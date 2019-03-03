@@ -1,6 +1,7 @@
-\documentclass[11pt,a4paper]{report}
+\documentclass[12pt,a4paper]{report}
+\linespread{1.5}
 \usepackage[utf8]{inputenc}
-%\usepackage{polski}
+\usepackage[Mex]{polski}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -14,17 +15,176 @@
 \maketitle
 
 \chapter{Wstep}
-
+Formalna teoria odpowiedniości dla działań statystycznych zawiera cechy teorii Stevensa empirycznej istotności. Proponuje się, aby uznać statystykę za właściwą w stosunku do stwierdzeń na ten temat, w przypadku gdy poprawność tych stwierdzeń nie zmienia się przy zastosowaniu  dopuszczalnych przekształceń skali pomiarowej. Argumentuje się ,użycie nieodpowiednich statystyk prowadzi do formułowania stwierdzeń które nie są istotne znaczeniowo i empirycznie. %Co jest niewłaściwe  w użyciu działań statystycznych na danych liczbowych gdy zmienne są dopuszczalne przekształcenia danych? Według Stevensa %
 \chapter{Preliminaria}
+\begin{definition}[Funkcji\citep{kuratowski1966wstkep}]
+Niech dane bedą dwa zbiory X i Y. Przez funkcję, której argumenty przebiegają zbiór X, wartości zaś należą do zbioru Y, rozumiemy każdy podzbiór f iloczynu kartezjańskiego X $\times$ Y o tej własności ze dla każdego x $\in$ X istnieje jeden i tylko jeden y taki, że $<x,y> \in f$. 
 
-\begin{definition}[Funkcja kardynalna\citep{engelking1989topologia}]
-Funkcja kardynalna nazywamy ...
 \end{definition}
+\begin{definition}[\citep{kuratowski1966wstkep}]
+Niech dane będą trzy zbiory X, Y i Z oraz dwie funkcje
+\begin{center}
+$f:X\to Y$ oraz $g:Y\to Z$.
+\end{center}
+Funkcje te wyznaczają trzecia funkcję złożoną $h:X\to Z$ ( superpozycją funkcji f i g) określoną przez warunek
+\begin{equation*}
+h(x)=g[f(x)].
+\end{equation*}
+\end{definition}
+\begin{definition}[Funkcji różnowartościowej \citep{kuratowski1966wstkep}]
+Funkcję f nazywamy różnowartościową, jeśli różnym argumentom funkcji odpowiadają różne wartości funkcji, tj. jeśli
+\begin{equation*}
+(x_{1}\ne x_{2}) \Rightarrow [f({x_{1}) \ne f(x_{2})]
+\end{equation*}
+lub - co na jedno wychodzi - jeśli
+\begin{equation*}
+[f(x_{1}) = f(x_{2})] \Rightarrow ({x_{1} = x_{2})
+\end{equation*}
+\end{definition}
+\begin{definition}[\citep{kuratowski1966wstkep}]
+Relacja p jest zwrotna, jeśli $\forall_{x}$ xpx.
+\newline
+Relacja p jest symetryczna, jeśli $xpx \Rightarrow ypx$ \newline
+Relacja p jest przechodnia, jeśli $(xpy)(ypz) \Rightarrow (xpz)$. \newline
+Relacja p jest relacją równoważności, jeśli jest zwrotna, symetryczna i przechodnia \newlina
+Niech dana będzie formuła zdaniowa $\phi(x,y)$ dwóch zmiennych. $\exists_{y} \phi (x,y)$ i $\forall_{y} \phi (x,y)$ są to więc formuły zdaniowe jednej zmiennej, mianowicie zmiennej x.
+\end{definition}
+\begin{definition}[\citep{jedrzejewski2011algebra}]
+Działanie $\ast$ w zbiorze X nazywamy działaniem łącznym, jeśli spełniony jest warunek 
+\begin{equation*}
+(a\ast b)\ast = a\ast(b\ast c)
+\end{equation*} 
+dla każdych elementów a,b,c ze zbioru X.
+\end{definition}
+\begin{definition}[\citep{jedrzejewski2011algebra}]
+Działanie $\ast$ w zbiorze X nazywamy działaniem przemiennym, jeśli spełnia ono warunek
+\begin{equation*}
+a\ast b=b\ast a
+\end{equation*}
+dla każdych elementów a,b ze zbioru X.
+\end{definition}
+\begin{definition}
+Element e, należący do zbioru X, nazywamy elementem prawostronnie neutralnym działania $\ast$ w zbiorze X, jeśli
+\begin{equation*}
+e\ast x = x
+\end{equation*} 
+dla każdego elementu x ze zbioru X.
+\end{definition}
+\begin{definition}
+Element e, należący do zbioru X, nazywamy elementem lewostronnie neutralnym działania $\ast$ w zbiorze X, jeśli
+\begin{equation*}
+x\ast e = x
+\end{equation*} 
+dla każdego elementu x ze zbioru X.
+\end{definition}
+\begin{definition}
+Element e nazywamy elementem neutralnym w zbiorze X, jeśli jest on lewostronnie i prawostronnie neutralny, czyli
+\begin{equation*}
+e\ast x = x\ast e = x
+\end{equation*}
+dla każdego elementu x ze zbioru X.
+\end{definition}
+\begin{definition}[Struktury algebraicznej \citep{jedrzejewski2011algebra}]
+Strukturę algebraiczną (systemem algebraicznym, czasem algebrą) nazywamy niepusty zbiór wraz z pewną liczbą działań wewnętrznych i pewną liczbą działań zewnętrznych w tym zbiorze.
+\end{definition}
+\begin{definition}[Grupy \citep{jedrzejewski2011algebra}]
+Strukturę algebraiczną ($\mathcal{G},\ast$) nazywamy grupą, jeśli spełnione są następujące warunki:
+\begin{equation*}
+\forall_{a\in \mathcal{G}} \forall_{b\in \mathcal{G}} \forall_{c\in \mathcal{G}} ((a\ast b)\ast c=a\ast (b\ast c)),
+\end{equation*}
+\begin{equation*}
+\exists_{e\in \mathcal{G}} \forall_{a\in \mathcal{G}}(e\ast a=a=a\ast e),
+\end{equation*}
+\begin{equation*}
+\forall_{a \in \mathcal{G}} \exists_{\overline{a}\in\mathcal{G}}(\overline{a}\ast a=e=a\ast \overline{a}).
+\end{equation*}
+\end{definition}
+\begin{definition}[\citep{jedrzejewski2011algebra}]
+Grupą przemienną (abelową) nazywamy taką grupę, w której działanie jest przemienne.
+\end{definition}
+%\begin{definition}[Funkcja kardynalna\citep{engelking1989topologia}]
+%Funkcja kardynalna nazywamy ...
+%\end{definition}
 
 
 
 \chapter{Teoria}
 
+Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skolerowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Jakąkolwiek funkcję tego rodzaju nazywamy $numercal$ $assignement$. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasy przypisań liczbowych. Drugim podstawowym pojęciem jest $dopuszczalne$ $przekształcenie$ czyli funkcja odwzorowująca wartości jednego numerycznego przypisania danej klasy przypisań numerycznych na wartości innego przypisania numerycznego tej samej klasy. Te dwa pojęcia są głównymi składnikami $numerical$ $assignment$ $system$. Co oznacza, że numeryczny system przypisania składa się z klasy przypisania numerycznego i klasy dopuszczalnych przekształceń. Ponadto łatwo pokazuje się jawną dziedzinę numerycznego przypisania i dopuszczalnych przekształceń. Formalna definicja jest następująca:
+\begin{definition}[Numerical assignment system (NAS)]
+Numerical assignment system to uporządkowany układ $<A, M, a, \Phi>$ spełniający poniższe warunki:
+\begin{enumerate}
+\item
+$A$ jest niepustym zbiorem, $a$ jest zbiorem liczb rzeczywistych, $M$ jest zbiorem funkcji przekształcających $A$ w $a$, i $\Phi$ jest klasą funkcji przekształcających $a$ w siebie.  
+\item
+Dla wszystkich $m$ z $M$ i $\phi$ z $\Phi$, $\phi \circ m$ zawiera się w $M$. 
+\item
+$\Phi$ zawiera tożsamościowe transformacje $a$ w siebie i dla wszystkich $\phi_{1}$ i $\phi_{2}$ z $\Phi$, $\phi_{1} \circ \phi{2}$ zawiera się w $\Phi$.
+
+\end{enumerate}
+
+\end{definition}
+Warunek 2. powyższej definicji jest po prostu wymogiem na to aby każde dopuszczalne przekształcenie  przenosiło dowolne numeryczne przypisanie do innego numerycznego przypisania tego samego systemu. Warunek 3. nie jest konieczny, ale może być wymuszony, ponieważ tożsamościowe transformacje zawsze związane są z numerycznym przypisaniem na numeryczne przypisanie, jeżeli dwie transformacje maja tę samą właściwość to muszą tez mieć ich składniki. Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i dopuszczalnych przekształceń nie są zakładane  powyższej definicji. Po pierwsze, nie zakładaliśmy, że dopuszczalne przekształcenia stanowią grupę,która wymaga dodatkowych, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem jeden do jednego $a$ w siebie. Nie zakładaliśmy ze numeryczne przypisania z $M$ odwzorowują $A$ na $a$ to znaczy, że pomiary przyjmują wszystkie możliwe wartości liczbowe. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności Warunku 2. w definicji, to znaczy, że każde numeryczne przypisanie na ten system może być przeniesione na inny za pomocą dopuszczalnego przekształcenia. Omawiając podstawowe systemy pomiarów powinniśmy pokazać dlaczego nie zakładamy mocniejszych założeń. Dotyczy to empirycznej podstawy pojęć numerycznego przypisania odpowiadającego rodzajowi pomiaru i ego klasie dopuszczalnych przekształceń. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń ale lepiej uzasadnionych. Zasadniczy powód mocniejszych założeń wydaje się być prostota matematyczna. Łatwo zauważyć, że jeżeli te założenia nie są spełnione 
+wówczas nie następują pewne wyniki dotyczące warunków dla niezmienności w ramach przekształceń odpowiadających danym typom skal. Wskazane jest zatem sformułowanie zestawu minimalnych dodatkowych założeń, które są wystarczające oby otrzymać pożądane konsekwencje, ale które mogą być uzasadnione dla wielu różnych rzeczywistych pomiarów w nauce.
+\begin{definition}
+Numerical assignment system $U=<A, M, a, \Phi>$ jest regularny wtedy i tylko wtedy gdy spełnione są poniższe warunki:
+\begin{enumerate}
+\item
+Elementy z $M$ i $\Phi$ są jeden do jednego.
+\item
+Istnieje $m_{0}$ w $M$, które odwzorowuje $A$ w $a$ i które generuje $M$ w tym sensie, że dla każdego $m$ z $M$ istnieje $\phi$ z $\Phi$ takie, że $\phi \circ m_{0}=m$.
+\item
+Dla wszystkich skończonych $n$ i elementów $\alpha_{1},\dots,\alpha_{n}$ z $a$ i elementów $\phi$ z $\Phi$, istnieje funkcja $\Psi$ w $\Phi$, która odwzorowuje $a$ w $a$, tak że $\Psi(\Phi(\alpha_{i}))=\alpha_{i}$, $i=1,\ldots,n$.
+\end{enumerate}
+\end{definition}
+\section{Typy skal}
+Pojęcie Stevensa na temat typów skal jest jednym z najważniejszych założeń w jego teorii, jednakże inni autorzy nie zawsze używają go o tym samym znaczeniu, co może oznaczać, że jest pewna swoboda sposobów w której może być ono bardziej precyzyjne. Na przykład skala ilorazowa została opisana jako skala której transformacje tworzą grupę prawdopodobieństwa (mnożenie przed dodatnią stałą), ale nie określono jaka jest dziedzina tych klas transformacji.  
+\begin{definition}
+Niech $U=<A, M, a, \Phi>$ będzie NAS. Wtedy:
+\begin{enumerate}
+\item
+$U$ jest skalą nominalną wtedy i tylko wtedy gdy $\Phi$ jest zbiorem wszystkich funkcji odwzorowujących $a$ w siebie.
+\item
+$U$ jest skalą porządkową wtedy i tylko wtedy gdy $\Phi$ jest zbiorem ściśle monotonicznych rosnących odwzorowań $a$ w siebie.
+\item
+$U$ jest skalą interwałową wtedy i tylko wtedy gdy $a$ jest zbiorem wszystkich liczb rzeczywistych i $\Phi$ jest zbiorem wszystkich funkcji $\phi$, takich że dla dow. $\beta,\gamma$ gdzie $\beta>0$
+\begin{equation*}
+\phi(\alpha)=\beta\alpha+\gamma
+\end{equation*}
+dla wszystkich $\alpha$ z $a$.
+\item
+$U$ jest skalą ilorazową wtedy i tylko wtedy gdy $a$ jest zbiorem liczb dodatnich rzeczywistych i $\Phi$ jest zbiorem wszystkich przekształceń takich że dla dow. $\beta>0$
+\begin{equation*}
+\phi(\alpha)=\beta\alpha
+\end{equation*}
+dla wszystkich $\alpha$ z $a$.
+\end{enumerate}
+\end{definition}
+\section{Operacje statystyczne}
+Poprzednie definicje dostarczają niezbędnych podstaw do precyzyjnych definicji różnych rodzajów niezmienności operacji statystycznych lub obliczeń stosowanych do pomiarów. Sformułujemy jeszcze jedną wstępną koncepcje to znaczy operacje statystyczną  (bardziej ogólnie, operację matematyczną) pomiarów. Liczba różnych rodzajów działań matematycznych  do których stosuje się pojęcie niezmienności jest dość duża i należałoby sformułować bardzo ogólną definicje działań matematycznych która by uwzględniała wszystkie poszczególne przypadki jednakże byłaby zbyt rozbudowana. Skupmy się na specjalnej klasie działań matematycznych i statystycznych, w których wynik jest obliczany ze skończonej liczby pomiarów (wielkość nie musi być ustalona) w pewien jednakowy sposób. Zawiera to w szczególnych przypadkach obliczenie średniej, mediany, odchylenia standardowego ze skończonej próbki, a także bardziej elementarne działania matematyczne takie jak na przykład dodawanie i odejmowanie. Nie zawiera działań stosowanych do nieskończonych populacji. Wszystkie standardowe operacje statystyczne mogą być przedstawione jako specjalne przypadki $uogólnionej$ $funkcji$ $rzeczywistej$. W celu zdefiniowania tego pojęcia powinniśmy wprowadzić następujące pojęcia pomocnicze. Jeżeli $A$ jest dowolnym zbiorem to $\overline{A}$ jest jego domknięciem stworzonym ze skończonych ciągów, mianowicie $\overline{A}$ składa się z $A$, wraz ze skończonymi ciągami z $A$ i skończonymi ciągami tych elementów i tak dalej. Jeżeli $m$ jest dowolną funkcją której dziedziną jest $A$, to można ją rozszerzyć na funkcję nad $\overline{A}$ w następujący sposób:
+\begin{enumerate}
+\item
+Dla wszystkich $x$ z $A$, $m(x)$ jest zdefiniowana jak wcześniej.
+\item
+Dla dowolnego ciągu $x_{1},\dots,x_{n}$ z elementów z $\overline{A}$, $m( x_{1},\dots,x_{n})$ jest zdefiniowane jako ciąg $m(x_{1}),\dots,m(x_{n})$
+\end{enumerate} 
+Więc jeżeli $x$ jest dowolnym ciągiem, $m(x)$ jest po prostu odpowiadającym ciągiem wartości. Używając tego pojęcia możemy zdefiniować $uogólnioną$ $funkcję$ $rzeczywistą$ której dziedzina jest podzbiorem $\overline{Re}$, gdzie $\overline{Re}$ jest zbiorem wszystkich liczb rzeczywistych. Większość konkretnych funkcji funkcji, które chcemy uwzględnić mają zdecydowanie bardziej ograniczone dziedziny, ale pożądane jest rozważenie wszystkich funkcji tej klasy razem. Przykładem takiej funkcji jest wzięcie średniej  liczb dowolnego takiego ciągu. Funkcja której dziedziną są wszystkie uporządkowane pary liczb rzeczywistych jest binarne działanie dodawania. Działanie które znajduje różnicę dwóch średnich może być rozumiane jako działanie posiadające dziedzinę składającą się klasy wszystkich uporządkowanych par skończonego ciągu liczb rzeczywistych. $Uogólnione$ $działanie$ $na$ $pomiarach$ jest intuicyjnie wynikiem zastosowania uogólnionej funkcji rzeczywistej  do liczb przypisanych przez liczbowe przypisanie. Zatem uogólnione operacje na pomiarach są generowane przez odpowiednie uogólnione funkcje rzeczywiste. Formalne definicje tych dwóch pojęć są następujące.
+\begin{definition}
+Uogólniona funkcja rzeczywista jest to dowolna funkcja której dziedziną jest podzbiór $\overline{Re}$, gdzie $Re$ jest zbiorem liczb rzeczywistych.
+\end{definition}
+\begin{definition}
+Jeżeli $\mathcal{F}$ jest uogólnioną funkcją rzeczywistą z dziedziną $\mathcal{D}\subseteq\overline{Re}$, wtedy uogólnionym działaniem na pomiarach odpowiadające $\mathcal{F}$ jest funkcja $F$ której dziedzina D jest zbiorem uporządkowanych par $m;x$ takich że
+\begin{enumerate}
+\item
+$m$ jest funkcją o wartościach rzeczywistych na pewnej dziedzinie $A$;
+\item
+$x$ jest elementem z $\overline{A}$ takim, że $m(x)$ należy do $\mathcal{D}$;
+\item
+dla każdego $m;x$ z D, $F(m;x)=\mathcal{F}(m(x))$.
+\end{enumerate}
+
+\end{definition}
+Użycie średnika w definicji dla pary $m;x$ nie ma znaczenia matematycznego. Należy zauważyć, że w definicji uogólnionej funkcji rzeczywistej , nie określono zakresu dla takich funkcji, zatem zakresy uogólnionych funkcji rzeczywistych może być zbiory arbitralne.W dalszej części będziemy się zajmować głównie funkcjami, których zakresy są zestawami liczb rzeczywistych. 
 \chapter{Praktyka}
 
 \chapter{Podsumowania}
