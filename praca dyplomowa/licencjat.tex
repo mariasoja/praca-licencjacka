@@ -15,8 +15,21 @@
 \maketitle
 
 \chapter{Wstep}
-Formalna teoria odpowiedniości dla działań statystycznych zawiera cechy teorii Stevensa empirycznej istotności. Proponuje się, aby uznać statystykę za właściwą w stosunku do stwierdzeń na ten temat, w przypadku gdy poprawność tych stwierdzeń nie zmienia się przy zastosowaniu  dopuszczalnych przekształceń skali pomiarowej. Argumentuje się ,użycie nieodpowiednich statystyk prowadzi do formułowania stwierdzeń które nie są istotne znaczeniowo i empirycznie. %Co jest niewłaściwe  w użyciu działań statystycznych na danych liczbowych gdy zmienne są dopuszczalne przekształcenia danych? Według Stevensa %
+
 \chapter{Preliminaria}
+\begin{definition}[\citep{kraszewski2007wstkep}]
+Parę uporządkowaną elementów $a$ i $b$ oznaczamy przez $<a,b>$. Element $a$ nazywamy pierwszą współrzędną (poprzednikiem), zaś element b - drugą współrzędną (następnikiem) pary $<a,b>$. Podstawowa własność określająca parę uporządkowaną jest następująca:
+\begin{equation*}
+<a,b>=<c,d>\Leftrightarrow a=c \wedge b=d
+\end{equation*} 
+
+\end{definition}
+\begin{definition}[\citep{kuratowski1966wstkep}]
+\begin{equation*}
+<a,b>=\{\{a\},\{a,b\}\}.
+\end{equation*}
+
+\end{definition}
 \begin{definition}[Funkcji\citep{kuratowski1966wstkep}]
 Niech dane bedą dwa zbiory X i Y. Przez funkcję, której argumenty przebiegają zbiór X, wartości zaś należą do zbioru Y, rozumiemy każdy podzbiór f iloczynu kartezjańskiego X $\times$ Y o tej własności ze dla każdego x $\in$ X istnieje jeden i tylko jeden y taki, że $<x,y> \in f$. 
 
@@ -31,23 +44,66 @@ Funkcje te wyznaczają trzecia funkcję złożoną $h:X\to Z$ ( superpozycją fu
 h(x)=g[f(x)].
 \end{equation*}
 \end{definition}
-\begin{definition}[Funkcji różnowartościowej \citep{kuratowski1966wstkep}]
-Funkcję f nazywamy różnowartościową, jeśli różnym argumentom funkcji odpowiadają różne wartości funkcji, tj. jeśli
+\begin{definition}[\citep{kraszewski2007wstkep}]
+Niech $f:X\rightarrow Y$.
+\begin{enumerate}
+\item
+Mówimy, że funkcja $f$ jest różnowartościowa i piszemy $f:X\xrightarrow{1-1} Y$, jeśli różnym argumentom przyporządkowuje ona różne wartości, czyli
 \begin{equation*}
-(x_{1}\ne x_{2}) \Rightarrow [f({x_{1}) \ne f(x_{2})]
+(\forall{x_{1},x_{2}}\in X)(x_{1}\ne x_{2} \Rightarrow f(x_{1})\ne f(x_{2}))
 \end{equation*}
-lub - co na jedno wychodzi - jeśli
+Funkcję taką nazywamy też injekcją lub mówimy, że jest $1-1$. Potocznie mówi się, że funkcja różnowartościowa nie skleja argumentów.
+\item
+Mówimy, że funkcja $f$ jest na i piszemy $f:X\xrightarrow{na}Y$, jeśli każdy element jej przeciwdziedziny jest wartością funkcji, czyli
 \begin{equation*}
-[f(x_{1}) = f(x_{2})] \Rightarrow ({x_{1} = x_{2})
+(\forall_{y}\in Y)(\exists_{x}\in X) y=f(x).
+\end{equation*}
+Funkcję taką nazywamy też surjekcją.
+\item
+Jeśli funkcja $f$ jest różnowartościowa i na, nazywamy ją wzajemnie jednoznaczną i piszemy $f:X\xrightarrow[na]{1-1} Y$. O takiej funkcji mówimy też, że jest bijekcją.
+\end{enumerate}
+\end{definition}
+\begin{definition}[\citep{kraszewski2007wstkep}]
+Dane są dwa zbiory $X$ i $Y$. Relacją (dwuargumentową) między elementami zbioru $X$ a elementami zbioru Y nazywamy dowolny podzbiór iloczynu kartezjańskiego $X \times Y$.
+\end{definition}
+\begin{definition}[\citep{kraszewski2007wstkep}]
+Dany jest zbiór $X$. Jeśli $R$ jest relacją między elementami zbioru $X$ a elementami zbioru $X$ (czyli $R\subseteq X \times X$), to mówimy, że $R$ jest relacją na zbiorze $X$ (można też mówić o relacji w zbiorze $X$).
+
+\end{definition}
+\begin{definition}[\citep{kraszewski2007wstkep}]
+Jeśli $R\subseteq X\times Y$ i $S\subseteq Y \times Z$ są relacjami, to złożeniem relacji $R$ z relacją $S$ nazywamy relację $S\circ R \subseteq X \times Z$ określoną warunkiem
+\begin{equation*}
+xS\circ Rz \Leftrightarrow(\exists_{y} \in Y)(xRy \wedge ySz).
 \end{equation*}
 \end{definition}
-\begin{definition}[\citep{kuratowski1966wstkep}]
-Relacja p jest zwrotna, jeśli $\forall_{x}$ xpx.
-\newline
-Relacja p jest symetryczna, jeśli $xpx \Rightarrow ypx$ \newline
-Relacja p jest przechodnia, jeśli $(xpy)(ypz) \Rightarrow (xpz)$. \newline
-Relacja p jest relacją równoważności, jeśli jest zwrotna, symetryczna i przechodnia \newlina
-Niech dana będzie formuła zdaniowa $\phi(x,y)$ dwóch zmiennych. $\exists_{y} \phi (x,y)$ i $\forall_{y} \phi (x,y)$ są to więc formuły zdaniowe jednej zmiennej, mianowicie zmiennej x.
+\begin{definition}
+Jeśli $R \subseteq X \times Z$ jest relacją, to relacją do niej odwrotną nazywamy relację $R^{-1} \subseteq Y \times X$ określoną warunkiem 
+\begin{equation*}
+xR^{-1}y\Leftrightarrow yRx.
+\end{equation*}
+\end{definition}
+
+\begin{definition}[\citep{kraszewski2007wstkep}]
+Niech $R$ będzie relacją na niepustym zbiorze X. Mówimy, że:
+\begin{enumerate}
+
+\end{enumerate}
+\item
+R jest zwrotna $\Leftrightarrow$ $(\forall_{x}\in X)$ xRx.
+\item
+R jest przeciwzwrotna $\Leftrightarrow$ $(\forall_{x}\in X)$ $\neg xRx$.
+\item
+R jest przechodnia $\Leftrightarrow$ $(\forall_{x,y,z}\in X)$ $(xRy\wedge yRz  \Rightarrow xRz)$.
+\item
+R jest symetryczna $\Leftrightarrow$ $(\forall_{x,y}\in X)(xRy \Rightarrow yRx)$. 
+\item
+R jest słabo antysymetryczna $\Leftrightarrow$ $(\forall_{x,y}\in X)( xRy \wedge yRx \Rightarrow x=y$.
+\item
+R jest silnie antysymetryczna $\Leftrightarrow$ $(\forall_{x,y}\in X)(xRy \Rightarrow \neg yRx$.
+\item
+R jest spójna $\Leftrightarrow$ $(\forall_{x,y}\in X)(xRy \vee yRx)$.
+
+\end{enumerate}
 \end{definition}
 \begin{definition}[\citep{jedrzejewski2011algebra}]
 Działanie $\ast$ w zbiorze X nazywamy działaniem łącznym, jeśli spełniony jest warunek 
