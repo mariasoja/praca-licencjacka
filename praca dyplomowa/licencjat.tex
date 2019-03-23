@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper]{report}
 \linespread{1.5}
 \usepackage[utf8]{inputenc}
-\usepackage[Mex]{polski}
+\usepackage{polski}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -10,6 +10,11 @@
 \newtheorem{definition}{Definicja}
 \author{Maria Soja}
 \title{Praca licencjacka}
+
+\newcommand{\parauporzadkowana}[2]{\left\langle {#1}; {#2} \right\rangle}
+\newcommand{\zbior}[1]{\left\lbrace {#1} \right\rbrace }
+
+\newcommand{\tuple}[1]{\left\langle {#1} \right\rangle}
 \begin{document}
 
 \maketitle
@@ -17,79 +22,93 @@
 \chapter{Wstep}
 
 \chapter{Preliminaria}
-\begin{definition}[\citep{kraszewski2007wstkep}]
-Parę uporządkowaną elementów $a$ i $b$ oznaczamy przez $<a,b>$. Element $a$ nazywamy pierwszą współrzędną (poprzednikiem), zaś element b - drugą współrzędną (następnikiem) pary $<a,b>$. Podstawowa własność określająca parę uporządkowaną jest następująca:
-\begin{equation*}
-<a,b>=<c,d>\Leftrightarrow a=c \wedge b=d
-\end{equation*} 
 
-\end{definition}
+%\begin{definition}[\citep{kraszewski2007wstkep}]
+%Parę uporządkowaną elementów $a$ i $b$ oznaczamy przez $<a,b>$. Element $a$ nazywamy pierwszą współrzędną (poprzednikiem), zaś element b - drugą współrzędną (następnikiem) pary $<a,b>$. Podstawowa własność określająca parę uporządkowaną jest następująca:
+%\begin{equation*}
+%<a,b>=<c,d>\Leftrightarrow a=c \wedge b=d
+%\end{equation*} 
+%
+%\end{definition}
+
+W naszej pracy rozważane będą zagadnienia wymagające doprecyzowania wielu pojęć z zakresu dziedzin matematyki takich jak statystyka czy algebra. 
+
+
+Zdefiniujmy parę uporządkowaną. Warto powiedzieć, że w wielu pracach definicje tam użyte są matematycznie niepoprawne.
+
 \begin{definition}[\citep{kuratowski1966wstkep}]
+Parą uporządkowana składającą się z poprzednika $a$ oraz następnika $b$ nazwiemy zbiór składający się z elementów poniżej opisanych i oznaczany:
 \begin{equation*}
-<a,b>=\{\{a\},\{a,b\}\}.
+\parauporzadkowana{a}{b}=\zbior{\zbior{a}, \zbior{a,b}}.
 \end{equation*}
 
 \end{definition}
-\begin{definition}[Funkcji\citep{kuratowski1966wstkep}]
-Niech dane bedą dwa zbiory X i Y. Przez funkcję, której argumenty przebiegają zbiór X, wartości zaś należą do zbioru Y, rozumiemy każdy podzbiór f iloczynu kartezjańskiego X $\times$ Y o tej własności ze dla każdego x $\in$ X istnieje jeden i tylko jeden y taki, że $<x,y> \in f$. 
+
+%TODO definicja iloczynu kartezjanskiego
+
+\begin{definition}[\citep{kraszewski2007wstkep}]
+Dane są dwa zbiory $X$ i $Y$. Relacją (dwuargumentową) między elementami zbioru $X$, a elementami zbioru $Y$ nazywamy dowolny podzbiór iloczynu kartezjańskiego $X \times Y$.
+\end{definition}
+Chcąc zapisać, że pewien element $x$ jest w relacji $R$ z pewnym elementem $y$ piszemy
+$$
+xRy.
+$$
+
+Najpowszechniej stosowaną relacją jest funkcja.
+
+\begin{definition}[Funkcja\citep{kuratowski1966wstkep}]
+Niech dane bedą dwa zbiory $X$ i $Y$. Przez funkcję, której argumenty przebiegają zbiór $X$, wartości zaś należą do zbioru $Y$, rozumiemy każdy podzbiór $f$ iloczynu kartezjańskiego $X \times Y$ o tej własności, że dla każdego $x \in X$ istnieje jeden i tylko jeden $y$ taki, że $\parauporzadkowana{x}{y} \in f$. 
 
 \end{definition}
-\begin{definition}[\citep{kuratowski1966wstkep}]
-Niech dane będą trzy zbiory X, Y i Z oraz dwie funkcje
-\begin{center}
-$f:X\to Y$ oraz $g:Y\to Z$.
-\end{center}
-Funkcje te wyznaczają trzecia funkcję złożoną $h:X\to Z$ ( superpozycją funkcji f i g) określoną przez warunek
+\begin{definition}[Superpozycja funkcji\citep{kuratowski1966wstkep}]
+Niech dane będą trzy zbiory $X$, $Y$ i $Z$ oraz dwie funkcje $f:X\to Y$, oraz $g:Y\to Z$. Funkcje te wyznaczają trzecia funkcję złożoną $h:X\to Z$ (nazywaną superpozycją funkcji $f$ i $g$) określoną przez warunek
 \begin{equation*}
-h(x)=g[f(x)].
+\forall_{x \in X} \quad h(x)=g(f(x)).
 \end{equation*}
 \end{definition}
+
 \begin{definition}[\citep{kraszewski2007wstkep}]
-Niech $f:X\rightarrow Y$.
+Niech $f:X \to Y$.
 \begin{enumerate}
 \item
 Mówimy, że funkcja $f$ jest różnowartościowa i piszemy $f:X\xrightarrow{1-1} Y$, jeśli różnym argumentom przyporządkowuje ona różne wartości, czyli
 \begin{equation*}
-(\forall{x_{1},x_{2}}\in X)(x_{1}\ne x_{2} \Rightarrow f(x_{1})\ne f(x_{2}))
+\forall{x_{1},x_{2}}\in X \quad x_{1}\ne x_{2} \implies f(x_{1})\ne f(x_{2}).
 \end{equation*}
 Funkcję taką nazywamy też injekcją lub mówimy, że jest $1-1$. Potocznie mówi się, że funkcja różnowartościowa nie skleja argumentów.
 \item
-Mówimy, że funkcja $f$ jest na i piszemy $f:X\xrightarrow{na}Y$, jeśli każdy element jej przeciwdziedziny jest wartością funkcji, czyli
+Mówimy, że funkcja $f$ jest na i piszemy $f:X\xrightarrow{na}Y$, jeśli każdy element jej przeciwdziedziny jest wartością funkcji dla pewnego jej argumentu, czyli
 \begin{equation*}
-(\forall_{y}\in Y)(\exists_{x}\in X) y=f(x).
+\forall_{y\in Y} \exists_{x\in X} \quad y=f(x).
 \end{equation*}
 Funkcję taką nazywamy też surjekcją.
 \item
 Jeśli funkcja $f$ jest różnowartościowa i na, nazywamy ją wzajemnie jednoznaczną i piszemy $f:X\xrightarrow[na]{1-1} Y$. O takiej funkcji mówimy też, że jest bijekcją.
 \end{enumerate}
 \end{definition}
-\begin{definition}[\citep{kraszewski2007wstkep}]
-Dane są dwa zbiory $X$ i $Y$. Relacją (dwuargumentową) między elementami zbioru $X$ a elementami zbioru Y nazywamy dowolny podzbiór iloczynu kartezjańskiego $X \times Y$.
-\end{definition}
+
 \begin{definition}[\citep{kraszewski2007wstkep}]
 Dany jest zbiór $X$. Jeśli $R$ jest relacją między elementami zbioru $X$ a elementami zbioru $X$ (czyli $R\subseteq X \times X$), to mówimy, że $R$ jest relacją na zbiorze $X$ (można też mówić o relacji w zbiorze $X$).
-
 \end{definition}
+
 \begin{definition}[\citep{kraszewski2007wstkep}]
 Jeśli $R\subseteq X\times Y$ i $S\subseteq Y \times Z$ są relacjami, to złożeniem relacji $R$ z relacją $S$ nazywamy relację $S\circ R \subseteq X \times Z$ określoną warunkiem
 \begin{equation*}
-xS\circ Rz \Leftrightarrow(\exists_{y} \in Y)(xRy \wedge ySz).
+x(S\circ R)z \iff \exists_{y \in Y} (xRy \land ySz).
 \end{equation*}
 \end{definition}
 \begin{definition}
 Jeśli $R \subseteq X \times Z$ jest relacją, to relacją do niej odwrotną nazywamy relację $R^{-1} \subseteq Y \times X$ określoną warunkiem 
 \begin{equation*}
-xR^{-1}y\Leftrightarrow yRx.
+R^{-1} := \zbior{\parauporzadkowana{y}{x} \in Y \times X; xRy}.
 \end{equation*}
 \end{definition}
 
 \begin{definition}[\citep{kraszewski2007wstkep}]
 Niech $R$ będzie relacją na niepustym zbiorze X. Mówimy, że:
 \begin{enumerate}
-
-\end{enumerate}
 \item
-R jest zwrotna $\Leftrightarrow$ $(\forall_{x}\in X)$ xRx.
+R jest zwrotna $\Leftrightarrow$ $(\forall_{x}\in X) xRx$.
 \item
 R jest przeciwzwrotna $\Leftrightarrow$ $(\forall_{x}\in X)$ $\neg xRx$.
 \item
@@ -104,13 +123,18 @@ R jest silnie antysymetryczna $\Leftrightarrow$ $(\forall_{x,y}\in X)(xRy \Right
 R jest spójna $\Leftrightarrow$ $(\forall_{x,y}\in X)(xRy \vee yRx)$.
 
 \end{enumerate}
+
+\begin{definition}[Działanie]
+Niech $X$ będzie dowolnym niepustym zbiorem. Powiemy, że $\ast$ jest działaniem w zbiorze $X$ jeśli $\ast: X \times X \to X$.
+\end{definition}
+
 \end{definition}
 \begin{definition}[\citep{jedrzejewski2011algebra}]
 Działanie $\ast$ w zbiorze X nazywamy działaniem łącznym, jeśli spełniony jest warunek 
 \begin{equation*}
-(a\ast b)\ast = a\ast(b\ast c)
+(a\ast b)\ast c = a\ast(b\ast c)
 \end{equation*} 
-dla każdych elementów a,b,c ze zbioru X.
+dla każdych elementów $a,b,c$ ze zbioru $X$.
 \end{definition}
 \begin{definition}[\citep{jedrzejewski2011algebra}]
 Działanie $\ast$ w zbiorze X nazywamy działaniem przemiennym, jeśli spełnia ono warunek
@@ -163,19 +187,24 @@ Grupą przemienną (abelową) nazywamy taką grupę, w której działanie jest p
 %\end{definition}
 
 
-
 \chapter{Teoria}
 
-Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skolerowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Jakąkolwiek funkcję tego rodzaju nazywamy $numercal$ $assignement$. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasy przypisań liczbowych. Drugim podstawowym pojęciem jest $dopuszczalne$ $przekształcenie$ czyli funkcja odwzorowująca wartości jednego numerycznego przypisania danej klasy przypisań numerycznych na wartości innego przypisania numerycznego tej samej klasy. Te dwa pojęcia są głównymi składnikami $numerical$ $assignment$ $system$. Co oznacza, że numeryczny system przypisania składa się z klasy przypisania numerycznego i klasy dopuszczalnych przekształceń. Ponadto łatwo pokazuje się jawną dziedzinę numerycznego przypisania i dopuszczalnych przekształceń. Formalna definicja jest następująca:
+Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skolerowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Jakąkolwiek funkcję tego rodzaju nazywamy \textit{numerical assignement}. Choć w języku polskim nie jest dostępne utarte tłumaczenie tego pojęcia rozumiemy je jako formę przypisania liczby do danego obiektu. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek. Jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasę przypisań liczbowych. Drugim podstawowym pojęciem jest dopuszczalne przekształcenie czyli funkcja odwzorowującą wartości jednego numerycznego przypisania danej klasy na wartości innego przypisania numerycznego. Te dwa pojęcia składają się na numerical assignment system. Zdefiniujmy formalnie czym jest numerical assignment system.
 \begin{definition}[Numerical assignment system (NAS)]
-Numerical assignment system to uporządkowany układ $<A, M, a, \Phi>$ spełniający poniższe warunki:
+Numerical assignment system to uporządkowany układ $\tuple{A, M, a, \Phi}$ spełniający poniższe warunki:
 \begin{enumerate}
 \item
 $A$ jest niepustym zbiorem, $a$ jest zbiorem liczb rzeczywistych, $M$ jest zbiorem funkcji przekształcających $A$ w $a$, i $\Phi$ jest klasą funkcji przekształcających $a$ w siebie.  
 \item
-Dla wszystkich $m$ z $M$ i $\phi$ z $\Phi$, $\phi \circ m$ zawiera się w $M$. 
+Dla wszystkich $m$ z $M$ i $\phi$ z $\Phi$, 
+$$
+\phi \circ m \in M.
+$$ 
 \item
-$\Phi$ zawiera tożsamościowe transformacje $a$ w siebie i dla wszystkich $\phi_{1}$ i $\phi_{2}$ z $\Phi$, $\phi_{1} \circ \phi{2}$ zawiera się w $\Phi$.
+$\Phi$ zawiera tożsamościową transformację (identyczność) $a$ w siebie i dla wszystkich $\phi_{1}$ i $\phi_{2}$ z $\Phi$, 
+$$
+\phi_{1} \circ \phi_{2} \in \Phi.
+$$
 
 \end{enumerate}
 
@@ -216,6 +245,9 @@ $U$ jest skalą ilorazową wtedy i tylko wtedy gdy $a$ jest zbiorem liczb dodatn
 dla wszystkich $\alpha$ z $a$.
 \end{enumerate}
 \end{definition}
+
+%TODO przykłady
+
 \section{Operacje statystyczne}
 Poprzednie definicje dostarczają niezbędnych podstaw do precyzyjnych definicji różnych rodzajów niezmienności operacji statystycznych lub obliczeń stosowanych do pomiarów. Sformułujemy jeszcze jedną wstępną koncepcje to znaczy operacje statystyczną  (bardziej ogólnie, operację matematyczną) pomiarów. Liczba różnych rodzajów działań matematycznych  do których stosuje się pojęcie niezmienności jest dość duża i należałoby sformułować bardzo ogólną definicje działań matematycznych która by uwzględniała wszystkie poszczególne przypadki jednakże byłaby zbyt rozbudowana. Skupmy się na specjalnej klasie działań matematycznych i statystycznych, w których wynik jest obliczany ze skończonej liczby pomiarów (wielkość nie musi być ustalona) w pewien jednakowy sposób. Zawiera to w szczególnych przypadkach obliczenie średniej, mediany, odchylenia standardowego ze skończonej próbki, a także bardziej elementarne działania matematyczne takie jak na przykład dodawanie i odejmowanie. Nie zawiera działań stosowanych do nieskończonych populacji. Wszystkie standardowe operacje statystyczne mogą być przedstawione jako specjalne przypadki $uogólnionej$ $funkcji$ $rzeczywistej$. W celu zdefiniowania tego pojęcia powinniśmy wprowadzić następujące pojęcia pomocnicze. Jeżeli $A$ jest dowolnym zbiorem to $\overline{A}$ jest jego domknięciem stworzonym ze skończonych ciągów, mianowicie $\overline{A}$ składa się z $A$, wraz ze skończonymi ciągami z $A$ i skończonymi ciągami tych elementów i tak dalej. Jeżeli $m$ jest dowolną funkcją której dziedziną jest $A$, to można ją rozszerzyć na funkcję nad $\overline{A}$ w następujący sposób:
 \begin{enumerate}
