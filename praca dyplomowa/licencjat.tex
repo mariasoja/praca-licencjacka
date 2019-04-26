@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{natbib} %bibtex
 
 \newtheorem{definition}{Definicja}
@@ -132,12 +133,14 @@ $R$ jest silnie antysymetryczna $\iff$ $(\forall_{x,y\in X})(xRy \implies \neg y
 $R$ jest spójna $\iff$ $(\forall_{x,y\in X})(xRy \lor yRx)$.
 
 \end{enumerate}
+\end{definition}
+Bazowym pojęciem algebry jest pojęcie działania.
 
 \begin{definition}[Działanie]
 Niech $X$ będzie dowolnym niepustym zbiorem. Powiemy, że $\ast$ jest działaniem w zbiorze $X$ jeśli $\ast: X \times X \to X$.
 \end{definition}
 
-\end{definition}
+
 \begin{definition}[\citep{jedrzejewski2011algebra}]
 Działanie $\ast$ w zbiorze $X$ nazywamy działaniem łącznym, jeśli spełniony jest warunek 
 \begin{equation*}
@@ -152,6 +155,7 @@ a\ast b=b\ast a
 \end{equation*}
 dla każdych elementów $a,b$ ze zbioru $X$.
 \end{definition}
+Przykładem działania jest dodawanie liczb naturalnych w zbiorze $N$.
 \begin{definition}[\citep{jedrzejewski2011algebra}]
 Element $e$, należący do zbioru $X$, nazywamy elementem prawostronnie neutralnym działania $\ast$ w zbiorze $X$, jeśli
 \begin{equation*}
@@ -173,8 +177,23 @@ e\ast x = x\ast e = x
 \end{equation*}
 dla każdego elementu $x$ ze zbioru $X$.
 \end{definition}
+Na przykład elementem neutralnym dodawania jest 0 natomiast elementem neutralnym mnożenia jest 1.
+
 \begin{definition}[Struktury algebraicznej \citep{jedrzejewski2011algebra}]
 Strukturę algebraiczną (systemem algebraicznym, czasem algebrą) nazywamy niepusty zbiór wraz z pewną liczbą działań wewnętrznych i pewną liczbą działań zewnętrznych w tym zbiorze.
+\end{definition}
+\begin{definition}[\citep{jedrzejewski2011algebra}]
+Strukturę algebraiczną, złożoną z niepustego zbioru $P$ i jednego działania łącznego, nazywamy półgrupą.
+\end{definition}
+\begin{definition}[\citep{jedrzejewski2011algebra}]
+Półgrupę, w której istnieje element neutralny, nazywamy półgrupą z jedynką lub monoidem. Półgrupę ,w której działanie jest przemienne, nazywamy półgrupę przemienną lub półgrupę abelową. 
+\end{definition}
+\begin{definition}[\citep{jedrzejewski2011algebra}]
+Element $a$ w półgrupię $(P,\ast)$ z jedynką $e$ nazywamy elementem odwracalnym, jeśli istnieje element $a'$ w zbiorze $P$ taki, że
+\begin{equation*}
+a'\ast a=a\ast a'=e
+\end{equation*}
+Element $a'$ nazywamy wtedy elementem odwrotnym do elementu $a$.
 \end{definition}
 \begin{definition}[Grupy \citep{jedrzejewski2011algebra}]
 Strukturę algebraiczną ($\mathcal{G},\ast$) nazywamy grupą, jeśli spełnione są następujące warunki:
@@ -218,7 +237,7 @@ $$
 \end{enumerate}
 
 \end{definition}
-Warunek 2. powyższej definicji jest po prostu wymogiem na to aby każde dopuszczalne przekształcenie  przenosiło dowolne numeryczne przypisanie do innego numerycznego przypisania tego samego systemu. Warunek 3. nie jest konieczny, ale może być wymuszony, ponieważ tożsamościowe transformacje zawsze związane są z numerycznym przypisaniem na numeryczne przypisanie, jeżeli dwie transformacje maja tę samą właściwość to muszą tez mieć ich składniki. Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i dopuszczalnych przekształceń nie są zakładane  powyższej definicji. Po pierwsze, nie zakładaliśmy, że dopuszczalne przekształcenia stanowią grupę,która wymaga dodatkowych, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Nie zakładaliśmy ze numeryczne przypisania z $M$ odwzorowują $A$ na $a$ to znaczy, że pomiary przyjmują wszystkie możliwe wartości liczbowe. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności Warunku 2. w definicji, to znaczy, że każde numeryczne przypisanie na ten system może być przeniesione na inny za pomocą dopuszczalnego przekształcenia. Omawiając podstawowe systemy pomiarów powinniśmy pokazać dlaczego nie zakładamy mocniejszych założeń. Dotyczy to empirycznej podstawy pojęć numerycznego przypisania odpowiadającego rodzajowi pomiaru i ego klasie dopuszczalnych przekształceń. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń ale lepiej uzasadnionych. Zasadniczy powód mocniejszych założeń wydaje się być prostota matematyczna. Łatwo zauważyć, że jeżeli te założenia nie są spełnione 
+Warunek 2. powyższej definicji jest po prostu wymogiem na to aby każde dopuszczalne przekształcenie  przenosiło dowolne numeryczne przypisanie do innego numerycznego przypisania tego samego systemu. Warunek 3. nie jest konieczny, ale może być wymuszony, ponieważ tożsamościowe transformacje zawsze związane są z numerycznym przypisaniem na numeryczne przypisanie, jeżeli dwie transformacje maja tę samą właściwość to muszą tez mieć ich składniki. Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i dopuszczalnych przekształceń nie są zakładane  powyższej definicji. Po pierwsze, nie zakładaliśmy, że dopuszczalne przekształcenia stanowią grupę, która wymaga dodatkowych, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Nie zakładaliśmy ze numeryczne przypisania z $M$ odwzorowują $A$ na $a$ to znaczy, że pomiary nie przyjmują wszystkich  możliwych wartości liczbowych. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności Warunku 2. w definicji, to znaczy, że każde numeryczne przypisanie na ten system może być przeniesione na inny za pomocą dopuszczalnego przekształcenia. Omawiając podstawowe systemy pomiarów powinniśmy pokazać dlaczego nie zakładamy mocniejszych założeń. Dotyczy to empirycznej podstawy pojęć numerycznego przypisania odpowiadającego rodzajowi pomiaru i jego klasie dopuszczalnych przekształceń. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń ale lepiej uzasadnionych. Zasadniczy powód mocniejszych założeń wydaje się być prostota matematyczna. Łatwo zauważyć, że jeżeli te założenia nie są spełnione 
 wówczas nie następują pewne wyniki dotyczące warunków dla niezmienności w ramach przekształceń odpowiadających danym typom skal. Wskazane jest zatem sformułowanie zestawu minimalnych dodatkowych założeń, które są wystarczające oby otrzymać pożądane konsekwencje, ale które mogą być uzasadnione dla wielu różnych rzeczywistych pomiarów w nauce.
 \begin{definition}
 Numerical assignment system $U=\tuple{A, M, a, \Phi}$ jest regularny wtedy i tylko wtedy gdy spełnione są poniższe warunki:
@@ -270,7 +289,7 @@ Natomiast w skali porządkowej już jesteśmy w stanie uporządkować nasze dane
 \begin{przyklad}
 Przykładem skali interwałowej jest układ $U$ gdzie zmienna jest rokiem urodzenia czyli niech $A=\zbior{1980,1995,1997,2000,2009}$, $a=\zbior{1,2,3,4,5}$, $M$ będzie zbiorem wszystkich przekształceń $A \to a$ i $\Phi$ będzie klasą funkcji przekształcających $a$ w siebie.
 \end{przyklad}
-W tej skali już na przykład można określić o ile lat ktoś jest straszy od innej osoby 
+W tej skali już na przykład można określić o ile lat ktoś jest starszy od innej osoby 
 \begin{przyklad}
 Natomiast przykładem skali ilorazowej jest układ $U$ gdzie zmienną jest wysokość mierzona w centymetrach czyli niech $A=\zbior{150,155,160,165,170,175}$, $a=\zbior{0,1,2,3,4,5}$, $M$ będzie zbiorem wszystkich przekształceń $A \to a$ i $\Phi$ będzie klasą funkcji przekształcających $a$ w siebie.
 \end{przyklad}
@@ -280,7 +299,7 @@ Dla dowolnego $m\in M$ (należącego do NAS) $$
 \forall_{y,z \in A} y=z \iff m(y)=m(z).
 $$
 \end{tw}
-\begin{dow}
+\begin{proof}
 Rozważmy $y,z \in A$ i niech $m \in M$. Wtedy
 \begin{equation*}
 \exists_{\phi \in \Phi} m=\phi \circ \overline{m}.
@@ -297,16 +316,16 @@ Przypuśćmy, że $m(y)=m(z) \land y \ne z$. Wobec powyższego sprzeczność. Za
 \begin{equation*}
 \forall_{y,z \in A} y=z \iff m(y)=m(z).
 \end{equation*}
-\end{dow}
+\end{proof}
 \begin{tw}
-W skali nominalnej nie ma porządku.
+W $A$ z przykładu 1 nie ma porządku.
 \end{tw}
-\begin{dow}
+\begin{proof}
 Przypuśćmy, że $\le$ jest porządkiem w $A$. Wtedy
 \begin{equation*}
-\forall_{m\in M} y \le z \implies m(y) \le m(z).
+\forall_{m\in M} \quad y \le z \implies m(y) \le m(z).
 \end{equation*}
-Pokażemy sprzeczność. $y\le z \impies \overline{m}(y)\le \overline{m}(z)$ oraz $y\ne z$. Rozważmy $\phi :a \to a$ $\forall_{v \in a} \phi(v) = \sigma -v$. Zauważmy, że $\phi$ jest funkcją liniową która nie jest stała, zatem jest różnowartościowa. Wtedy $y \le z \implies \overline{m}(y) \le \overline{m}(z)$. Skoro $\forall_{m \in M} y\le z \implies m(y) \le m(z)$ to 
+Pokażemy sprzeczność. $y\le z \implies \overline{m}(y)\le \overline{m}(z)$ oraz $y\ne z$. Rozważmy $\phi :a \to a$ $\forall_{v \in a} \phi(v) = \sigma -v$. Zauważmy, że $\phi$ jest funkcją liniową która nie jest stała, zatem jest różnowartościowa. Wtedy $y \le z \implies \overline{m}(y) \le \overline{m}(z)$. Skoro $\forall_{m \in M} y\le z \implies m(y) \le m(z)$ to 
 \begin{equation*}
 \phi \circ \overline{m}(y) \le \phi \circ \overline{m}(z) \iff \sigma -\overline{m}(y) \le \sigma - \overline{m}(z)\iff -\overline{m}(y) \le -\overline{m}(z) \iff \overline{m}(y) \ge \overline{m}(z)
 \end{equation*}
@@ -315,8 +334,28 @@ Pokażemy sprzeczność. $y\le z \impies \overline{m}(y)\le \overline{m}(z)$ ora
 \end{equation*}
 zatem $y=z$ co jest sprzeczne z założeniem.
 
-\end{dow}
-
+\end{proof}
+\begin{tw}
+W $A$ z przykładu 3 nie można określić ile razy ktoś jest starszy, czyli nie można wykonać operacji mnożenia.
+\end{tw}
+\begin{proof}
+Niech $y \in A$, niech $x$ oznacza wiek a $z$ obecny rok.
+\begin{equation*}
+x=z-y
+\end{equation*}
+Przypuśćmy, że 
+\begin{equation*}
+\forall_{m \in M} \forall_{n \in N}\quad ny=nx \implies nm(y)=nm(x)
+\end{equation*}
+Pokażemy sprzeczność. Zauważmy, że $ny=n(z-y)$ $\implies$ $nm(y)=n(m(z)-m(y))$ oraz $z \ne y$, $z>y$ zatem
+\begin{equation*}
+nm(y)=nm(z)-nm(y) \iff 2nm(y)=nm(z) \iff 2m(y)=m(z)
+\end{equation*}
+Weźmy $y=2000$ oraz $z=2019$ wstawiając do powyższego mamy 4000=2019. Sprzeczność zatem
+\begin{equation*}
+\forall_{m \in M} \forall_{n \in N}\quad ny\ne nx \implies nm(y)\ne nm(x)
+\end{equation*}
+\end{proof}
 
 
 
