@@ -8,9 +8,12 @@
 \usepackage{amsthm}
 \usepackage{natbib} %bibtex
 
-\newtheorem{definition}{Definicja}
+\newtheorem{definition}{Definicja}[chapter]
 \newtheorem{przyklad}{Przykład}
-\newtheorem{tw}{Twierdzenie}
+
+\newtheorem{tw}[definition]{Twierdzenie}
+\newtheorem{remark}[definition]{Uwaga}
+%\newtheorem{dow}{Dowód}
 \author{Maria Soja}
 \title{Praca licencjacka}
 
@@ -201,7 +204,7 @@ Grupą przemienną (abelową) nazywamy taką grupę, w której działanie jest p
 %\end{definition}
 
 
-\chapter{Teoria}
+\chapter{Teoria Pomiaru Statystycznego Stevensa}
 
 Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skorelowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Jakąkolwiek funkcję tego rodzaju nazywamy \textit{numerical assignement}. Choć w języku polskim nie jest dostępne utarte tłumaczenie tego pojęcia rozumiemy je jako formę przypisania liczby do danego obiektu. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek. Jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasę przypisań liczbowych. Drugim podstawowym pojęciem jest dopuszczalne przekształcenie czyli funkcja odwzorowującą wartości jednego numerycznego przypisania danej klasy na wartości innego przypisania numerycznego. Te dwa pojęcia składają się na numerical assignment system. Zdefiniujmy formalnie czym jest numerical assignment system.
 \begin{definition}[Numerical assignment system (NAS)]
@@ -223,7 +226,16 @@ $$
 \end{enumerate}
 
 \end{definition}
-Warunek 2. powyższej definicji jest po prostu wymogiem na to aby każde dopuszczalne przekształcenie  przenosiło dowolne numeryczne przypisanie do innego numerycznego przypisania tego samego systemu. Warunek 3. nie jest konieczny, ale może być wymuszony, ponieważ tożsamościowe transformacje zawsze związane są z numerycznym przypisaniem na numeryczne przypisanie, jeżeli dwie transformacje maja tę samą właściwość to muszą tez mieć ich składniki. Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i dopuszczalnych przekształceń nie są zakładane  powyższej definicji. Po pierwsze, nie zakładaliśmy, że dopuszczalne przekształcenia stanowią grupę, która wymaga dodatkowych, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Nie zakładaliśmy ze numeryczne przypisania z $M$ odwzorowują $A$ na $a$ to znaczy, że pomiary nie przyjmują wszystkich  możliwych wartości liczbowych. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności Warunku 2. w definicji, to znaczy, że każde numeryczne przypisanie na ten system może być przeniesione na inny za pomocą dopuszczalnego przekształcenia. Omawiając podstawowe systemy pomiarów powinniśmy pokazać dlaczego nie zakładamy mocniejszych założeń. Dotyczy to empirycznej podstawy pojęć numerycznego przypisania odpowiadającego rodzajowi pomiaru i jego klasie dopuszczalnych przekształceń. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń ale lepiej uzasadnionych. Zasadniczy powód mocniejszych założeń wydaje się być prostota matematyczna. Łatwo zauważyć, że jeżeli te założenia nie są spełnione 
+
+\begin{remark}[O warunku 2]
+Warunek 2. powyższej definicji jest po prostu wymogiem na to aby każde dopuszczalne przekształcenie  przenosiło dowolne numeryczne przypisanie do innego numerycznego przypisania tego samego systemu.
+\end{remark}
+
+\begin{remark}[O warunku 3]
+Warunek 3. nie jest kluczowy, ale może być wymuszany, ponieważ tożsamościowe transformacje zdecydowanie przypisują numeryczne przypisanie do numerycznego przypisanie. Poza tym musimy pamiętać, że złożenie dwóch transformacji musi zawsze dawać poprawną transformację.
+\end{remark}
+
+  Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i dopuszczalnych przekształceń nie są zakładane  powyższej definicji. Po pierwsze, nie zakładaliśmy, że dopuszczalne przekształcenia stanowią grupę, która wymaga dodatkowych, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Nie zakładaliśmy ze numeryczne przypisania z $M$ odwzorowują $A$ na $a$ to znaczy, że pomiary nie przyjmują wszystkich  możliwych wartości liczbowych. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności Warunku 2. w definicji, to znaczy, że każde numeryczne przypisanie na ten system może być przeniesione na inny za pomocą dopuszczalnego przekształcenia. Omawiając podstawowe systemy pomiarów powinniśmy pokazać dlaczego nie zakładamy mocniejszych założeń. Dotyczy to empirycznej podstawy pojęć numerycznego przypisania odpowiadającego rodzajowi pomiaru i jego klasie dopuszczalnych przekształceń. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń ale lepiej uzasadnionych. Zasadniczy powód mocniejszych założeń wydaje się być prostota matematyczna. Łatwo zauważyć, że jeżeli te założenia nie są spełnione 
 wówczas nie następują pewne wyniki dotyczące warunków dla niezmienności w ramach przekształceń odpowiadających danym typom skal. Wskazane jest zatem sformułowanie zestawu minimalnych dodatkowych założeń, które są wystarczające oby otrzymać pożądane konsekwencje, ale które mogą być uzasadnione dla wielu różnych rzeczywistych pomiarów w nauce.
 \begin{definition}
 Numerical assignment system $U=\tuple{A, M, a, \Phi}$ jest regularny wtedy i tylko wtedy gdy spełnione są poniższe warunki:
