@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper]{report}
 \linespread{1.5}
+\usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
 \usepackage{amsmath}
@@ -13,9 +14,9 @@
 
 \newtheorem{tw}[definition]{Twierdzenie}
 \newtheorem{remark}[definition]{Uwaga}
-%\newtheorem{dow}{Dowód}
+
 \author{Maria Soja}
-\title{Praca licencjacka}
+\title{Teoria Stevensa pomiaru statystycznego}
 
 \newcommand{\parauporzadkowana}[2]{\left\langle {#1}; {#2} \right\rangle}
 \newcommand{\zbior}[1]{\left\lbrace {#1} \right\rbrace }
@@ -23,12 +24,67 @@
 \newcommand{\tuple}[1]{\left\langle {#1} \right\rangle}
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\begin{flushleft}
+\end{flushleft}
+\begin{center}
+\textsc{{\huge Politechnika Łódzka}}
+\end{center}
+\bigskip
+\bigskip
+\begin{center}
+\textsc{{\Large Wydział Fizyki Technicznej, Informatyki i~Matematyki Stosowanej}}
+\end{center}
+\bigskip
+\bigskip
+\begin{Large}
+Kierunek: Matematyka 
+\\Specjalność: Matematyczne metody analizy danych biznesowych
+
+\end{Large}
+\bigskip
+\bigskip
+\noindent\hrulefill
+\begin{center}
+{\textbf{{\Large Teoria Stevensa pomiaru statystycznego.}}}
+\end{center}
+\begin{flushright}
+{\large 
+Maria Soja
+
+Nr albumu: 
+210088
+}
+\end{flushright}
+\noindent\hrulefill
+\bigskip
+\bigskip
+\begin{center}
+{\large Praca licencjacka
+napisana w~Instytucie Matematyki 
+\\Politechniki Łódzkiej 
+\bigskip
+\bigskip
+\\Promotor: dr, mgr inż. Piotr Kowalski
+ }
+\end{center}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\begin{center}
+{\textsc{\large Łódź, wrzesień 2019}}
+\end{center}
+\end{titlepage}
+
+
 \tableofcontents
 
 \chapter{Wstep}
 
 \chapter{Preliminaria}
+
+\section{Oznaczenia używane w pracy}
 
 \section{Elementy teorii mnogości}
 W naszej pracy rozważane będą zagadnienia wymagające doprecyzowania wielu pojęć z zakresu dziedzin matematyki takich jak statystyka czy algebra. 
@@ -36,7 +92,7 @@ W naszej pracy rozważane będą zagadnienia wymagające doprecyzowania wielu po
 
 Zdefiniujmy parę uporządkowaną. Warto powiedzieć, że w wielu pracach definicje tam użyte są matematycznie niepoprawne.
 
-\begin{definition}[\citep{kuratowski1966wstkep}]
+\begin{definition}[{\citep[Sec 3.3]{kuratowski1966wstkep}}]
 Parą uporządkowana składającą się z poprzednika $a$ oraz następnika $b$ nazwiemy zbiór składający się z elementów poniżej opisanych i oznaczany:
 \begin{equation*}
 \parauporzadkowana{a}{b}=\zbior{\zbior{a}, \zbior{a,b}}.
@@ -44,7 +100,7 @@ Parą uporządkowana składającą się z poprzednika $a$ oraz następnika $b$ n
 
 \end{definition}
 
-\begin{definition}[Iloczyn kartezjański\citep{kuratowski1966wstkep}]
+\begin{definition}[Iloczyn kartezjański{\citep[Sec 3.4]{kuratowski1966wstkep}}]
 Iloczynem kartezjańskim zbiorów $X$ i $Y$ nazywamy zbiór wszystkich par uporządkowanych $\parauporzadkowana{x}{y}$, gdzie $x \in X$ i $y \in Y$. Zbiór ten oznaczamy przez $ X \times Y$; zatem
 \begin{equation*}
 X \times Y= \zbior{\parauporzadkowana{x}{y}:  x\in X  , y \in Y}.
@@ -52,7 +108,7 @@ X \times Y= \zbior{\parauporzadkowana{x}{y}:  x\in X  , y \in Y}.
 
 \end{definition}
 
-\begin{definition}[\citep{kraszewski2007wstkep}]
+\begin{definition}[{\citep[Sec 6.1]{kraszewski2007wstkep}}]
 Dane są dwa zbiory $X$ i $Y$. Relacją $\mathcal{R}$ (dwuargumentową) między elementami zbioru $X$, a elementami zbioru $Y$ nazywamy dowolny podzbiór iloczynu kartezjańskiego $X \times Y$.
 \end{definition}
 Chcąc zapisać, że pewien element $x$ jest w relacji $\mathcal{R}$ z pewnym elementem $y$ piszemy
@@ -62,21 +118,21 @@ $$
 
 Najpowszechniej stosowaną relacją jest funkcja.
 
-\begin{definition}[Funkcja\citep{kuratowski1966wstkep}]
+\begin{definition}[Funkcja{\citep[Sec 4.1]{kuratowski1966wstkep}}]
 Niech dane bedą dwa zbiory $X$ i $Y$. Przez funkcję, której argumenty przebiegają zbiór $X$, wartości zaś należą do zbioru $Y$, rozumiemy każdy podzbiór $f$ iloczynu kartezjańskiego $X \times Y$ o tej własności, że dla każdego $x \in X$ istnieje jeden i tylko jeden $y$ taki, że $\parauporzadkowana{x}{y} \in f$. 
 
 \end{definition}
 
 Równoważnie zapisujemy, że $f(x)=y$
 
-\begin{definition}[Superpozycja funkcji\citep{kuratowski1966wstkep}]
+\begin{definition}[Superpozycja funkcji{\citep[Sec 4.2]{kuratowski1966wstkep}}]
 Niech dane będą trzy zbiory $X$, $Y$ i $Z$ oraz dwie funkcje $f:X\to Y$, oraz $g:Y\to Z$. Funkcje te wyznaczają trzecia funkcję złożoną $h:X\to Z$ (nazywaną superpozycją funkcji $f$ i $g$) określoną przez warunek
 \begin{equation*}
 \forall_{x \in X} \quad h(x)=g(f(x)).
 \end{equation*}
 \end{definition}
 
-\begin{definition}[\citep{kraszewski2007wstkep}]
+\begin{definition}[{\citep[Sec 5.2]{kraszewski2007wstkep}}]
 Niech $f:X \to Y$.
 \begin{enumerate}
 \item
@@ -96,12 +152,12 @@ Jeśli funkcja $f$ jest różnowartościowa i na, nazywamy ją wzajemnie jednozn
 \end{enumerate}
 \end{definition}
 
-\begin{definition}[\citep{kraszewski2007wstkep}]
+\begin{definition}[{\citep[Sec 6.1]{kraszewski2007wstkep}}]
 Dany jest zbiór $X$. Jeśli $\mathcal{R}$ jest relacją między elementami zbioru $X$ a elementami zbioru $X$ (czyli $\mathcal{R}\subseteq X \times X$), to mówimy, że $\mathcal{R}$ jest relacją na zbiorze $X$ (można też mówić o relacji w zbiorze $X$).
 \end{definition}
 
 
-\begin{definition}[\citep{kraszewski2007wstkep}]
+\begin{definition}[{\citep[Sec 6.2]{kraszewski2007wstkep}}]
 Niech $\mathcal{R}$ będzie relacją na niepustym zbiorze $X$. Mówimy, że:
 \begin{enumerate}
 \item
@@ -125,19 +181,19 @@ $\mathcal{R}$ jest spójna $\iff$ $(\forall_{x,y\in X})(x\mathcal{R}y \lor y\mat
 
 Bazowym pojęciem algebry jest pojęcie działania.
 
-\begin{definition}[Działanie]
+\begin{definition}[Działanie{\citep[Sec 4.1]{jedrzejewski2011algebra}}]
 Niech $X$ będzie dowolnym niepustym zbiorem. Powiemy, że $\circ$ jest działaniem w zbiorze $X$ jeśli $\circ: X \times X \to X$.
 \end{definition}
 
 
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.1]{jedrzejewski2011algebra}}]
 Działanie $\circ$ w zbiorze $X$ nazywamy działaniem łącznym, jeśli spełniony jest warunek 
 \begin{equation*}
 (a\circ b)\circ c = a\circ(b\circ c)
 \end{equation*} 
 dla każdych elementów $a,b,c$ ze zbioru $X$.
 \end{definition}
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.1]{jedrzejewski2011algebra}}]
 Działanie $\circ$ w zbiorze $X$ nazywamy działaniem przemiennym, jeśli spełnia ono warunek
 \begin{equation*}
 a\circ b=b\circ a
@@ -145,21 +201,21 @@ a\circ b=b\circ a
 dla każdych elementów $a,b$ ze zbioru $X$.
 \end{definition}
 Przykładem działania jest dodawanie liczb naturalnych w zbiorze $N$.
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.1]{jedrzejewski2011algebra}}]
 Element $e$, należący do zbioru $X$, nazywamy elementem prawostronnie neutralnym działania $\circ$ w zbiorze $X$, jeśli
 \begin{equation*}
 x\circ e = x
 \end{equation*} 
 dla każdego elementu $x$ ze zbioru $X$.
 \end{definition}
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.1]{jedrzejewski2011algebra}}]
 Element $e$, należący do zbioru $X$, nazywamy elementem lewostronnie neutralnym działania $\circ$ w zbiorze $X$, jeśli
 \begin{equation*}
 e\circ x = x
 \end{equation*} 
 dla każdego elementu $x$ ze zbioru $X$.
 \end{definition}
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.1]{jedrzejewski2011algebra}}]
 Element $e$ nazywamy elementem neutralnym w zbiorze $X$, jeśli jest on lewostronnie i prawostronnie neutralny, czyli
 \begin{equation*}
 e\circ x = x\circ e = x
@@ -168,23 +224,23 @@ dla każdego elementu $x$ ze zbioru $X$.
 \end{definition}
 Na przykład elementem neutralnym dodawania jest 0 natomiast elementem neutralnym mnożenia jest 1.
 
-\begin{definition}[Struktury algebraicznej \citep{jedrzejewski2011algebra}]
+\begin{definition}[Struktury algebraicznej{ \citep[Sec 4.1]{jedrzejewski2011algebra}}]
 Strukturę algebraiczną (systemem algebraicznym, czasem algebrą) nazywamy niepusty zbiór wraz z pewną liczbą działań wewnętrznych i pewną liczbą działań zewnętrznych w tym zbiorze.
 \end{definition}
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.2]{jedrzejewski2011algebra}}]
 Strukturę algebraiczną, złożoną z niepustego zbioru $P$ i jednego działania łącznego, nazywamy półgrupą.
 \end{definition}
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.2]{jedrzejewski2011algebra}}]
 Półgrupę, w której istnieje element neutralny, nazywamy półgrupą z jedynką lub monoidem. Półgrupę ,w której działanie jest przemienne, nazywamy półgrupę przemienną lub półgrupę abelową. 
 \end{definition}
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.2]{jedrzejewski2011algebra}}]
 Element $a$ w półgrupię $(P,\circ)$ z jedynką $e$ nazywamy elementem odwracalnym, jeśli istnieje element $a'$ w zbiorze $P$ taki, że
 \begin{equation*}
 a'\circ a=a\circ a'=e
 \end{equation*}
 Element $a'$ nazywamy wtedy elementem odwrotnym do elementu $a$.
 \end{definition}
-\begin{definition}[Grupy \citep{jedrzejewski2011algebra}]
+\begin{definition}[Grupy {\citep[Sec 4.3]{jedrzejewski2011algebra}}]
 Strukturę algebraiczną ($\mathcal{G},\circ$) nazywamy grupą, jeśli spełnione są następujące warunki:
 \begin{equation*}
 \forall_{a\in \mathcal{G}} \forall_{b\in \mathcal{G}} \forall_{c\in \mathcal{G}} ((a\circ b)\circ c=a\circ (b\circ c)),
@@ -196,12 +252,10 @@ Strukturę algebraiczną ($\mathcal{G},\circ$) nazywamy grupą, jeśli spełnion
 \forall_{a \in \mathcal{G}} \exists_{\overline{a}\in\mathcal{G}}(\overline{a}\circ a=e=a\circ\overline{a}).
 \end{equation*}
 \end{definition}
-\begin{definition}[\citep{jedrzejewski2011algebra}]
+\begin{definition}[{\citep[Sec 4.3]{jedrzejewski2011algebra}}]
 Grupą przemienną (abelową) nazywamy taką grupę, w której działanie jest przemienne.
 \end{definition}
-%\begin{definition}[Funkcja kardynalna\citep{engelking1989topologia}]
-%Funkcja kardynalna nazywamy ...
-%\end{definition}
+
 
 
 \chapter{Teoria Pomiaru Statystycznego Stevensa}
