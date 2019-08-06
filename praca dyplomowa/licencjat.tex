@@ -292,7 +292,7 @@ Warunek 2. powyższej definicji jest po prostu wymogiem na to aby każde dopuszc
 Warunek 3. nie jest kluczowy, ale może być wymuszany, ponieważ tożsamościowe transformacje zdecydowanie przypisują numeryczne przypisanie do numerycznego przypisanie. Poza tym musimy pamiętać, że złożenie dwóch transformacji musi zawsze dawać poprawną transformację.
 \end{remark}
 
-  Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i dopuszczalnych przekształceń nie są zakładane  powyższej definicji. Po pierwsze, nie zakładaliśmy, że dopuszczalne przekształcenia stanowią grupę, która wymaga dodatkowych, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Nie zakładaliśmy ze numeryczne przypisania z $M$ odwzorowują $A$ na $a$ to znaczy, że pomiary nie przyjmują wszystkich  możliwych wartości liczbowych. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności Warunku 2. w definicji, to znaczy, że każde numeryczne przypisanie na ten system może być przeniesione na inny za pomocą dopuszczalnego przekształcenia. Omawiając podstawowe systemy pomiarów powinniśmy pokazać dlaczego nie zakładamy mocniejszych założeń. Dotyczy to empirycznej podstawy pojęć numerycznego przypisania odpowiadającego rodzajowi pomiaru i jego klasie dopuszczalnych przekształceń. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń ale lepiej uzasadnionych. Zasadniczy powód mocniejszych założeń wydaje się być prostota matematyczna. Łatwo zauważyć, że jeżeli te założenia nie są spełnione 
+  Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i dopuszczalnych przekształceń nie są zakładane  powyższej definicji. Po pierwsze, nie zakładaliśmy, że dopuszczalne przekształcenia stanowią grupę, która wymaga dodatkowych założeń, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Nie zakładaliśmy ze numeryczne przypisania z $M$ odwzorowują $A$ na $a$ to znaczy, że pomiary nie przyjmują wszystkich  możliwych wartości liczbowych. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności warunku 2. w definicji, to znaczy, że każde numeryczne przypisanie na ten system może być przeniesione na inny za pomocą dopuszczalnego przekształcenia. Omawiając podstawowe systemy pomiarów powinniśmy pokazać dlaczego nie zakładamy mocniejszych założeń. Dotyczy to empirycznej podstawy pojęć numerycznego przypisania odpowiadającego rodzajowi pomiaru i jego klasie dopuszczalnych przekształceń. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń ale lepiej uzasadnionych. Zasadniczy powód mocniejszych założeń wydaje się być prostota matematyczna. Łatwo zauważyć, że jeżeli te założenia nie są spełnione 
 wówczas nie następują pewne wyniki dotyczące warunków dla niezmienności w ramach przekształceń odpowiadających danym typom skal. Wskazane jest zatem sformułowanie zestawu minimalnych dodatkowych założeń, które są wystarczające oby otrzymać pożądane konsekwencje, ale które mogą być uzasadnione dla wielu różnych rzeczywistych pomiarów w nauce.
 \begin{definition}
 Numerical assignment system $U=\tuple{A, M, a, \Phi}$ jest regularny wtedy i tylko wtedy gdy spełnione są poniższe warunki:
@@ -340,7 +340,7 @@ $$
 Dniom tygodnia przypiszemy liczby $a=\zbior{0,1,2,3,4,5,6,7,8,9,10}$
 \end{przyklad}
 
-Bardzo trudno jest jawnie podać postać rodziny $M$ najczęściej odbywa się to w ten sposób, że zakłada się że pewne konkretne przekształcenie należy do tej rodziny $M$ a inne przekształcenia uzyskuje się przez jego superpozycje z różnymi funkcjami z $\Phi$ 
+Bardzo trudno jest jawnie podać postać rodziny $M$ najczęściej odbywa się to w ten sposób, że zakłada się pewne konkretne przekształcenie należy do tej rodziny $M$ a inne przekształcenia uzyskuje się przez jego superpozycje z różnymi funkcjami z $\Phi$ 
 
 \begin{definition}[Przekształcenia generujące rodzinę $M$]
 Niech $k \in N$ rozważmy 
@@ -351,17 +351,17 @@ zdefiniujmy rekurencyjną formułę
 $$
 M_{k+1} = M_{k} \cup \zbior{m; m:A \to a , \exists_{\overline{m} \in M_{k}} \exists_{\phi \in \Phi} \quad m= \phi \circ \overline{m}}
 $$ 
-wtedy $M= \bigcup^{\infty}_{n=0}M_{n}$ nazywamy rodzinę przypisań wygenerowana przez $m_{1},\dots, m_{k}$ oraz rodzinę $\Phi$.
+wtedy $M= \bigcup^{\infty}_{n=0}M_{n}$ nazywamy rodziną przypisań wygenerowana przez $m_{1},\dots, m_{k}$ oraz rodzinę $\Phi$.
 \end{definition}
 
 \begin{tw}
 Dla zbioru $A$ z Przykładu 1, rozważmy
- %\begin{equation*}
-%\begin{split}
-%m_{0} & =\zbior{\parauporzadkowana{\textrm{Poniedziałek}}{0},\parauporzadkowana{\textrm{Wtorek}}{1},\parauporzadkowana{\textrm{Środa}}{2},\parauporzadkowana{\textrm{Czwartek}}{3},\parauporzadkowana{\textrm{Piątek}}{4},\\
-%& \parauporzadkowana{\textrm{Sobota}}{5},\parauporzadkowana{\textrm{Niedziela}}{6}} \left. \rigth\rbrace
-%\end{split}
-%\end{equation*}
+ \begin{equation*}
+\begin{split}
+m_{0} & =\zbior{\parauporzadkowana{\textrm{Poniedziałek}}{0},\parauporzadkowana{\textrm{Wtorek}}{1},\parauporzadkowana{\textrm{Środa}}{2},\parauporzadkowana{\textrm{Czwartek}}{3},\parauporzadkowana{\textrm{Piątek}}{4},\\
+& \parauporzadkowana{\textrm{Sobota}}{5},\parauporzadkowana{\textrm{Niedziela}}{6}} \left. \rigth\rbrace
+\end{split}
+\end{equation*}
 
 i niech $M$ będzie zbiorem generowanym przez $m_{0}$ oraz rodzinę $\Phi \colon A \to a$ oraz $\Phi$ jest klasą funkcji różnowartościowych przekształcających $a$ w siebie wtedy taki układ $U$ jest skalą nominalną oraz zachodzi poniższa równoważność
  $$
@@ -389,12 +389,12 @@ Przypuśćmy, że $m(y)=m(z) \land y \ne z$. Wobec powyższego sprzeczność. Za
 
 \begin{tw}
 Dla zbioru $A$ z Przykładu 1, rozważmy
- %\begin{equation*}
-%\begin{split}
-% m_{0} & =\zbior{\parauporzadkowana{\textrm{Poniedziałek}}{0},\parauporzadkowana{\textrm{Wtorek}}{1},\parauporzadkowana{\textrm{Środa}}{2},\parauporzadkowana{\textrm{Czwartek}}{3},\parauporzadkowana{\textrm{Piątek}}{4}, \\
-%&  \parauporzadkowana{\textrm{Sobota}}{5},\parauporzadkowana{\textrm{Niedziela}}{6}} 
-%\end{split}
-%\end{equation*}
+ \begin{equation*}
+\begin{split}
+ m_{0} & =\zbior{\parauporzadkowana{\textrm{Poniedziałek}}{0},\parauporzadkowana{\textrm{Wtorek}}{1},\parauporzadkowana{\textrm{Środa}}{2},\parauporzadkowana{\textrm{Czwartek}}{3},\parauporzadkowana{\textrm{Piątek}}{4}, \\
+&  \parauporzadkowana{\textrm{Sobota}}{5},\parauporzadkowana{\textrm{Niedziela}}{6}} 
+\end{split}
+\end{equation*}
  
  i niech  $M$ będzie zbiorem generowanym przez $m_{0}$ oraz rodzinę $\Phi \colon A \to a$ oraz $\Phi$ jest klasą funkcji różnowartościowych przekształcających $a$ w siebie wtedy taki układ $U$ jest skalą nominalną, ale porządki zdefiniowane przez przypisania z rodziny $M$ nie tworzą porządku w zbiorze $A$.
 \end{tw}
@@ -491,13 +491,16 @@ W skali ilorazowej możliwe jest dokonywanie wszystkich operacji matematycznych.
 
 
 \section{Operacje statystyczne}
-Poprzednie definicje dostarczają niezbędnych podstaw do precyzyjnych definicji różnych rodzajów niezmienności operacji statystycznych lub obliczeń stosowanych do pomiarów. Sformułujemy jeszcze jedną wstępną koncepcje to znaczy operacje statystyczną  (bardziej ogólnie, operację matematyczną) pomiarów. Liczba różnych rodzajów działań matematycznych  do których stosuje się pojęcie niezmienności jest dość duża i należałoby sformułować bardzo ogólną definicje działań matematycznych która by uwzględniała wszystkie poszczególne przypadki jednakże byłaby zbyt rozbudowana. Skupmy się na specjalnej klasie działań matematycznych i statystycznych, w których wynik jest obliczany ze skończonej liczby pomiarów (wielkość nie musi być ustalona) w pewien jednakowy sposób. Zawiera to w szczególnych przypadkach obliczenie średniej, mediany, odchylenia standardowego ze skończonej próbki, a także bardziej elementarne działania matematyczne takie jak na przykład dodawanie i odejmowanie. Nie zawiera działań stosowanych do nieskończonych populacji. Wszystkie standardowe operacje statystyczne mogą być przedstawione jako specjalne przypadki uogólnionej funkcji rzeczywistej. W celu zdefiniowania tego pojęcia powinniśmy wprowadzić następujące pojęcia pomocnicze. Jeżeli $A$ jest dowolnym zbiorem to $\domkniecie{A}$ jest jego domknięciem stworzonym ze skończonych ciągów, mianowicie $\domkniecie{A}$ składa się z $A$, wraz ze skończonymi ciągami z $A$ i skończonymi ciągami tych elementów i tak dalej. Jeżeli $m$ jest dowolną funkcją której dziedziną jest $A$, to można ją rozszerzyć na funkcję nad $\domkniecie{A}$ w następujący sposób:
+Poprzednie definicje dostarczają niezbędnych podstaw do precyzyjnych definicji różnych rodzajów niezmienności operacji statystycznych lub obliczeń stosowanych do pomiarów. Sformułujemy jeszcze jedną wstępną koncepcje to znaczy operacje statystyczną  (bardziej ogólnie, operację matematyczną) pomiarów. Liczba różnych rodzajów działań matematycznych  do których stosuje się pojęcie niezmienności jest dość duża i należałoby sformułować bardzo ogólną definicje działań matematycznych która by uwzględniała wszystkie poszczególne przypadki jednakże byłaby zbyt rozbudowana. Skupmy się na specjalnej klasie działań matematycznych i statystycznych, w których wynik jest obliczany ze skończonej liczby pomiarów (wielkość nie musi być ustalona) w pewien jednakowy sposób. Zawiera to w szczególnych przypadkach obliczenie średniej, mediany, odchylenia standardowego ze skończonej próbki, a także bardziej elementarne działania matematyczne takie jak na przykład dodawanie i odejmowanie. Nie zawiera działań stosowanych do nieskończonych populacji. Wszystkie standardowe operacje statystyczne mogą być przedstawione jako specjalne przypadki uogólnionej funkcji rzeczywistej. W celu zdefiniowania tego pojęcia powinniśmy wprowadzić następujące pojęcia pomocnicze. 
+\begin{definition}
+Jeżeli $A$ jest dowolnym zbiorem to $\domkniecie{A}$ jest jego domknięciem stworzonym ze skończonych ciągów, mianowicie $\domkniecie{A}$ składa się z $A$, wraz ze skończonymi ciągami z $A$ i skończonymi ciągami tych elementów i tak dalej. Jeżeli $m$ jest dowolną funkcją której dziedziną jest $A$, to można ją rozszerzyć na funkcję nad $\domkniecie{A}$ w następujący sposób:
 \begin{enumerate}
 \item
 Dla wszystkich $x$ z $A$, $m(x)$ jest zdefiniowana jak wcześniej.
 \item
 Dla dowolnego ciągu $x_{1},\dots,x_{n}$ z elementów z $\domkniecie{A}$, $m( x_{1},\dots,x_{n})$ jest zdefiniowane jako ciąg $m(x_{1}),\dots,m(x_{n})$
 \end{enumerate} 
+\end{definition}
 Więc jeżeli $\textbf{x}$ jest dowolnym ciągiem, $m(\textbf{x})$ jest po prostu odpowiadającym ciągiem wartości. Używając tego pojęcia możemy zdefiniować uogólnioną funkcję rzeczywistą której dziedzina jest podzbiorem $\domkniecie{Re}$, gdzie $Re$ jest zbiorem wszystkich liczb rzeczywistych. Większość konkretnych funkcji funkcji, które chcemy uwzględnić mają zdecydowanie bardziej ograniczone dziedziny, ale pożądane jest rozważenie wszystkich funkcji tej klasy razem. Przykładem takiej funkcji jest wzięcie średniej  liczb dowolnego takiego ciągu. Funkcja której dziedziną są wszystkie uporządkowane pary liczb rzeczywistych jest binarne działanie dodawania. Działanie które znajduje różnicę dwóch średnich może być rozumiane jako działanie posiadające dziedzinę składającą się klasy wszystkich uporządkowanych par skończonego ciągu liczb rzeczywistych. Uogólnione działanie na pomiarach jest intuicyjnie wynikiem zastosowania uogólnionej funkcji rzeczywistej  do liczb przypisanych przez liczbowe przypisanie. Zatem uogólnione operacje na pomiarach są generowane przez odpowiednie uogólnione funkcje rzeczywiste. Formalne definicje tych dwóch pojęć są następujące.
 \begin{definition}
 Uogólniona funkcja rzeczywista jest to dowolna funkcja której dziedziną jest podzbiór $\domkniecie{Re}$, gdzie $Re$ jest zbiorem liczb rzeczywistych.
@@ -529,38 +532,30 @@ $F$ jest bezwzględnie niezmienna względem $U$ wtedy i tylko wtedy, gdy dla ka�
 F(m_{1};\textbf{x})=F(m_{2};\textbf{x}).
 \end{equation*}
 \item
-$F$ jest niezmiennym odniesieniem względem $U$ wtedy i tylko wtedy, gdy dla każdego $m_{1}, m_{2} \in M$ z ,$x \in A$ $\textbf{x} \in \domkniecie{A}$ takich, że $m_{1}(\textbf{x})$ oraz $m_{2}(\textbf{x})$ nalezą do $\mathcal{D}$,
+$F$ jest referencyjnie niezmienna względem $U$ wtedy i tylko wtedy, gdy dla każdego $m_{1}, m_{2} \in M$ z ,$x \in A$ $\textbf{x} \in \domkniecie{A}$ takich, że $m_{1}(\textbf{x})$ oraz $m_{2}(\textbf{x})$ nalezą do $\mathcal{D}$,
 \begin{equation*}
-m_{1}(\textbf{x})=F(m_{1};\textbf{x})
-\end{equation*}
- wtedy i tylko wtedy, gdy
-\begin{equation*}
-m_{2}(\textbf{x})=F(m_{2};\textbf{x})
+m_{1}(\textbf{x})=F(m_{1};\textbf{x}) \iff m_{2}(\textbf{x})=F(m_{2};\textbf{x})
 \end{equation*}
 \item
 $F$ jest porównawczo niezmienna względem $U$ wtedy i tylko wtedy, gdy dla każdego ${m_{1}, m_{2} \in M$ i $\textbf{x}$,$\textbf{y} \in \domkniecie{A}$ takich, że $m_{1}(\textbf{x}), m_{2}(\textbf{x}), m_{1}(\textbf{y})$ oraz $m_{2}(\textbf{y})$ nalezą do $\mathcal{D}$,
 \begin{equation*}
-F(m_{1};\textbf{x})=F(m_{1};\textbf{y})
-\end{equation*}
-wtedy i tylko wtedy, gdy
-\begin{equation*}
-F(m_{2};\textbf{x})=F(m_{2};\textbf{y}).
+F(m_{1};\textbf{x})=F(m_{1};\textbf{y}) \iff F(m_{2};\textbf{x})=F(m_{2};\textbf{y}).
 \end{equation*}
 \end{enumerate} 
 \end{definition}
 
 Przyjęliśmy podejście definiowania rodzajów niezmienności jako niezmienności według wszystkich przypisań numerycznych z danego NAS a nie podejście Stevensa, które wymaga niezmienności według wszystkich transformacji dopuszczalnych przez NAS. Jeśli ograniczymy uwagę do regularnego NAS, każdy typ niezmienności może być zdefiniowany równoważnie pod względem klasy numerycznego przypisania lub klasy dopuszczalnych transformacji. Ponieważ rozważamy ogólniejszą klasę NAS, alternatywa wymagająca niezmienności według wszystkich numerycznych przypisań wydaje się być bardziej fundamentalna. Niektóre komentarze do tych definicji są zgodne. Zauważmy, że zgodnie z tymi definicjami, odchylenie standardowe nie jest ani bezwzględnie niezmienne, ani niezmienne w stosunku do skal interwałowych, pomimo faktu, że Stevens wymienia je jako odpowiednią statystkę dla takich skal.
 
-Niezmiennym odniesieniem w stosunku do skal interwałowych są funkcje
+Referencyjnie niezmienne w stosunku do skal interwałowych są funkcje
 \begin{equation*}
 Mean(m;\textbf{x})+kSD(m;\textbf{x}),
 \end{equation*}
-gdzie $k\in \mathbb{R}$. Co więcej te niezmienne funkcje odniesienia mogą być użyte do zdefiniowania funkcji
+gdzie $k\in \mathbb{R}$. Co więcej te referencyjne niezmienne funkcje mogą być użyte do zdefiniowania funkcji
 \begin{equation*}
 F(m;x, \textbf{x})=\zbior{k;m(x) = Mean(m;\textbf{x})+kSD(m;\textbf{x}},
 \end{equation*}
-która jest bezwzględnie niezmienna w stosunku do skal interwałowych. Zauważmy, że ta funkcja daje standardowy wynik, tj. liczbę odchyleń standardowych, których obiekt x stoi powyżej lub poniżej średniej populacji x. Pokazuje to, że konieczne jest staranne rozróżnienie pomiędzy daną funkcją a innymi funkcjami, które mogą być zdefiniowane w jej zakresie, ponieważ ponieważ w żadnym wypadku nie jest to przypadek ogólny, że jedna funkcja $A$ będzie miała takie same właściwości niezmienności jak druga funkcja $B$ zdefiniowane w kategoriach $A$. Zatem, chociaż odchylenie standardowe nie jest ani bezwzględnie niezmienne, ani niezmiennym odniesieniem w stosunku do skal interwałowych, pewne funkcje mogą być zdefiniowane w kategoriach odchylenia standardowego które mają te własności niezmienności i prawdopodobnie te ostatnie funkcje o których niektórzy myślą, gdy twierdzą niezmienność odniesienia (w stosunku do skal interwałowych) dla odchylenia standardowego.
-Z drugiej strony odchylenie standardowe jest porównawczo niezmienna względem skali interwałowych, ponieważ dla każdej skali interwałowej $\tuple{A,M,a,\Phi}$, spełnia ona warunek, że jeżeli odchylenie standardowe, w stosunku do numerycznego przypisania $m_{1} \in M$, są równe dla dwóch skończonych populacji , to muszą być równe w odniesieniu do innego numerycznego przypisania $m_{2} \in M$.
+która jest bezwzględnie niezmienna w stosunku do skal interwałowych. Zauważmy, że ta funkcja daje standardowy wynik, tj. liczbę odchyleń standardowych, których obiekt x stoi powyżej lub poniżej średniej populacji x. Pokazuje to, że konieczne jest staranne rozróżnienie pomiędzy daną funkcją a innymi funkcjami, które mogą być zdefiniowane w jej zakresie, ponieważ ponieważ w żadnym wypadku nie jest to przypadek ogólny, że jedna funkcja $A$ będzie miała takie same właściwości niezmienności jak druga funkcja $B$ zdefiniowane w warunkach $A$. Zatem, chociaż odchylenie standardowe nie jest ani bezwzględnie niezmienne, ani niezmiennym odniesieniem w stosunku do skal interwałowych, pewne funkcje mogą być zdefiniowane w kategoriach odchylenia standardowego które mają te własności niezmienności i prawdopodobnie te ostatnie funkcje o których niektórzy myślą, gdy twierdzą referencyjną niezmienność (w stosunku do skal interwałowych) dla odchylenia standardowego.
+Z drugiej strony odchylenie standardowe jest porównawczo niezmienna względem skali interwałowych, ponieważ dla każdej skali interwałowej $\tuple{A,M,a,\Phi}$, spełnia ona warunek, że jeżeli odchylenie standardowe, w stosunku do numerycznego przypisania $m_{1} \in M$, są równe dla dwóch skończonych populacji, to muszą być równe w odniesieniu do innego numerycznego przypisania $m_{2} \in M$.
 
 Niezmienność porównań wydaje się być szczególnie przydatna, gdy zamierzonym zastosowaniem statystyki jest po prostu do porównania różnych grup; stąd jej nazwa. Zostanie pokazane, że (przy pewnych ograniczeniach) niezmienność bezwzględna i referencyjna są w rzeczywistości szczególnymi przypadkami niezmienności porównania.
 
@@ -696,7 +691,7 @@ Uogólniona operacja na pomiarach jest odpowiednia w stosunku do wzoru i NAS wte
 
 Należy zauważyć, że to kryterium adekwatności dla operacji statystycznej względem wzoru nie wymaga wyraźnie, aby wzór był konstruowany z warunkami operacji. W rzeczywistości to, czy operacja jest odpowiednia w stosunku do wzoru i NAS zależy tylko od relacji między wzorem a NAS. Z tego wynika, że jeśli jakakolwiek operacja statystyczna jest odpowiednia w stosunku do wzoru i NAS, to każda inna operacja jest również odpowiednia w stosunku do tej samego wzoru i NAS. To pokazuje, że po prostu przeszliśmy przez trudny problem próby określenia warunków, które musiałyby być spełnione przez wzór, aby być w pewnym intuicyjnym sensie odnośnie operacji statystycznej. W ważnych zastosowaniach tego kryterium będziemy się zajmować tylko wzorami, które odnoszą się do danej operacji (można powiedzieć, że wzór (3.1) dotyczy średniej operacji).
 
-Teraz pokazujemy każdy z trzech specjalnych rodzajów niezmienności jako specjalne przypadki niezmienności względem wzoru lub klasy worów. Poszczególne wzory, o których mowa, są tym, co nazywamy bezwzględnym, referencyjnym i wzorami porównawczymi. Są one definiowane w sposób okrężny: najpierw określamy, jakie muszą być funkcje prawdy tych wzorów, a następnie zdefiniujmy wzór, który będzie tego rodzaju, na wypadek, gdyby miał jedną z nich jako swoją funkcję prawdy. Ponadto założymy, co może jest bardzo wątpliwe, a mianowicie, że wszystkie te funkcje prawdy są funkcjami prawdy jakiegoś wzoru.
+Teraz pokazujemy każdy z trzech specjalnych rodzajów niezmienności jako specjalne przypadki niezmienności względem wzoru lub klasy wzorów. Poszczególne wzory, o których mowa, są tym, co nazywamy bezwzględnym, referencyjnym i wzorami porównawczymi. Są one definiowane w sposób okrężny: najpierw określamy, jakie muszą być funkcje prawdy tych wzorów, a następnie zdefiniujmy wzór, który będzie tego rodzaju, na wypadek, gdyby miał jedną z nich jako swoją funkcję prawdy. Ponadto założymy, co może jest bardzo wątpliwe, a mianowicie, że wszystkie te funkcje prawdy są funkcjami prawdy jakiegoś wzoru.
 \begin{definition}
 Niech $F$ będzie uogólnioną operacją na pomiarach z dziedziną $\mathcal{D}$. Wtedy:
 \begin{enumerate}
@@ -735,11 +730,11 @@ Jest to oczywiste, pod warunkiem, że istnieją symbole dla wszystkich liczb rze
 Niech $F$ będzie uogólnioną operacją na pomiarach taka że dla wszystkich rzeczywistych $\alpha$, $ABS_{F,\alpha}$ i $REF_{F}$ $COMP_{F}$ są także uogólnionymi operacjami na pomiarach, oraz niech $U$ będzie numerical assignment sysytem. Wtedy:
 \begin{enumerate}
 \item
-$F$ jest bezwzględnie niezmienna w stosunku do $U$ wtedy i tylko wtedy gdy jest odpowiednia w stosunku do wszystkich bezwzględnych wzorów $F$ i $U$.
+$F$ jest bezwzględnie niezmienna w stosunku do $U$ wtedy i tylko wtedy gdy, jest odpowiednia w stosunku do wszystkich bezwzględnych wzorów $F$ i $U$.
 \item
-$F$ jest referencyjnie niezmienna w stosunku do $U$ wtedy i tylko wtedy gdy jest odpowiednia w stosunku do wszystkich referencyjnych wzorów $F$ i $U$.  
+$F$ jest referencyjnie niezmienna w stosunku do $U$ wtedy i tylko wtedy gdy, jest odpowiednia w stosunku do wszystkich referencyjnych wzorów $F$ i $U$.  
 \item
-$F$ jest porównawczo niezmienna w stosunku do $U$ wtedy i tylko wtedy gdy jest odpowiednia w stosunku do wszystkich porównawczych wzorów $F$ i $U$.    
+$F$ jest porównawczo niezmienna w stosunku do $U$ wtedy i tylko wtedy gdy, jest odpowiednia w stosunku do wszystkich porównawczych wzorów $F$ i $U$.    
 \end{enumerate}
 \end{tw}
 
@@ -795,6 +790,8 @@ $M$ jest klasą homomorficznego osadzenia $G$ w $\mathcal{G}$.
 $\Phi$ jest klasą homomorficznego osadzenia $\mathcal{G}$ w siebie. 
 \end{enumerate} 
 \end{definition}
+
+Oczywiście klasy $M$ i $\Phi$ są definiowalne w warunkach $G$ i $\mathcal{G}$. Celem ich wyraźnego przedstawienia jest ułatwienie porównania z NAS, które odpowiadają FMS
 \chapter{Podsumowania}
 \bibliographystyle{plain}
 \bibliography{bibliografia}
