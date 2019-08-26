@@ -860,7 +860,7 @@ $$
 \forall_{\phi \in \Phi} \forall_{\alpha \in \domkniecie{a}} \quad \mathcal{F}(\phi(\alpha))=\mathcal{F}(\alpha).
 $$
 \item
-Jeżeli dla każdego $\alpha \in \domkniecie{a}$ takiego, że $\alpha$ jest w $\mathcal{D}$, $\mathcal{F}(\alpha)$ jest w $a$, wtedy $F$ jest odnośnikowo niezmiennicza w stosunku do $U$ wtedy i tylko wtedy gdy dla wszystkich $\phi \in \Phi$ i $\alpha \in \domkniecie{a}$ takie, że $\alpha$ i $\phi(\alpha)$ są w $\mathcal{D}$,
+Jeżeli dla każdego $\alpha \in \domkniecie{a}$ takiego, że $\alpha$ jest w $\mathcal{D}$, $\mathcal{F}(\alpha)\in a$, wtedy $F$ jest odnośnikowo niezmiennicza w stosunku do $U$ wtedy i tylko wtedy gdy dla wszystkich $\phi \in \Phi$ i $\alpha \in \domkniecie{a}$ takie, że $\alpha$ i $\phi(\alpha)$ są w $\mathcal{D}$,
 \begin{equation*}
 \mathcal{F}(\phi(\alpha))=\phi(\mathcal{F}(\alpha)).
 \end{equation*}
@@ -870,8 +870,42 @@ $F$ jest porównawczo niezmiennicza w stosunku do $U$  $$
 $$
 \end{enumerate}
 \end{tw}
-\begin{proof}
+\begin{proof} 
+Dowód (1) wynika wprost z twierdzenia 3.13
 
+(2)
+Załóżmy, że 
+\begin{equation*}
+\mathcal{F}(\phi(\alpha))=\phi(\mathcal{F}(\alpha)).
+\end{equation*}
+Niech $m_1, m_2 \in M$ i $x\in \domkniecie{A}$ z regularności NAS istnieje $m_0\in M$ takie, że 
+$$ 
+m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0
+$$
+Niech $\alpha=m_0(x)$, $\alpha=(\alpha_1,\dots,\alpha_n)$.
+Pokażemy
+$$
+\domkniecie{m_{1}}(x)=F(m_{1};x) \implies \domkniecie{m_{2}}(x)=F(m_{2};x).
+$$
+Załóżmy, że $\domkniecie{m_{1}}(x)=F(m_{1};x)$
+$$
+\domkniecie{\phi_1\circ m_0}(x)=F(m_1;x)
+$$
+Z regularności $U$ 
+$$
+\exists_{\Psi_1\in \domkniecie{a}} \forall_{i\in \zbior{1,\dots,n}} \quad \Psi_1(\phi_1(\alpha_i))=\alpha_i
+$$
+\begin{eqnarray*}
+\domkniecie{m_0}(x) & = & \Psi_1(F(m_1;x)=\Psi_1(\mathcal{F}(\domkniecie{m_1}(x))/\phi_2()\\ \domkniecie{m_2}(x)&=&\phi_2(\Psi_1(\mathcal{F}(\domkniecie{m_1}(x)))
+\end{eqnarray*}
+Niech $\phi:=\phi_2\circ \Psi_1, \alpha:=\domkniecie{m_1}(x)$
+$$
+\domkniecie{m_2}(x)\mathcal{F}(\phi_2(\Psi_1(\domkniecie{m_2}(x))))=\mathcal{F}(\phi_2(\domkniecie{m_0}(x))=\mathcal{F}(\domkniecie{m_2}(x))
+$$
+$$
+\domkniecie{m_2}(x)=\mathcal{F}(\domkniecie{m_2}(x))= F(m_2;x)
+$$
+Z uwagi na symetrię oznaczeń implikacja w drugą stronę jest oczywista. Z dowolności $m_1, m_2$ i $x$ F jest odnośnikowo niezmiennicza.
 \end{proof}
 Powyższe twierdzenie pokazuje, że warunki bezwzględnej, referencyjnej oraz porównawczej niezmienniczości operacji $F$ są równoważne (przynajmniej w szerokim zakresie warunków określonych w twierdzeniu) różnym rodzajom praw transformacji, które odnoszą się do wartości od $\mathcal{F}(\phi(\alpha))$ do $\mathcal{F}(\alpha)$. W pierwszym przypadku wartości te muszą być równe. W przypadku referencyjnej niezmienniczości wymagane jest, aby wartości $\mathcal{F}$ przekształcić zgodnie z tym samym prawem, co podstawowa transformacja pomiarów. W przypadku porównawczej niezmienniczości  wymagane jest, aby każda transformacja podstawowych pomiarów mogła określić odpowiednią transformację wartości operacji. Jedną bezpośrednią konsekwencją tego, wspomnianą wcześniej, jest to, że (zakładając, że ograniczenia przedstawione w hipotezie twierdzenia są spełnione), bezwzględna i referencyjna niezmienniczość są szczególnymi przypadkami niezmienniczości porównawczej.
 
