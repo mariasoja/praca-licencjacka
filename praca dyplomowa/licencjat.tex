@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
 \usepackage{amsmath}
+\usepackage{centernot}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -22,7 +23,8 @@
 \newcommand{\parauporzadkowana}[2]{\left\langle {#1}; {#2} \right\rangle}
 \newcommand{\zbior}[1]{\left\lbrace {#1} \right\rbrace }
 \newcommand{\domkniecie}[1]{\left\lbrack{#1}\right\rbrack}
-
+\newcommand{\notiff}{%
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{"}$\hidewidth\cr$\iff$}}}}
 \newcommand{\tuple}[1]{\left\langle {#1} \right\rangle}
 \begin{document}
 
@@ -718,11 +720,19 @@ Załóżmy, że
 \begin{equation}
 \forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad m(\overline{x}),\phi(m(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
 \end{equation}
-Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ oraz $\overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D}$. Niech $\domkniecie{m}(x):= \overline{\alpha}$. Z (3.3)
+Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ oraz $\overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D}$. Niech $m \in M$, $\overline{x} \in \domkniecie{A}$ $\domkniecie{m}(\overline{x}):= \overline{\alpha}$. 
 $$
- \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
+ \mathcal{F}(\overline{\alpha})=\mathcal{F}(\domkniecie{m}(\overline{x})
 $$
-Z dowolności wyboru $\phi, \overline{\alpha}$ udowodniliśmy punkt (3).
+Z (3.3)
+$$
+\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))
+$$
+Zatem mamy
+$$
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}
+$$
+Z dowolności wyboru $\phi, \overline{\alpha}, m, \overline{x}$ udowodniliśmy punkt (3).
 \end{proof}
 
 \begin{tw}[Warunki równoważne niezmienniczości odnośnikowej]
@@ -852,7 +862,7 @@ $$
 \end{tw}
 \begin{proof}
 Udowodnimy $(1) \implies (2)$
-Niech $F$ będzie porównawczo niezmiennicza oraz niech $m\in M, \phi \in \Phi$, $x, y \in A$ i $\overline{x}, \overline{y} \in \domkniecie{A}$ wtedy dla $m_1:=\phi\circ m, m_2:=m, x:=x, y:=y, \overline{x}:=\overline{x}, overline{y}:=\overline{y}$ mamy $F(\phi\circ m;\overline{x})=F(\phi\circ m;\overline{y}) \iff F(m;\overline{x})=F(m;\overline{y})$
+Niech $F$ będzie porównawczo niezmiennicza oraz niech $m\in M, \phi \in \Phi$, $x, y \in A$ i $\overline{x}, \overline{y} \in \domkniecie{A}$ wtedy dla $m_1:=\phi\circ m, m_2:=m, x:=x, y:=y, \overline{x}:=\overline{x}, \overline{y}:=\overline{y}$ mamy $F(\phi\circ m;\overline{x})=F(\phi\circ m;\overline{y}) \iff F(m;\overline{x})=F(m;\overline{y})$
 Następujące stwierdzenia są równoważne
 $$
 \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))
@@ -919,9 +929,25 @@ Załóżmy, że
 \begin{equation}
 \forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad m(\overline{x}), m(\overline{y}), \phi(m(\overline{x})), \phi(m(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 \end{equation}
-Niech $\phi \in \phi$, $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$ oraz $\overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D}$. Niech $\domkniecie{m}(\overline{x}:=\overline{\alpha}$,  $\domkniecie{m}(\overline{y}:=\overline{\beta}$. Z (3.10)
+Niech $\phi \in \phi$, $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$ oraz $\overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D}$ i $\domkniecie{m}(\overline{x}):=\overline{\alpha}$,  $\domkniecie{m}(\overline{y}):=\overline{\beta}$. 
+Rozumujemy równoważnie
 $$
-\mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})
+$$
+Niech $m \in M$, $\overline{x}, \overline{y} \in \domkniecie{A}$ takie, że
+$$
+\overline{\alpha}=m(\overline{x}), \quad \overline{\beta}=m(\overline{y})
+$$
+Wtedy z pierwszej równoważności
+$$
+\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y})
+$$
+Z (3.10)
+$$
+\mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})) 
+$$
+$$
+\mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 $$
 Z dowolności $\phi, \overline{\alpha}, \overline{\beta}$ udowodniliśmy punkt (3).
 \end{proof}
@@ -941,8 +967,9 @@ Jeżeli dla wszystkich $\overline{\alpha} \in \domkniecie{a}$ takich, że $\over
 \forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\phi(\mathcal{F}(\overline{\alpha})).
 \end{equation*}
 \item
-$F$ jest porównawczo niezmiennicza w stosunku do $U$  $$
-\forall_{\phi \in \Phi}  \exists_{\psi_{\phi}\in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
+$F$ jest porównawczo niezmiennicza w stosunku do $U$ wtedy i tylko wtedy, gdy dla wszystkich $\phi \in \Phi$ istnieje $\Psi_{\phi}$ które jest różnowartościowe takie, że
+$$
+ \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
 $$
 \end{enumerate}
 \end{tw}
@@ -1020,16 +1047,29 @@ Niech $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$. Wtedy z (3.13)
 \end{eqnarray*}
 Równoważnie
 \begin{eqnarray*}
-\mathcal{F}(\phi(\overline{\alpha}))&=&\mathcal{F}(\overline{\beta}))\\
-\Psi_{\phi}(\mathcal{F}(\phi(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
-\mathcal{F}(\overline{\alpha})&=&\mathcal{F}(\overline{\beta})
+\mathcal{F}(\phi(\overline{\alpha}))&=&\mathcal{F}(\phi(\overline{\beta}))\\
+\Psi_{\phi}(\mathcal{F}(\overline{\alpha})&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
 \end{eqnarray*}
+Ponieważ $\Psi_{\phi} \in \Phi$ więc jest różnowartościowa. Zatem mamy
+$$
+\mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta})
+$$
 $\implies$
 Załóżmy, że
 \begin{equation}
 \forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
-Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ i $\overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D}$. Wtedy z (3.14)
+Niech $\phi \in \Phi$. Niech $\Psi_{\phi}$ będzie taka, że $\Psi_{\phi}: z\longmapsto \mathcal{F}(\phi(\overline{\alpha})$, gdzie $\overline{\alpha} \in \domkniecie{a} \land z=\mathcal{F}(\overline{\alpha})$
+Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. Niech $\overline{\alpha}, \overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta)$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta})$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}, \overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1, \mathcal{F}(\overline{\beta})=z_2$.
+\begin{eqnarray*}
+\Psi_{\phi}(z_1)&=&\Psi_{\phi}(z_2)\\
+\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
+\end{eqnarray*}
+Z (3.14)
+$$
+\mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta})) \implies \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}) \implies z_1=z_2
+$$
+Z dowolności $\phi, \overline{\alpha}, \overline{\beta}$ udowodniliśmy implikacje.
 \end{enumerate}
 \end{proof}
 Powyższe twierdzenie pokazuje, że warunki bezwzględnej, referencyjnej oraz porównawczej niezmienniczości operacji $F$ są równoważne (przynajmniej w szerokim zakresie warunków określonych w twierdzeniu) różnym rodzajom praw transformacji, które odnoszą się do wartości od $\mathcal{F}(\phi(\alpha))$ do $\mathcal{F}(\alpha)$. W pierwszym przypadku wartości te muszą być równe. W przypadku referencyjnej niezmienniczości wymagane jest, aby wartości $\mathcal{F}$ przekształcić zgodnie z tym samym prawem, co podstawowa transformacja pomiarów. W przypadku porównawczej niezmienniczości  wymagane jest, aby każda transformacja podstawowych pomiarów mogła określić odpowiednią transformację wartości operacji. Jedną bezpośrednią konsekwencją tego, wspomnianą wcześniej, jest to, że (zakładając, że ograniczenia przedstawione w hipotezie twierdzenia są spełnione), bezwzględna i referencyjna niezmienniczość są szczególnymi przypadkami niezmienniczości porównawczej.
@@ -1061,7 +1101,7 @@ F(m;x,\overline{x})= \left\{ \begin{array}{lIl}
 \end{array} \right.
 \end{equation}
 
-Powyższe sugeruje, że przynajmniej dla ograniczonej klasy wzorów, takich jak (3.5), wzory te mogą być wykonane tak, aby odpowiadały funkcjom prawdy w prosty i jednolity sposób (funkcja prawdy jest definiowana w kategoriach wzoru jak w (3.6)). Co więcej, te funkcje prawdy są postrzegane jako szczególne przypadki uogólnionych operacji na pomiarach.
+Powyższe sugeruje, że przynajmniej dla ograniczonej klasy wzorów, takich jak (3.15), wzory te mogą być wykonane tak, aby odpowiadały funkcjom prawdy w prosty i jednolity sposób (funkcja prawdy jest definiowana w kategoriach wzoru jak w (3.16)). Co więcej, te funkcje prawdy są postrzegane jako szczególne przypadki uogólnionych operacji na pomiarach.
 \begin{definition}
 Uogólniona funkcja prawdy pomiaru jest uogólnioną operacją na pomiarach, których wartości wynoszą tylko $0$ i $1$.
 \end{definition}
@@ -1071,7 +1111,7 @@ Mając powiązane funkcje prawdy z wzorami w sposób opisany powyżej, możliwe 
 \begin{definition}
 Wyrażenie $W(F)$ jest empirycznie znaczące względem $U$ gdy jego funkcje prawdy są niezmiennicze bezwzględnie.
 \end{definition}
-Oczywiście definicja ta jest nieprecyzyjna z powodu nieprecyzyjności w warunkach wzoru i wzoru funkcji prawdy, który celowo nie został precyzyjnie zdefiniowany. W obronie sformułowania powyższej definicji w ten sposób można powiedzieć, że jej zastosowania są dość jasne w tych przypadkach, w których stosuje się ją do wzorów takich jak (3.5), dla których precyzyjnie określona funkcja prawdy jest definiowana w sposób (3.6) . Oznacza to, że jeśli wzór jest wystarczająco jasny, aby możliwe było precyzyjne zdefiniowanie odpowiedniej funkcji prawdy, wówczas zastosowanie definicji staje się jednoznaczne.
+Oczywiście definicja ta jest nieprecyzyjna z powodu nieprecyzyjności w warunkach wzoru i wzoru funkcji prawdy, który celowo nie został precyzyjnie zdefiniowany. W obronie sformułowania powyższej definicji w ten sposób można powiedzieć, że jej zastosowania są dość jasne w tych przypadkach, w których stosuje się ją do wzorów takich jak (3.15), dla których precyzyjnie określona funkcja prawdy jest definiowana w sposób (3.16) . Oznacza to, że jeśli wzór jest wystarczająco jasny, aby możliwe było precyzyjne zdefiniowanie odpowiedniej funkcji prawdy, wówczas zastosowanie definicji staje się jednoznaczne.
 \section{Odpowiedniość stwierdzeń dotyczących operacji statystycznych}
 
 Główną cechą naszej analizy jest to, że nie można mówić o statystyce (reprezentowanej przez uogólnioną operację na pomiarach), że jest odpowiednia lub nieodpowiednia. Operacje te powinny być raczej uważane za odpowiednie lub nieodpowiednie w stosunku do wzoru (i NAS).
@@ -1079,7 +1119,7 @@ Główną cechą naszej analizy jest to, że nie można mówić o statystyce (re
 $F$ jest względnie odpowiednie w stosunku do wyrażenia $W$ oraz $U$ (NAS) wtedy i tylko wtedy, gdy $W(F)$ jest empirycznie znaczące względem $U$.
 \end{definition}
 
-Należy zauważyć, że to kryterium adekwatności dla operacji statystycznej względem wzoru nie wymaga wyraźnie, aby wzór był konstruowany z warunkami operacji. W rzeczywistości to, czy operacja jest odpowiednia w stosunku do wzoru i NAS zależy tylko od relacji między wzorem, a NAS. Z tego wynika, że jeśli jakakolwiek operacja statystyczna jest odpowiednia w stosunku do wzoru i NAS, to każda inna operacja jest również odpowiednia w stosunku do tej samego wzoru i NAS. To pokazuje, że po prostu przeszliśmy przez trudny problem próby określenia warunków, które musiałyby być spełnione przez wzór w odniesieniu do operacji statystycznej. W ważnych zastosowaniach tego kryterium będziemy zajmować się tylko wzorami, które odnoszą się do danej operacji (można powiedzieć, że wzór (3.5) dotyczy średniej operacji).
+Należy zauważyć, że to kryterium adekwatności dla operacji statystycznej względem wzoru nie wymaga wyraźnie, aby wzór był konstruowany z warunkami operacji. W rzeczywistości to, czy operacja jest odpowiednia w stosunku do wzoru i NAS zależy tylko od relacji między wzorem, a NAS. Z tego wynika, że jeśli jakakolwiek operacja statystyczna jest odpowiednia w stosunku do wzoru i NAS, to każda inna operacja jest również odpowiednia w stosunku do tej samego wzoru i NAS. To pokazuje, że po prostu przeszliśmy przez trudny problem próby określenia warunków, które musiałyby być spełnione przez wzór w odniesieniu do operacji statystycznej. W ważnych zastosowaniach tego kryterium będziemy zajmować się tylko wzorami, które odnoszą się do danej operacji (można powiedzieć, że wzór (3.15) dotyczy średniej operacji).
 
 Teraz pokazujemy każdy z trzech specjalnych rodzajów niezmienniczości jako specjalne przypadki niezmienniczości względem wzoru lub klasy wzorów. Poszczególne wzory, o których mowa, są tym, co nazywamy bezwzględnym, referencyjnym i wzorami porównawczymi. Są one definiowane w sposób okrężny: najpierw określamy, jakie muszą być funkcje prawdy tych wzorów, a następnie definiujemy wzór, który będzie tego rodzaju, na wypadek, gdyby miał jedną z nich jako swoją funkcję prawdy. Należy założyć, co może być bardzo wątpliwe, a mianowicie, że wszystkie te funkcje prawdy są funkcjami prawdy jakiegoś wzoru.
 \begin{definition}
@@ -1094,7 +1134,7 @@ ABS_{F,\alpha}(m;\overline{x})= \left\{ \begin{array}{lIl}
 \end{array} \right.
 \end{equation*}
 \item
-$REF_{F}$ jest funkcją z dziedziną $\mathcalD'}$ składającą się ze wszystkich uporządkowanych trójek $m;x,\overline{x}$, gdzie $m;\overline{x}$ jest w $\mathcal{D}$ i $x$ jest w dziedzinie $m$, taka że
+$REF_{F}$ jest funkcją z dziedziną $\mathcal{D'}$ składającą się ze wszystkich uporządkowanych trójek $m;x,\overline{x}$, gdzie $m;\overline{x}$ jest w $\mathcal{D}$ i $x$ jest w dziedzinie $m$, taka że
 \begin{equation*}
 REF_{F}(m;x,\overline{x})= \left\{ \begin{array}{lIl}
 1 & \textrm{gdy} & m(x)=F(m;\overline{x}),}\\
@@ -1140,7 +1180,7 @@ $F$ jest porównawczo niezmiennicza w stosunku do $U$ wtedy i tylko wtedy gdy, j
 $\implies$
 Niech $F$ będzie bezwzględnie niezmiennicza w stosunku do $U$ 
 \begin{equation}
-\forall_{m_{1}, m_{2} \in M}  \forall_{x \in \domkniecie{A}} \quad F(m_{1};x)=F(m_{2};x).
+\forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
 \end{equation}
 Niech $\alpha \in \mathbb{R}$. Pokażemy, że $ABS_{F,\alpha}$ jest bezwzględnie niezmiennicza. Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x} \in \domkniecie{A}$ 
 \begin{enumerate}[I.]
@@ -1170,9 +1210,9 @@ Niech $F$ będzie odnośnikowo niezmiennicza w stosunku do $U$
 Pokażemy, że $REF_{F}$ jest bezwzględnie niezmiennicza. Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x} \in \domkniecie{A}$ 
 \begin{enumerate}[I.]
 \item
-Jeśli $REF_{F}(m_1;X,\overline{x})=1$ to z definicji $m_1(x)=F(m_1;\overline{x})$ z (3.18) $m_2(x)=F(m_2;\overline{x})$ stąd $REF_{F}(m_2;x,\overline{x})=1$.
+Jeśli $REF_{F}(m_1;x,\overline{x})=1$ to z definicji $m_1(x)=F(m_1;\overline{x})$ z (3.18) $m_2(x)=F(m_2;\overline{x})$ stąd $REF_{F}(m_2;x,\overline{x})=1$.
 \item
-Jeśli $REF_{F}(m_1;x,\overline{x})=0$ to z definicji $m_1(x)\neF(m_1;\overline{x})$ z (3.18) $m_2(x)\neF(m_2;\overline{x})$ stąd $REF_{F}(m_2;x,\overline{x})=0$.
+Jeśli $REF_{F}(m_1;x,\overline{x})=0$ to z definicji $m_1(x)\ne F(m_1;\overline{x})$ z (3.18) $m_2(x)\ne F(m_2;\overline{x})$ stąd $REF_{F}(m_2;x,\overline{x})=0$.
 \end{enumerate}
 Zatem 
 $$
@@ -1204,9 +1244,9 @@ Pokażemy, że $COMP_{F}$ jest bezwzględnie niezmiennicza, to znaczy
  Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x}, \overline{y} \in \domkniecie{A}$ 
 \begin{enumerate}[I.]
 \item
-Jeśli $COMP_{F}(m_1;\overline{x},\overline{y})=1$ to $F(m_1;\overline{x})=F(m_1;\overline{y}$ to z (3.19) $F(m_2;\overline{x})=F(m_2;\overline{y})$ stąd $COMP_{F}(m_2;\overline{x},\overline{y})=1$.
+Jeśli $COMP_{F}(m_1;\overline{x},\overline{y})=1$ to $F(m_1;\overline{x})=F(m_1;\overline{y})$ to z (3.19) $F(m_2;\overline{x})=F(m_2;\overline{y})$ stąd $COMP_{F}(m_2;\overline{x},\overline{y})=1$.
 \item
-Jeśli $COMP_{F}(m_1;\overline{x},\overline{y})=0$ to $F(m_1;\overline{x})\neF(m_1;\overline{y}$ to z (3.19) $F(m_2;\overline{x})\ne F(m_2;\overline{y})$ stąd $COMP_{F}(m_2;\overline{x},\overline{y})=0$.
+Jeśli $COMP_{F}(m_1;\overline{x},\overline{y})=0$ to $F(m_1;\overline{x})\ne F(m_1;\overline{y})$ to z (3.19) $F(m_2;\overline{x})\ne F(m_2;\overline{y})$ stąd $COMP_{F}(m_2;\overline{x},\overline{y})=0$.
 \end{enumerate}
 Zatem 
 $$
@@ -1220,9 +1260,9 @@ F(m_{1};\overline{x})=F(m_{1};\overline{y}) \notiff F(m_{2};\overline{x})=F(m_{2
 $$
 \begin{enumerate}[I.]
 \item
-Jeśli $F(m_1;\overline{x}=F(m_1;\overline{y}))$ wtedy $COMP_{F}(m_1;\overline{x},\overline{y})=1$ z (3.20) $COMP_{F}(m_2;\overline{x},\overline{y})=1$ z def $COMP_F$ $F(m_2;\overline{x})=F(m_2;\overline{y})$. Sprzeczność.
+Jeśli $F(m_1;\overline{x})=F(m_1;\overline{y})$ wtedy $COMP_{F}(m_1;\overline{x},\overline{y})=1$ z (3.20) $COMP_{F}(m_2;\overline{x},\overline{y})=1$ z def $COMP_F$ $F(m_2;\overline{x})=F(m_2;\overline{y})$. Sprzeczność.
 \item
-Jeśli $F(m_1;\overline{x}\ne F(m_1;\overline{y}))$ wtedy $COMP_{F}(m_1;\overline{x},\overline{y})=0$ z (3.20) $COMP_{F}(m_2;\overline{x},\overline{y})=0$ z def $COMP_F$ $F(m_2;\overline{x})\ne F(m_2;\overline{y})$. Sprzeczność.
+Jeśli $F(m_1;\overline{x})\ne F(m_1;\overline{y})$ wtedy $COMP_{F}(m_1;\overline{x},\overline{y})=0$ z (3.20) $COMP_{F}(m_2;\overline{x},\overline{y})=0$ z def $COMP_F$ $F(m_2;\overline{x})\ne F(m_2;\overline{y})$. Sprzeczność.
 \end{enumerate}
 Skoro wszystkie przypadki skończyły się uzyskaniem sprzeczności to nasze przypuszczenie musi być fałszywe.
 \end{enumerate}
