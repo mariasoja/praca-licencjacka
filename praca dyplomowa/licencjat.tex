@@ -84,11 +84,14 @@ napisana w~Instytucie Matematyki
 
 \tableofcontents
 
-\chapter{Wstep}
+\chapter{Wstęp}
+
+Tematem pracy jest Teoria Stevensa pomiaru statystycznego. Teoria ta wiąże się nieodłącznie z pojęciem skali w zagadnieniach analizy danych. Pomimo tego, że pojęcie skali pojawia się w wielu książkach z zakresu analizy danych np. {\citep{walesiak2009statystyczna}} to zaskakującym jest że nigdzie nie jest ono matematycznie poprawnie ono wyjaśnione ponadto różne bliskie narzędzia analizy danych są nieporównywalnie lepiej matematycznie opisane. W bibliografiach znajduje się w tych miejscach odniesienie do teorii Stevensa sformułowanej w pracy napisanej przez Adams, Fagot, Robinson {\citep{adams1965theory}} która okazuje się być próbą wyjaśnienia nieprecyzyjności z wcześniejszych prac Stevensa. Publikacja pracy miała miejsce w roku 1965 co sugeruje ze odpowiedziała na większość z nękających społeczność pytań. Sama praca okazuje się zawierać znacznie więcej niż definicje skal pomiarowych autorzy starają się w niej sformułować bardzo ogólna teorie o formułowaniu wszelkich zdań z zakresu statystyki. W niniejszej pracy podjęta została próba omówienia choć części bogato omówionej tam teorii. 
+ 
+Praca uporządkowana jest w następujący sposób. W rozdziale drugim znajdują się preliminaria w których umieszczono miedzy innymi elementy algebraicznej teorii grup oraz teorii mnogości. W rozdziale trzecim omawiane są kolejne aspekty teorii Stevensa pomiaru statystycznego część ta rozpoczyna od wprowadzenia numerical assignmnet systems (NAS) których zadaniem jest modelowanie rzeczywistych pomiarów wykonywanych w statystyce. W dalszej części wprowadzone są typy skal jako warunki nakładane na poszczególne NAS, w tym miejscu dokonujemy porównania założeń NAS  z teoria grup algebraicznych. Dalsza cześć pracy stanowi omówienie teorii niezmienniczości w pomiarach statystycznych. W pracy zaprezentowano kilka twierdzeń o warunkach równoważnych rożnych typów niezmienniczości. Pomimo tego iż praca ta nie wyczerpuje i nie wyjaśnia w pełni jak teorii przedstawionej w pracy Adams, Fagot, Robinson {\citep{adams1965theory}}. Wnosi istotną wartość poprzez zaprezentowanie własnych przykładów oraz dowodów twierdzeń zaprezentowanych w pracy które wyraźnie rzutują na rozumienie pojęć przedstawionych w pracy. Praca ponadto pokazuje iż tematyka przedstawiona ponad 50 lat temu teoria ta dalej jest nietrywialna i nie jest wprowadzana w pełni przez autorów książek z analizy danych z uwagi na jej ogólność i stopień skomplikowania. W rozdziale czwartym podsumujemy  matematyczne badania tej teorii i omówimy wypracowane wnioski.
 
 \chapter{Preliminaria}
 
-\section{Oznaczenia używane w pracy}
 
 \section{Elementy teorii mnogości}
 W naszej pracy rozważane będą zagadnienia wymagające doprecyzowania wielu pojęć z zakresu dziedzin matematyki takich jak statystyka czy algebra. 
@@ -574,17 +577,17 @@ Niech $U=\tuple{A,M,a,\Phi}$ będzie NAS $\mathcal{F}:\mathcal{D}\to\domkniecie{
 \item
 $F$ jest bezwzględnie niezmiennicza względem $U$ 
 $$
-\forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
+\forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
 $$
 \item
 $F$ jest odnośnikowo niezmiennicza względem $U$  
 $$
-\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
+\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}),\domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
 $$
 \item
 $F$ jest porównawczo niezmiennicza względem $U$ 
 $$
-\forall_{m_1, m_2 \in M}  \forall_{\overline{x},\overline{y} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x}),m_1(\overline{y}), m_2(\overline{y}) \in \mathcal{D} \implies  F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
+\forall_{m_1, m_2 \in M}  \forall_{\overline{x},\overline{y} \in \domkniecie{A}} \quad  \domkniecie{m_1}(\overline{x}), \domkniecie{ m_2}(\overline{x}), \domkniecie{m_1}(\overline{y}), \domkniecie{m_2}(\overline{y}) \in \mathcal{D} \implies  F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
 $$
 \end{enumerate} 
 \end{definition}
@@ -645,7 +648,7 @@ Porównawczo niezmiennicza w stosunku do $U$ są funkcje maximum oraz minimum
 \end{przyklad}
 Referencyjnie niezmiennicze w stosunku do skal interwałowych też są np. funkcje
 \begin{equation*}
-Mean(m;\overline{x})+kSD(m;\overline{x}),
+Mean(m;x)+kSD(m;x),
 \end{equation*}
 
 \begin{tw}[Warunki równoważne niezmienniczości bezwzględnej]
@@ -658,11 +661,11 @@ NWSR.
 $F$ jest niezmiennicza bezwzględnie w stosunku do $U$ 
 \item
 $$
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad m(\overline{x}),\phi(m(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
+\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}),\phi(\domkniecie{m}(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
 $$
 \item
 $$
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
 $$
 \end{enumerate}
 
@@ -671,7 +674,7 @@ $$
 Udowodnimy (1)$\implies$ (2)
 Niech $F$ będzie bezwzględnie niezmiennicza w stosunku do $U$
 \begin{equation}
-\forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
+\forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
 \end{equation}
 Niech $m \in M, \phi \in \Phi$ i $\overline{x} \in \domkniecie{A}$. Wtedy
 $$
@@ -695,11 +698,11 @@ $$
 $$
 Niech $m:=\phi_2\circ m_0$ oraz $\phi:=\phi_1\circ\Psi$, $\overline{x}=\overline{x}$. Wtedy
 \begin{eqnarray*}
-\mathcal{F}(\phi_1\circ \Psi\circ \phi_2 \circ m_0(\overline{x})) & = & \mathcal{F}(m_2(\overline{x})) \\
-\mathcal{F}(\phi_1\circ(\Psi\circ \phi_2)\circ m_0(\overline{x})) & = & \mathcal{F}(\phi_1\circ m_0(\overline{x})) = \mathcal{F}(m_1(\overline{x}))
+\mathcal{F}(\domkniecie{\phi_1\circ \Psi\circ \phi_2 \circ m_0}(\overline{x})) & = & \mathcal{F}(\domkniecie{m_2}(\overline{x})) \\
+\mathcal{F}(\domkniecie{\phi_1\circ(\Psi\circ \phi_2)\circ m_0}(\overline{x})) & = & \mathcal{F}(\domkniecie{\phi_1\circ m_0}(\overline{x})) = \mathcal{F}(\domkniecie{m_1}(\overline{x}))
 \end{eqnarray*}
 \begin{eqnarray*}
-\mathcal{F}(m_2(\overline{x})) & = & \mathcal{F}(m_1(\overline{x}))\\
+\mathcal{F}(m_2(\overline{x})) & = & \mathcal{F}(\domkniecie{m_1}(\overline{x}))\\
 F(m_2;\overline{x}) & = & F(m_1;\overline{x})
 \end{eqnarray*}
 Z dowolności $m_1,m_2$ raz $\overline{x} \in \domkniecie{A}$ udowodniliśmy punkt (1).
@@ -718,11 +721,11 @@ Z dowolności wyboru $m, \phi$ oraz $\overline{x}$ udowodniliśmy punkt (2).
 Udowodnimy $(2) \implies (3)$
 Załóżmy, że
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad m(\overline{x}),\phi(m(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
+\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}),\domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
 \end{equation}
 Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ oraz $\overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D}$. Niech $m \in M$, $\overline{x} \in \domkniecie{A}$ $\domkniecie{m}(\overline{x}):= \overline{\alpha}$. 
 $$
- \mathcal{F}(\overline{\alpha})=\mathcal{F}(\domkniecie{m}(\overline{x})
+ \mathcal{F}(\overline{\alpha})=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 Z (3.3)
 $$
@@ -730,7 +733,7 @@ $$
 $$
 Zatem mamy
 $$
-\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha})
 $$
 Z dowolności wyboru $\phi, \overline{\alpha}, m, \overline{x}$ udowodniliśmy punkt (3).
 \end{proof}
@@ -743,12 +746,12 @@ NWSR
 $F$ jest odnośnikowo niezmiennicza w stosunku do $U$
 \item
 $$
-\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad m(\overline{x}), \phi(m(\overline{x})) \in \mathcal{D} \implies
-(\phi(m(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
+\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies
+(\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 \item
 $$
-\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha))=\mathcal{F}(\phi(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
 $$
 \end{enumerate}
 
@@ -757,7 +760,7 @@ $$
 Udowodnimy (1) $\implies$ (2)
 Załóżmy, że
 \begin{equation}
-\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
+\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
 \end{equation}
 Niech $m\in M, \phi \in \Phi$, $x \in A$ i $\overline{x}\in \domkniecie{A}$
 Stosujemy przekształcenia równoważne
@@ -767,15 +770,15 @@ $$
 $$
 Z (3.4) mamy
 $$
-\iff \domkniecie{m}(x)=F(m;\overline{x}) \iff m(x)=\mathcal{F}(\domkniecie{m}(x))
+\iff m(x)=F(m;\overline{x}) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 Udowodnimy (2) $\implies (1)$
 Załóżmy, że 
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad m(\overline{x}), \phi(m(\overline{x})) \in \mathcal{D} \implies
-(\phi(m(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
+\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies
+(\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 \end{equation}
-Niech $m_1,m_2 \in M, x \in A, \overline{x}\in \domkniecie{A}$ i niech $m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D}$. Z regularności NAS istnieje $m_0, \phi_1,\phi_2$ takie, że
+Niech $m_1,m_2 \in M, x \in A, \overline{x}\in \domkniecie{A}$ i niech $\domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D}$. Z regularności NAS istnieje $m_0, \phi_1,\phi_2$ takie, że
 $$ 
 m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0
 $$
@@ -802,14 +805,14 @@ $$
 $$
 m_2(x)=F(m_2;\overline{x}).
 $$
-Z dowolności $m_1, m_2, x i \overline{x}, F$ jest odnośnikowo niezmiennicza.
+Z dowolności $m_1, m_2, x$ i $\overline{x}, F$ jest odnośnikowo niezmiennicza.
 
 Udowodnimy (3) $\implies$ (2)
 Załóżmy, że
 \begin{equation}
-\forall_{\phi \in \Phi} \forall_{\alpha \in A} \forall_{\overline{\alpha} \in \domkniecie{a}}\quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
 \end{equation}
-Niech $m\in M, \phi\in \Phi$, $x\in A$ i $\overline{x} \in \domkniecie{A}$ i niech $\overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D}$. Dla  $\alpha:= m(x), \overline{\alpha}:=\domkniecie{m}(\overline{x})$. Równoważnie
+Niech $m\in M, \phi\in \Phi$, $x\in A$ i $\overline{x} \in \domkniecie{A}$ i niech $\overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D}$. Dla  $\alpha:= m(x), \overline{\alpha}:=\domkniecie{m}(\overline{x})$. Równoważnie
 $$
 (\phi(m(x))=\mathcal{F}(\domkniecie{\phi\circ m}(\overline{x})) 
 $$
@@ -818,15 +821,15 @@ $$
 $$
 Z (3.6)
 $$
-\alpha=\mathcal{F}(\overline{\alpha}) \quad m(x)=\mathcal{F}(\domkniecie{m}(\overline{x})
+\alpha=\mathcal{F}(\overline{\alpha}) \quad m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 Z dowolności wyboru $m, \phi$ oraz $x$ udowodniliśmy punkt (2).
 
 Udowodnimy $(2) \implies (3)$
 Załóżmy, że 
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad m(\overline{x}), \phi(m(\overline{x})) \in \mathcal{D} \implies
-(\phi(m(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
+\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies
+(\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 \end{equation}
 Niech $\phi \in \Phi$, $\alpha \in a$, $\overline{\alpha} \in \domkniecie{a}$. Wtedy istnieje $x$ i $\overline{x}$ oraz takie $m$, że
 $$
@@ -834,7 +837,7 @@ $$
 $$ 
 \begin{eqnarray*}
 \phi(\alpha) & = & \mathcal{F}(\domkniecie{\phi}(\overline{\alpha})),\\
-\phi(m(x))&=&\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})).
+\phi \circ m(x))&=&\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})).
 \end{eqnarray*}
 Z (3.7) mamy
 \begin{eqnarray*}
@@ -851,11 +854,12 @@ NWSR
 $F$ jest porównawczo niezmiennicza w stosunku do $U$.
 \item
 $$
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad m(\overline{x}), m(\overline{y}), \phi(m(\overline{x})), \phi(m(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
+\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad \domkniecie{m}(\overline{x}), \domkniecie{
+m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 $$
 \item
 $$
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \domkniecie{\phi}(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 $$
 \end{enumerate}
 
@@ -869,7 +873,7 @@ $$
 $$
 Zauważmy, że
 $$
-F(\phi \circ m;\overline{x})=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x})), \quad F(\phi \circ m;y)=\mathcal{F}(\phi\circ \domkniecie{m}(\overline{y})).
+F(\phi \circ m;\overline{x})=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x})), \quad F(\phi \circ m;y)=\mathcal{F}(\domkniecie{\phi\circ m}(\overline{y})).
 $$
 Zatem równoważne zdanie jest równe 
 $$
@@ -890,13 +894,14 @@ Z dowolności $\overline{x}, \overline{y} \in \domkniecie{A}$, $m_1, m_2 \in M$ 
 Udowodnimy (2) $\implies (1)$
 Załóżmy, że 
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad m(\overline{x}), m(\overline{y}), \phi(m(\overline{x})), \phi(m(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
+\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad \domkniecie{m}(\overline{x}), \domkniecie{
+m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 \end{equation}
 Niech $m_1,m_2 \in M, \overline{x}, \overline{y} \in \domkniecie{A}$. Z regularności NAS istnieją $m_0, \phi_1,\phi_2$ takie, że
 $$ 
 m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0
 $$
-Niech $\overline{\alpha}=m_0(\overline{x})$ wtedy ponownie z regularności NAS istnieje $\Psi$ takie, że dla każdego $\overline{\alpha_i} \in \alpha$
+Niech $\overline{\alpha}=\domkniecie{m_0}(\overline{x})$ wtedy ponownie z regularności NAS istnieje $\Psi$ takie, że dla każdego $\overline{\alpha_i} \in \alpha$
 $$
 \Psi(\phi_2(\overline{\alpha_i}))=\overline{\alpha_i}
 $$
@@ -916,9 +921,9 @@ Z dowolności $m_1, m_2$ i $\overline{x}, \overline{y} F$ jest porównawczo niez
 Udowodnimy (3) $\implies$ (2)
 Załóżmy, że
 \begin{equation}
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \domkniecie{\phi}(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
-Niech $m\in M, \phi\in \Phi$ i $\overline{x}, \overline{y} \in \domkniecie{A}$, $\overline{\alpha}:= m(\overline{x}), \overline{\beta}:=m(\overline{y})$. Z (3.9)
+Niech $m\in M, \phi\in \Phi$ i $\overline{x}, \overline{y} \in \domkniecie{A}$, $\overline{\alpha}:=\domkniecie{m}(\overline{x}), \overline{\beta}:=\domkniecie{m}(\overline{y})$. Z (3.9)
 $$
 \mathcal{F}(\domkniecie{\phi\circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi\circ m}(\overline{x})) \iff \mathcal{F}(\domkniecie{m} (\overline{x})=\mathcal{F}(\domkniecie{m}(\overline{y})).
 $$
@@ -927,7 +932,8 @@ Z dowolności wyboru $m, \phi$ oraz $\overline{x}, \overline{y}$ udowodniliśmy 
 Udowodnimy $(2) \implies (3)$
 Załóżmy, że
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad m(\overline{x}), m(\overline{y}), \phi(m(\overline{x})), \phi(m(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
+\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad \domkniecie{m}(\overline{x}), \domkniecie{
+m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 \end{equation}
 Niech $\phi \in \phi$, $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$ oraz $\overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D}$ i $\domkniecie{m}(\overline{x}):=\overline{\alpha}$,  $\domkniecie{m}(\overline{y}):=\overline{\beta}$. 
 Rozumujemy równoważnie
@@ -936,7 +942,7 @@ $$
 $$
 Niech $m \in M$, $\overline{x}, \overline{y} \in \domkniecie{A}$ takie, że
 $$
-\overline{\alpha}=m(\overline{x}), \quad \overline{\beta}=m(\overline{y})
+\overline{\alpha}=\domkniecie{m}(\overline{x}), \quad \overline{\beta}=\domkniecie{m}(\overline{y})
 $$
 Wtedy z pierwszej równoważności
 $$
@@ -959,17 +965,17 @@ Niech $U=\tuple{A,M,a,\phi}$ będzie regularnym NAS $\mathcal{F}:\mathcal{D}\to 
 \item
 $F$ jest bezwzględnie niezmiennicza w stosunku do $U$ 
 $$
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
 $$
 \item
 Jeżeli dla wszystkich $\overline{\alpha} \in \domkniecie{a}$ takich, że $\overline{\alpha} \in \mathcal{D}$, $\mathcal{F}(\alpha)\in a$, wtedy $F$ jest odnośnikowo niezmiennicza w stosunku do $U$ wtedy i tylko wtedy gdy 
 \begin{equation*}
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\phi(\mathcal{F}(\overline{\alpha})).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\domkniecie{\phi}(\mathcal{F}(\overline{\alpha})).
 \end{equation*}
 \item
 $F$ jest porównawczo niezmiennicza w stosunku do $U$ wtedy i tylko wtedy, gdy dla wszystkich $\phi \in \Phi$ istnieje $\Psi_{\phi}$ które jest różnowartościowe takie, że
 $$
- \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
+ \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
 $$
 \end{enumerate}
 \end{tw}
@@ -981,9 +987,9 @@ Dowód (1) wynika wprost z twierdzenia 3.13
 $\impliedby$
 Załóżmy, że 
 \begin{equation}
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\phi(\mathcal{F}(\overline{\alpha})).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\domkniecie{\phi}(\mathcal{F}(\overline{\alpha})).
 \end{equation}
-Niech $m_1, m_2 \in M$ $x \in A$ i $\overline{x} \in \domkniecie{A}$ i $m_1(\overline{x}), m_2(\overline{x}) \in \mathcal{D}$
+Niech $m_1, m_2 \in M$ $x \in A$ i $\overline{x} \in \domkniecie{A}$ i $\domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x}) \in \mathcal{D}$
 $$
 m_1(x)=F(m_1;\overline{x})=F(\domkniecie{m_1}(\overline{x}))
 $$
@@ -1008,9 +1014,8 @@ m_2(x)&=&\phi_2(\Psi(\mathcal{F}(\domkniecie{\phi_1 \circ m_0}(x)))
 \end{eqnarray*}
 
 Dla $\phi:=\phi_2\circ \Psi, \overline{\alpha}:=\domkniecie{m_1}(\overline{x})$ z (3.11)
-
 \begin{eqnarray*}
-m_2(x) & = & \mathcal{F}(\phi_2 \circ \Psi \circ \phi_1 \circ m_0)(\overline{x})),\\
+m_2(x) & = & \mathcal{F}(\domkniecie{\phi_2 \circ \Psi \circ \phi_1 \circ m_0})(\overline{x})),\\
 m_2(x) & = & \mathcal{F}(\domkniecie{m_2}(\overline{x}))
 \end{eqnarray*}
 Z uwagi na symetrię oznaczeń implikacja w drugą stronę jest oczywista. Z dowolności $m_1, m_2$, $x$ i $\overline{x}$, F jest odnośnikowo niezmiennicza.
@@ -1018,7 +1023,7 @@ Z uwagi na symetrię oznaczeń implikacja w drugą stronę jest oczywista. Z dow
 $\implies$
 Załóżmy, że
 \begin{equation}
-\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha))=\mathcal{F}(\phi(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha))=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
 \end{equation}
 Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ i $\overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D}$. Niech $\alpha=\mathcal{F}(\overline{\alpha})$ z (3.12) mamy 
 $$
@@ -1033,22 +1038,22 @@ Z dowolności $\phi$ i $\alpha, \overline{\alpha}$ udowodniliśmy punkt (2).
 $\impliedby$
 Załóżmy, że
 \begin{equation*}
-\forall_{\phi \in \Phi}  \exists_{\psi_{\phi}\in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
+\forall_{\phi \in \Phi}  \exists_{\psi_{\phi}\in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
 \end{equation*}
 Niech $\phi \in \Phi$. Wtedy istnieje 
 \begin{equation}
-\Psi_{\phi}: \forall_{\overline{\alpha} \in \domkniecie{a}} \mathcal{F}(\phi(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
+\Psi_{\phi}: \forall_{\overline{\alpha} \in \domkniecie{a}} \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
 \end{equation}
 
 Niech $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$. Wtedy z (3.13)
 \begin{eqnarray*}
-\mathcal{F}(\phi(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))\\
-\mathcal{F}(\phi(\overline{\beta}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))\\
+\mathcal{F}(\domkniecie{\phi}(\overline{\beta}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))
 \end{eqnarray*}
 Równoważnie
 \begin{eqnarray*}
-\mathcal{F}(\phi(\overline{\alpha}))&=&\mathcal{F}(\phi(\overline{\beta}))\\
-\Psi_{\phi}(\mathcal{F}(\overline{\alpha})&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))&=&\mathcal{F}(\domkniecie{\phi}(\overline{\beta}))\\
+\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
 \end{eqnarray*}
 Ponieważ $\Psi_{\phi} \in \Phi$ więc jest różnowartościowa. Zatem mamy
 $$
@@ -1057,17 +1062,17 @@ $$
 $\implies$
 Załóżmy, że
 \begin{equation}
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \domkniecie{\phi}(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
-Niech $\phi \in \Phi$. Niech $\Psi_{\phi}$ będzie taka, że $\Psi_{\phi}: z\longmapsto \mathcal{F}(\phi(\overline{\alpha})$, gdzie $\overline{\alpha} \in \domkniecie{a} \land z=\mathcal{F}(\overline{\alpha})$
-Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. Niech $\overline{\alpha}, \overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta)$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta})$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}, \overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1, \mathcal{F}(\overline{\beta})=z_2$.
+Niech $\phi \in \Phi$. Niech $\Psi_{\phi}$ będzie taka, że $\Psi_{\phi}: z\longmapsto \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))$, gdzie $\overline{\alpha} \in \domkniecie{a} \land z=\mathcal{F}(\overline{\alpha})$
+Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. Niech $\overline{\alpha}, \overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta)$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta}))$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}, \overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1, \mathcal{F}(\overline{\beta})=z_2$.
 \begin{eqnarray*}
 \Psi_{\phi}(z_1)&=&\Psi_{\phi}(z_2)\\
 \Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
 \end{eqnarray*}
 Z (3.14)
 $$
-\mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\phi(\overline{\beta})) \implies \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}) \implies z_1=z_2
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \implies \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}) \implies z_1=z_2
 $$
 Z dowolności $\phi, \overline{\alpha}, \overline{\beta}$ udowodniliśmy implikacje.
 \end{enumerate}
@@ -1180,7 +1185,7 @@ $F$ jest porównawczo niezmiennicza w stosunku do $U$ wtedy i tylko wtedy gdy, j
 $\implies$
 Niech $F$ będzie bezwzględnie niezmiennicza w stosunku do $U$ 
 \begin{equation}
-\forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
+\forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
 \end{equation}
 Niech $\alpha \in \mathbb{R}$. Pokażemy, że $ABS_{F,\alpha}$ jest bezwzględnie niezmiennicza. Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x} \in \domkniecie{A}$ 
 \begin{enumerate}[I.]
@@ -1205,7 +1210,7 @@ Niech $\alpha=F(m_1;\overline{x})$. Rozważmy wyrażenie $ABS_{F,\alpha}$  z za�
 $\implies$
 Niech $F$ będzie odnośnikowo niezmiennicza w stosunku do $U$ 
 \begin{equation}
-\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
+\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
 \end{equation}
 Pokażemy, że $REF_{F}$ jest bezwzględnie niezmiennicza. Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x} \in \domkniecie{A}$ 
 \begin{enumerate}[I.]
@@ -1226,7 +1231,7 @@ m_{1}(x)=F(m_{1};\overline{x}) \notiff m_{2}(x)=F(m_{2};\overline{x}).
 $$
 \begin{enumerate}[I.]
 \item
-Jeśli $m_1(x)=F(m_1;\overline{x})$ wtedy $REF_{F}(m_1;x,\overline{x})=1$ z bezwzględnej niezmienniczości $REF_{F}(m_2;X,\overline{x})=1$ wtedy $m_2(x)=F(m_2;\overline{x})$. Sprzeczność.
+Jeśli $m_1(x)=F(m_1;\overline{x})$ wtedy $REF_{F}(m_1;x,\overline{x})=1$ z bezwzględnej niezmienniczości $REF_{F}(m_2;x,\overline{x})=1$ wtedy $m_2(x)=F(m_2;\overline{x})$. Sprzeczność.
 \item
 Jeśli $m_1(x)\ne F(m_1;\overline{x})$ wtedy $REF_{F}(m_1;X,\overline{x})=0$ z bezwzględnej niezmienniczości $REF_{F}(m_2;X,\overline{x})=0$ wtedy $m_2(x)\ne F(m_2;\overline{x})$. Sprzeczność.
 \end{enumerate}
@@ -1235,7 +1240,7 @@ Skoro wszystkie przypadki skończyły się uzyskaniem sprzeczności to nasze prz
 $\implies$
 Niech $F$ będzie porównawczo niezmiennicza w stosunku do $U$ 
 \begin{equation}
-\forall_{m_1, m_2 \in M}  \forall_{\overline{x},\overline{y} \in \domkniecie{A}} \quad m_1(\overline{x}), m_2(\overline{x}),m_1(\overline{y}), m_2(\overline{y}) \in \mathcal{D} \implies  F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
+\forall_{m_1, m_2 \in M}  \forall_{\overline{x},\overline{y} \in \domkniecie{A}} \quad  \domkniecie{m_1}(\overline{x}), \domkniecie{ m_2}(\overline{x}), \domkniecie{m_1}(\overline{y}), \domkniecie{m_2}(\overline{y}) \in \mathcal{D} \implies  F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
 \end{equation}
 Pokażemy, że $COMP_{F}$ jest bezwzględnie niezmiennicza, to znaczy
 \begin{equation}
