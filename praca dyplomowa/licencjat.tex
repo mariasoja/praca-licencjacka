@@ -86,9 +86,9 @@ napisana w~Instytucie Matematyki
 
 \chapter{Wstęp}
 
-Tematem pracy jest Teoria Stevensa pomiaru statystycznego. Teoria ta wiąże się nieodłącznie z pojęciem skali w zagadnieniach analizy danych. Pomimo tego, że pojęcie skali pojawia się w wielu książkach z zakresu analizy danych np. {\citep{walesiak2009statystyczna}} to zaskakującym jest że nigdzie nie jest ono matematycznie poprawnie ono wyjaśnione ponadto różne bliskie narzędzia analizy danych są nieporównywalnie lepiej matematycznie opisane. W bibliografiach znajduje się w tych miejscach odniesienie do teorii Stevensa sformułowanej w pracy napisanej przez Adams, Fagot, Robinson {\citep{adams1965theory}} która okazuje się być próbą wyjaśnienia nieprecyzyjności z wcześniejszych prac Stevensa. Publikacja pracy miała miejsce w roku 1965 co sugeruje ze odpowiedziała na większość z nękających społeczność pytań. Sama praca okazuje się zawierać znacznie więcej niż definicje skal pomiarowych autorzy starają się w niej sformułować bardzo ogólna teorie o formułowaniu wszelkich zdań z zakresu statystyki. W niniejszej pracy podjęta została próba omówienia choć części bogato omówionej tam teorii. 
+Tematem pracy jest teoria Stevensa pomiaru statystycznego. Teoria ta wiąże się nieodłącznie z pojęciem skali w zagadnieniach analizy danych. Pomimo tego, że pojęcie skali pojawia się w wielu książkach z zakresu analizy danych np. w {\citep{walesiak2009statystyczna}} to zaskakującym jest że nigdzie nie jest ono matematycznie poprawnie ono wyjaśnione ponadto różne bliskie narzędzia analizy danych są nieporównywalnie lepiej matematycznie opisane. W bibliografiach znajduje się w tych miejscach odniesienie do teorii Stevensa sformułowanej w pracy napisanej przez Adams, Fagot, Robinson {\citep{adams1965theory}}, która okazuje się być próbą wyjaśnienia nieprecyzyjności z wcześniejszych prac Stevensa. Publikacja pracy miała miejsce w roku 1965 co sugeruje ze odpowiedziała na większość z nękających społeczność pytań. Sama praca okazuje się zawierać znacznie więcej niż definicje skal pomiarowych. Autorzy starają się w niej sformułować bardzo ogólna teorie o formułowaniu wszelkich zdań z zakresu statystyki. W niniejszej pracy podjęta została próba omówienia choć części tej bogato omówionej tam teorii. 
  
-Praca uporządkowana jest w następujący sposób. W rozdziale drugim znajdują się preliminaria w których umieszczono miedzy innymi elementy algebraicznej teorii grup oraz teorii mnogości. W rozdziale trzecim omawiane są kolejne aspekty teorii Stevensa pomiaru statystycznego część ta rozpoczyna od wprowadzenia numerical assignmnet systems (NAS) których zadaniem jest modelowanie rzeczywistych pomiarów wykonywanych w statystyce. W dalszej części wprowadzone są typy skal jako warunki nakładane na poszczególne NAS, w tym miejscu dokonujemy porównania założeń NAS  z teoria grup algebraicznych. Dalsza cześć pracy stanowi omówienie teorii niezmienniczości w pomiarach statystycznych. W pracy zaprezentowano kilka twierdzeń o warunkach równoważnych rożnych typów niezmienniczości. Pomimo tego iż praca ta nie wyczerpuje i nie wyjaśnia w pełni jak teorii przedstawionej w pracy Adams, Fagot, Robinson {\citep{adams1965theory}}. Wnosi istotną wartość poprzez zaprezentowanie własnych przykładów oraz dowodów twierdzeń zaprezentowanych w pracy które wyraźnie rzutują na rozumienie pojęć przedstawionych w pracy. Praca ponadto pokazuje iż tematyka przedstawiona ponad 50 lat temu teoria ta dalej jest nietrywialna i nie jest wprowadzana w pełni przez autorów książek z analizy danych z uwagi na jej ogólność i stopień skomplikowania. W rozdziale czwartym podsumujemy  matematyczne badania tej teorii i omówimy wypracowane wnioski.
+Praca uporządkowana jest w następujący sposób. W rozdziale drugim znajdują się preliminaria w których umieszczono miedzy innymi elementy algebraicznej teorii grup oraz teorii mnogości. W rozdziale trzecim omawiane są kolejne aspekty teorii Stevensa pomiaru statystycznego. Część ta rozpoczyna od wprowadzenia numerical assignment systems (NAS), których zadaniem jest modelowanie rzeczywistych pomiarów wykonywanych w statystyce. W dalszej części wprowadzone są typy skal jako warunki nakładane na poszczególne NAS, w tym miejscu dokonujemy porównania założeń NAS  z teoria grup algebraicznych. Dalsza część pracy stanowi omówienie teorii niezmienniczości w pomiarach statystycznych. W pracy zaprezentowano kilka twierdzeń o warunkach równoważnych rożnych typów niezmienniczości. Pomimo tego, iż praca ta nie wyczerpuje i nie wyjaśnia w pełni teorii przedstawionej w pracy Adams, Fagot, Robinson {\citep{adams1965theory}}, wnosi istotną wartość poprzez zaprezentowanie własnych przykładów oraz dowodów twierdzeń zaprezentowanych w pracy które wyraźnie rzutują na rozumienie pojęć przedstawionych w pracy. Ponadto pokazuje iż tematyka przedstawiona ponad 50 lat temu, dalej jest nietrywialną i nie jest wprowadzana w pełni przez autorów książek z analizy danych z uwagi na jej ogólność i stopień skomplikowania. W rozdziale czwartym podsumujemy  matematyczne badania tej teorii i omówimy wypracowane wnioski.
 
 \chapter{Preliminaria}
 
@@ -208,44 +208,30 @@ a\circ b=b\circ a
 dla każdych elementów $a,b$ ze zbioru $X$.
 \end{definition}
 Przykładem działania jest dodawanie liczb naturalnych w zbiorze $N$.
-\begin{definition}[{\citep[Sec 4.1 Def. 4.6]{jedrzejewski2011algebra}}]
-Element $e$, należący do zbioru $X$, nazywamy elementem prawostronnie neutralnym działania $\circ$ w zbiorze $X$, jeśli
-\begin{equation*}
-x\circ e = x
-\end{equation*} 
-dla każdego elementu $x$ ze zbioru $X$.
-\end{definition}
-\begin{definition}[{\citep[Sec 4.1 Def. 4.5]{jedrzejewski2011algebra}}]
-Element $e$, należący do zbioru $X$, nazywamy elementem lewostronnie neutralnym działania $\circ$ w zbiorze $X$, jeśli
-\begin{equation*}
-e\circ x = x
-\end{equation*} 
-dla każdego elementu $x$ ze zbioru $X$.
-\end{definition}
 \begin{definition}[{\citep[Sec 4.1 Def. 4.8]{jedrzejewski2011algebra}}]
-Element $e$ nazywamy elementem neutralnym w zbiorze $X$, jeśli jest on lewostronnie i prawostronnie neutralny, czyli
+Element $e$ nazywamy elementem neutralnym w zbiorze $X$, jeśli 
 \begin{equation*}
 e\circ x = x\circ e = x
 \end{equation*}
 dla każdego elementu $x$ ze zbioru $X$.
 \end{definition}
-Na przykład elementem neutralnym dodawania jest 0 natomiast elementem neutralnym mnożenia jest 1.
 
-\begin{definition}[Struktury algebraicznej{ \citep[Sec 4.1 Def. 4.1]{jedrzejewski2011algebra}}]
-Strukturę algebraiczną (systemem algebraicznym, czasem algebrą) nazywamy niepusty zbiór wraz z pewną liczbą działań wewnętrznych i pewną liczbą działań zewnętrznych w tym zbiorze.
-\end{definition}
+
 \begin{definition}[{\citep[Sec 4.2 Def. 4.9]{jedrzejewski2011algebra}}]
-Strukturę algebraiczną, złożoną z niepustego zbioru $P$ i jednego działania łącznego, nazywamy półgrupą.
-\end{definition}
-\begin{definition}[{\citep[Sec 4.2]{jedrzejewski2011algebra}}]
+\begin{itemize}
+\item
+Strukturę algebraiczną, złożoną z niepustego zbioru $X$ i jednego działania łącznego, nazywamy półgrupą.
+\item
 Półgrupę, w której istnieje element neutralny, nazywamy półgrupą z jedynką lub monoidem. Półgrupę ,w której działanie jest przemienne, nazywamy półgrupę przemienną lub półgrupę abelową. 
-\end{definition}
-\begin{definition}[{\citep[Sec 4.2]{jedrzejewski2011algebra}}]
-Element $a$ w półgrupię $(P,\circ)$ z jedynką $e$ nazywamy elementem odwracalnym, jeśli istnieje element $a'$ w zbiorze $P$ taki, że
+\item
+Element $a$ w półgrupię $(X,\circ)$ z jedynką $e$ nazywamy elementem odwracalnym, jeśli istnieje element $a'$ w zbiorze $X$ taki, że
 \begin{equation*}
 a'\circ a=a\circ a'=e
 \end{equation*}
 Element $a'$ nazywamy wtedy elementem odwrotnym do elementu $a$.
+\item
+Półgrupę
+\end{itemize}
 \end{definition}
 \begin{definition}[Grupy {\citep[Sec 4.3 Def. 4.10]{jedrzejewski2011algebra}}]
 Strukturę algebraiczną ($\mathcal{G},\circ$) nazywamy grupą, jeśli spełnione są następujące warunki:
@@ -267,9 +253,9 @@ Grupą przemienną (abelową) nazywamy taką grupę, w której działanie jest p
 
 \chapter{Teoria Pomiaru Statystycznego Stevensa}
 
-W poniższym rozdziale korzystać z artykułu [{\citep{adams1965theory}}]
+W poniższym rozdziale korzystać z artykułu {\citep{adams1965theory}}
 
-Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skorelowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Dowolną funkcję tego rodzaju nazywamy \textit{numerical assignment}. Choć w języku polskim nie jest dostępne utarte tłumaczenie tego pojęcia rozumiemy je jako formę przypisania liczby do danego obiektu. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek. Jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasę przypisań liczbowych. Drugim podstawowym pojęciem jest permissible transformation czyli funkcja odwzorowującą wartości jednego numerical assignment danej klasy na wartości innego numerical assignment. Te dwa pojęcia składają się na numerical assignment system. Zdefiniujmy formalnie czym jest numerical assignment system.
+Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skorelowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Dowolną funkcję tego rodzaju nazywamy numerical assignment. Choć w języku polskim nie jest dostępne utarte tłumaczenie tego pojęcia rozumiemy je jako formę przypisania liczby do danego obiektu. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek. Jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasę przypisań liczbowych. Drugim podstawowym pojęciem jest permissible transformation czyli funkcja odwzorowującą wartości jednego numerical assignment danej klasy na wartości innego numerical assignment. Te dwa pojęcia składają się na numerical assignment system. Zdefiniujmy formalnie czym jest numerical assignment system.
 \begin{definition}[Numerical assignment system (NAS)]
 Numerical assignment system to uporządkowany układ $\tuple{A, M, a, \Phi}$ spełniający poniższe warunki:
 \begin{enumerate}
@@ -277,7 +263,7 @@ Numerical assignment system to uporządkowany układ $\tuple{A, M, a, \Phi}$ spe
 $A$ jest niepustym zbiorem, $a$ jest podzbiorem liczb rzeczywistych, $M$ jest zbiorem funkcji przekształcających $A$ w $a$, i $\Phi$ jest klasą funkcji przekształcających $a$ w siebie.  
 \item
 $$
-\forall_{m \in M} \forall_{phi \in \Phi} \quad \phi \circ m \in M.
+\forall_{m \in M} \forall_{\phi \in \Phi} \quad \phi \circ m \in M.
 $$ 
 \item
 $\Phi$ zawiera tożsamościową transformację (identyczność) $a$ w siebie i 
@@ -575,19 +561,19 @@ Definiujemy trzy rodzaje niezmienniczości dla uogólnionych operacji na pomiara
 Niech $U=\tuple{A,M,a,\Phi}$ będzie NAS $\mathcal{F}:\mathcal{D}\to\domkniecie{\mathbb{R}}$, $\mathcal{D}\subset \domkniecie{\mathbb{R}}$ i $F$ jest uogólnioną operacją na pomiarach odpowiadających $\mathcal{F}$. Wtedy:
 \begin{enumerate}
 \item
-$F$ jest bezwzględnie niezmiennicza względem $U$ 
+$F$ jest bezwzględnie niezmiennicza względem $U$ gddy
 $$
 \forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
 $$
 \item
-$F$ jest odnośnikowo niezmiennicza względem $U$  
+$F$ jest odnośnikowo niezmiennicza względem $U$ gddy 
 $$
-\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}),\domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
+\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}),\domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies \big[ m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}) \big].
 $$
 \item
-$F$ jest porównawczo niezmiennicza względem $U$ 
+$F$ jest porównawczo niezmiennicza względem $U$ gddy dla dow. $m_1$, $m_2 \in M$ i $\overline{x}$, $\overline{y} \in \domkniecie{A}$ o ile $\domkniecie{m_1}(\overline{x}), \domkniecie{ m_2}(\overline{x}), \domkniecie{m_1}(\overline{y}), \domkniecie{m_2}(\overline{y}) \in \mathcal{D}$ to mamy.
 $$
-\forall_{m_1, m_2 \in M}  \forall_{\overline{x},\overline{y} \in \domkniecie{A}} \quad  \domkniecie{m_1}(\overline{x}), \domkniecie{ m_2}(\overline{x}), \domkniecie{m_1}(\overline{y}), \domkniecie{m_2}(\overline{y}) \in \mathcal{D} \implies  F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
+F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
 $$
 \end{enumerate} 
 \end{definition}
@@ -641,15 +627,12 @@ Skąd
 $$
 \domkniecie{m_1}(x)=F(m_1;x) \iff \domkniecie{m_2}(x)=F(m_2;x)
 $$
-Z dowolności $m_1,m_2$ oraz $x$, $F$ jest odnośnikowo niezmiennicza względem $U$
+Z dowolności $m_1,m_2$ oraz $x$, $F$ jest odnośnikowo niezmiennicza względem $U$.
 \end{przyklad}
 \begin{przyklad}
-Porównawczo niezmiennicza w stosunku do $U$ są funkcje maximum oraz minimum
+Porównawczo niezmiennicza w stosunku do $U$ są funkcje maximum oraz minimum.
 \end{przyklad}
-Referencyjnie niezmiennicze w stosunku do skal interwałowych też są np. funkcje
-\begin{equation*}
-Mean(m;x)+kSD(m;x),
-\end{equation*}
+
 
 \begin{tw}[Warunki równoważne niezmienniczości bezwzględnej]
 Niech $U=\tuple{A,M,a,\Phi}$ będzie regularnym NAS, niech $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$ i niech $F$ będzie uogólnioną operacją na pomiarach odpowiadającą $\mathcal{F}$. Wtedy:
@@ -691,10 +674,10 @@ Z regularności $U$, istnieje $m_0\in M$ takie, że
 $$
 m_1=\phi_1\circ m_0, \quad m_2=\phi_2\circ m_0.
 $$
-Wtedy wyznaczają $\overline{\alpha}=m_0(\overline{x})$
+Wtedy wyznaczają $\overline{\alpha}=m_0(\overline{x})$.
 Ponadto z regularności $U$ istnieje $\Psi:a\to a$, że
 $$
-\quad \Psi\circ \phi_2(\overline{\alpha})=\overline{\alpha}
+ \Psi(\phi_2(\overline{\alpha}))=\overline{\alpha}
 $$
 Niech $m:=\phi_2\circ m_0$ oraz $\phi:=\phi_1\circ\Psi$, $\overline{x}=\overline{x}$. Wtedy
 \begin{eqnarray*}
@@ -705,7 +688,7 @@ Niech $m:=\phi_2\circ m_0$ oraz $\phi:=\phi_1\circ\Psi$, $\overline{x}=\overline
 \mathcal{F}(m_2(\overline{x})) & = & \mathcal{F}(\domkniecie{m_1}(\overline{x}))\\
 F(m_2;\overline{x}) & = & F(m_1;\overline{x})
 \end{eqnarray*}
-Z dowolności $m_1,m_2$ raz $\overline{x} \in \domkniecie{A}$ udowodniliśmy punkt (1).
+Z dowolności $m_1,m_2$ oraz $\overline{x} \in \domkniecie{A}$ udowodniliśmy punkt (1).
 
 Udowodnimy (3) $\implies$ (2)
 Załóżmy, że
@@ -714,16 +697,16 @@ Załóżmy, że
 \end{equation}
 Niech $m\in M, \phi \in \Phi$ i $\overline{x} \in\domkniecie{A}$, $\overline{\alpha}:=m(\overline{x})$. Z (3.2)
 $$
- \mathcal{F}(\phi(m(\overline{x})))=\mathcal{F}(m(\overline{x})).
+ \mathcal{F}(\domkniecie{\phi\circ m}(\overline{x})))=\mathcal{F}(m(\overline{x})).
 $$
-Z dowolności wyboru $m, \phi$ oraz $\overline{x}$ udowodniliśmy punkt (2).
+Z dowolności wyboru $m$, $\phi$ oraz $\overline{x}$ udowodniliśmy punkt (2).
 
 Udowodnimy $(2) \implies (3)$
 Załóżmy, że
 \begin{equation}
 \forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}),\domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
 \end{equation}
-Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ oraz $\overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D}$. Niech $m \in M$, $\overline{x} \in \domkniecie{A}$ $\domkniecie{m}(\overline{x}):= \overline{\alpha}$. 
+Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ oraz $\overline{\alpha}$, $\phi(\overline{\alpha})\in \mathcal{D}$. Niech $m \in M$, $\overline{x} \in \domkniecie{A}$, $\domkniecie{m}(\overline{x}):= \overline{\alpha}$. 
 $$
  \mathcal{F}(\overline{\alpha})=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
@@ -735,7 +718,7 @@ Zatem mamy
 $$
 \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha})
 $$
-Z dowolności wyboru $\phi, \overline{\alpha}, m, \overline{x}$ udowodniliśmy punkt (3).
+Z dowolności wyboru $\phi$, $\overline{\alpha}$, $m$, $\overline{x}$ udowodniliśmy punkt (3).
 \end{proof}
 
 \begin{tw}[Warunki równoważne niezmienniczości odnośnikowej]
@@ -743,10 +726,9 @@ Niech $U=\tuple{A,M,a,\Phi}$ będzie regularnym NAS, niech $\mathcal{F}:\mathcal
 NWSR
 \begin{enumerate}
 \item
-$F$ jest odnośnikowo niezmiennicza w stosunku do $U$
+$F$ jest odnośnikowo niezmiennicza w stosunku do $U$ gddy dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D}$ to mamy.
 \item
 $$
-\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies
 (\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 \item
@@ -758,31 +740,30 @@ $$
 \end{tw}
 \begin{proof}
 Udowodnimy (1) $\implies$ (2)
-Załóżmy, że
+Załóżmy, że dla dow. $m_{1}$, $ m_{2} \in M$, $x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $\domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
+ m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
 \end{equation}
 Niech $m\in M, \phi \in \Phi$, $x \in A$ i $\overline{x}\in \domkniecie{A}$
 Stosujemy przekształcenia równoważne
-Dla $m_1:=\phi\circ m, m_2:=m, x:=x, \overline{x}:=\overline{x}$ mamy
+Dla $m_1:=\phi\circ m$,$ m_2:=m$, $x:=x$, $\overline{x}:=\overline{x}$ mamy
 $$
-\phi(m(x))=\mathcal{F}((\domkniecie{\phi \circ m}(\overline{x})) \iff \domkniecie{\phi \circ m}(x)=F(\phi \circ m;\overline{x}) 
+\phi\circ m(x)=\mathcal{F}((\domkniecie{\phi \circ m}(\overline{x})) \iff \domkniecie{\phi \circ m}(x)=F(\phi \circ m;\overline{x}) 
 $$
 Z (3.4) mamy
 $$
 \iff m(x)=F(m;\overline{x}) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 Udowodnimy (2) $\implies (1)$
-Załóżmy, że 
+Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies
 (\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 \end{equation}
-Niech $m_1,m_2 \in M, x \in A, \overline{x}\in \domkniecie{A}$ i niech $\domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D}$. Z regularności NAS istnieje $m_0, \phi_1,\phi_2$ takie, że
+Niech $m_1,m_2 \in M$, $x \in A$, $\overline{x}\in \domkniecie{A}$ i niech $\domkniecie{m_1}(\overline{x})$, $\domkniecie{m_2}(\overline{x})\in \mathcal{D}$. Z regularności NAS istnieje $m_0$, $\phi_1$, $\phi_2$ takie, że
 $$ 
 m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0
 $$
-Niech $\alpha=m_0(x)$i $\overline{\alpha}=\domkniecie{m_0}(\overline{x})$ wtedy ponownie z regularności NAS istnieje $\Psi$ takie, że dla każdego $\alpha_i \in \alpha$
+Niech $\alpha=m_0(x)$ i $\overline{\alpha}=\domkniecie{m_0}(\overline{x})$ wtedy ponownie z regularności NAS istnieje $\Psi$ takie, że dla każdego $\alpha_i \in \alpha$
 $$
 \Psi(\phi_2(\overline{\alpha_i}))=\overline{\alpha_i}
 $$
@@ -812,9 +793,9 @@ Załóżmy, że
 \begin{equation}
 \forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
 \end{equation}
-Niech $m\in M, \phi\in \Phi$, $x\in A$ i $\overline{x} \in \domkniecie{A}$ i niech $\overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D}$. Dla  $\alpha:= m(x), \overline{\alpha}:=\domkniecie{m}(\overline{x})$. Równoważnie
+Niech $m\in M, \phi\in \Phi$, $x\in A$ i $\overline{x} \in \domkniecie{A}$ i niech $\overline{\alpha}$, $\domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D}$. Dla  $\alpha:= m(x)$, $\overline{\alpha}:=\domkniecie{m}(\overline{x})$. Równoważnie
 $$
-(\phi(m(x))=\mathcal{F}(\domkniecie{\phi\circ m}(\overline{x})) 
+\phi\circ m(x)=\mathcal{F}(\domkniecie{\phi\circ m}(\overline{x})) 
 $$
 $$
 \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})).
@@ -826,10 +807,10 @@ $$
 Z dowolności wyboru $m, \phi$ oraz $x$ udowodniliśmy punkt (2).
 
 Udowodnimy $(2) \implies (3)$
-Załóżmy, że 
+Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi},\forall_{x \in A}\forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies
 (\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
+\end{equation}
 \end{equation}
 Niech $\phi \in \Phi$, $\alpha \in a$, $\overline{\alpha} \in \domkniecie{a}$. Wtedy istnieje $x$ i $\overline{x}$ oraz takie $m$, że
 $$
@@ -837,14 +818,14 @@ $$
 $$ 
 \begin{eqnarray*}
 \phi(\alpha) & = & \mathcal{F}(\domkniecie{\phi}(\overline{\alpha})),\\
-\phi \circ m(x))&=&\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})).
+\phi \circ m(x)&=&\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})).
 \end{eqnarray*}
 Z (3.7) mamy
 \begin{eqnarray*}
 m(x) &=&\mathcal{F}(\domkniecie{m}(\overline{x}))\\
 \alpha&=&\mathcal{F}(\overline{\alpha})
 \end{eqnarray*}
-Z dowolności $\phi, \alpha, \overline{\alpha}$ udowodniliśmy punkt (3).
+Z dowolności $\phi$, $\alpha$, $\overline{\alpha}$ udowodniliśmy punkt (3).
 \end{proof}
 \begin{tw}[Warunki równoważne niezmienniczości porównawczej]
 Niech $U=\tuple{A,M,a,\Phi}$ będzie regularnym NAS, niech $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$ i niech $F$ będzie uogólnioną operacją na pomiarach odpowiadającą $\mathcal{F}$. Wtedy
@@ -853,9 +834,11 @@ NWSR
 \item
 $F$ jest porównawczo niezmiennicza w stosunku do $U$.
 \item
+Dla dow. $m \in M$, $\phi \in \Phi$ i $\overline{x}$, $\overline{y} \in \domkniecie{A}$ o ile $\domkniecie{m}(\overline{x}), \domkniecie{
+m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D}$ to mamy.
+
 $$
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad \domkniecie{m}(\overline{x}), \domkniecie{
-m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
+\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 $$
 \item
 $$
@@ -892,10 +875,10 @@ $$
 Z dowolności $\overline{x}, \overline{y} \in \domkniecie{A}$, $m_1, m_2 \in M$ udowodniliśmy punkt (2)
 
 Udowodnimy (2) $\implies (1)$
-Załóżmy, że 
+Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$ i $\overline{x}$, $\overline{y} \in \domkniecie{A}$ o ile $\domkniecie{m}(\overline{x}), \domkniecie{
+m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad \domkniecie{m}(\overline{x}), \domkniecie{
-m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
+\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 \end{equation}
 Niech $m_1,m_2 \in M, \overline{x}, \overline{y} \in \domkniecie{A}$. Z regularności NAS istnieją $m_0, \phi_1,\phi_2$ takie, że
 $$ 
@@ -916,31 +899,31 @@ Z (3.8)
 & \iff & F(m_2;\overline{x})=F(m_2;\overline{y})
 \end{eqnarray*}
 
-Z dowolności $m_1, m_2$ i $\overline{x}, \overline{y} F$ jest porównawczo niezmiennicza.
+Z dowolności $m_1, m_2$ i $\overline{x}$, $\overline{y}$ $F$ jest porównawczo niezmiennicza.
 
 Udowodnimy (3) $\implies$ (2)
-Załóżmy, że
+Załóżmy, że dla dow. $phi \in \Phi$ i $\overline{\alpha}$,$ \overline{\beta} \in \domkniecie{a}$ o ile $\overline{\alpha}, \overline{\beta}, \domkniecie{\phi}(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \domkniecie{\phi}(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
-Niech $m\in M, \phi\in \Phi$ i $\overline{x}, \overline{y} \in \domkniecie{A}$, $\overline{\alpha}:=\domkniecie{m}(\overline{x}), \overline{\beta}:=\domkniecie{m}(\overline{y})$. Z (3.9)
+Niech $m\in M, \phi\in \Phi$ i $\overline{x}, \overline{y} \in \domkniecie{A}$, $\overline{\alpha}:=\domkniecie{m}(\overline{x})$, $\overline{\beta}:=\domkniecie{m}(\overline{y})$. Z (3.9)
 $$
 \mathcal{F}(\domkniecie{\phi\circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi\circ m}(\overline{x})) \iff \mathcal{F}(\domkniecie{m} (\overline{x})=\mathcal{F}(\domkniecie{m}(\overline{y})).
 $$
-Z dowolności wyboru $m, \phi$ oraz $\overline{x}, \overline{y}$ udowodniliśmy punkt (2).
+Z dowolności wyboru $m, \phi$ oraz $\overline{x}$, $\overline{y}$ udowodniliśmy punkt (2).
 
 Udowodnimy $(2) \implies (3)$
-Załóżmy, że
+Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$ i $\overline{x}$, $\overline{y} \in \domkniecie{A}$ o ile $\domkniecie{m}(\overline{x}), \domkniecie{
+m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x}, \overline{y} \in \domkniecie{A}}\quad \domkniecie{m}(\overline{x}), \domkniecie{
-m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ m}(\overline{y})) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
+\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 \end{equation}
-Niech $\phi \in \phi$, $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$ oraz $\overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D}$ i $\domkniecie{m}(\overline{x}):=\overline{\alpha}$,  $\domkniecie{m}(\overline{y}):=\overline{\beta}$. 
+Niech $\phi \in \phi$, $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$ oraz $\overline{\alpha}$, $\overline{\beta}$, $\phi(\overline{\alpha})$, $\phi(\overline{\beta}) \in \mathcal{D}$ i $\domkniecie{m}(\overline{x}):=\overline{\alpha}$,  $\domkniecie{m}(\overline{y}):=\overline{\beta}$. 
 Rozumujemy równoważnie
 $$
 \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})
 $$
-Niech $m \in M$, $\overline{x}, \overline{y} \in \domkniecie{A}$ takie, że
+Niech $m \in M$, $\overline{x}$, $\overline{y} \in \domkniecie{A}$ takie, że
 $$
 \overline{\alpha}=\domkniecie{m}(\overline{x}), \quad \overline{\beta}=\domkniecie{m}(\overline{y})
 $$
@@ -955,7 +938,7 @@ $$
 $$
 \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 $$
-Z dowolności $\phi, \overline{\alpha}, \overline{\beta}$ udowodniliśmy punkt (3).
+Z dowolności $\phi$, $\overline{\alpha}$, $\overline{\beta}$ udowodniliśmy punkt (3).
 \end{proof}
 
 
@@ -997,7 +980,7 @@ $$
 $$ 
 m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0
 $$
-Niech $\alpha=m_0(x), \overline{\alpha}=\domkniecie{m_0}(\overline{x})$, $\alpha=(\alpha_1,\dots,\alpha_n)$.
+Niech $\alpha=m_0(x)$, $\overline{\alpha}=\domkniecie{m_0}(\overline{x})$, $\alpha=(\alpha_1,\dots,\alpha_n)$.
 
 Dalej z regularności $U$ istnieje $\Psi:a \to a$
 $$
@@ -1013,7 +996,7 @@ m_1(x) & = & \mathcal{F}(\domkniecie{m_1}(\overline{x})),\\
 m_2(x)&=&\phi_2(\Psi(\mathcal{F}(\domkniecie{\phi_1 \circ m_0}(x)))
 \end{eqnarray*}
 
-Dla $\phi:=\phi_2\circ \Psi, \overline{\alpha}:=\domkniecie{m_1}(\overline{x})$ z (3.11)
+Dla $\phi:=\phi_2\circ \Psi,$ $\overline{\alpha}:=\domkniecie{m_1}(\overline{x})$ z (3.11)
 \begin{eqnarray*}
 m_2(x) & = & \mathcal{F}(\domkniecie{\phi_2 \circ \Psi \circ \phi_1 \circ m_0})(\overline{x})),\\
 m_2(x) & = & \mathcal{F}(\domkniecie{m_2}(\overline{x}))
@@ -1021,11 +1004,11 @@ m_2(x) & = & \mathcal{F}(\domkniecie{m_2}(\overline{x}))
 Z uwagi na symetrię oznaczeń implikacja w drugą stronę jest oczywista. Z dowolności $m_1, m_2$, $x$ i $\overline{x}$, F jest odnośnikowo niezmiennicza.
 
 $\implies$
-Załóżmy, że
+Załóżmy, że dla dow. $\phi \in \Phi$, $\alpha \in a$ i $\overline{\alpha} \in \domkniecie{a}$ o ile $\overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D}$ to mamy 
 \begin{equation}
-\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha))=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
+\phi(\alpha))=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
 \end{equation}
-Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ i $\overline{\alpha}, \phi(\overline{\alpha}) \in \mathcal{D}$. Niech $\alpha=\mathcal{F}(\overline{\alpha})$ z (3.12) mamy 
+Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ i $\overline{\alpha}$, $\phi(\overline{\alpha}) \in \mathcal{D}$. Niech $\alpha=\mathcal{F}(\overline{\alpha})$ z (3.12) mamy 
 $$
 \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))
 $$
@@ -1060,12 +1043,12 @@ $$
 \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta})
 $$
 $\implies$
-Załóżmy, że
+Załóżmy, że dla dow $\phi \in \Phi$, $\overline{\alpha}$, $\overline{\beta} \in \domkniecie{a}$ o ile $\overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \domkniecie{\phi}(\overline{\beta}) \in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \domkniecie{\phi}(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
 Niech $\phi \in \Phi$. Niech $\Psi_{\phi}$ będzie taka, że $\Psi_{\phi}: z\longmapsto \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))$, gdzie $\overline{\alpha} \in \domkniecie{a} \land z=\mathcal{F}(\overline{\alpha})$
-Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. Niech $\overline{\alpha}, \overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta)$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta}))$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}, \overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1, \mathcal{F}(\overline{\beta})=z_2$.
+Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. Niech $\overline{\alpha}$, $\overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta)$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta}))$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}$, $\overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1$, $\mathcal{F}(\overline{\beta})=z_2$.
 \begin{eqnarray*}
 \Psi_{\phi}(z_1)&=&\Psi_{\phi}(z_2)\\
 \Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
@@ -1074,7 +1057,7 @@ Z (3.14)
 $$
 \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \implies \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}) \implies z_1=z_2
 $$
-Z dowolności $\phi, \overline{\alpha}, \overline{\beta}$ udowodniliśmy implikacje.
+Z dowolności $\phi$, $\overline{\alpha}$, $\overline{\beta}$ udowodniliśmy implikacje.
 \end{enumerate}
 \end{proof}
 Powyższe twierdzenie pokazuje, że warunki bezwzględnej, referencyjnej oraz porównawczej niezmienniczości operacji $F$ są równoważne (przynajmniej w szerokim zakresie warunków określonych w twierdzeniu) różnym rodzajom praw transformacji, które odnoszą się do wartości od $\mathcal{F}(\phi(\alpha))$ do $\mathcal{F}(\alpha)$. W pierwszym przypadku wartości te muszą być równe. W przypadku referencyjnej niezmienniczości wymagane jest, aby wartości $\mathcal{F}$ przekształcić zgodnie z tym samym prawem, co podstawowa transformacja pomiarów. W przypadku porównawczej niezmienniczości  wymagane jest, aby każda transformacja podstawowych pomiarów mogła określić odpowiednią transformację wartości operacji. Jedną bezpośrednią konsekwencją tego, wspomnianą wcześniej, jest to, że (zakładając, że ograniczenia przedstawione w hipotezie twierdzenia są spełnione), bezwzględna i referencyjna niezmienniczość są szczególnymi przypadkami niezmienniczości porównawczej.
@@ -1094,14 +1077,14 @@ Oznacza to, że nie można zdefiniować rozsądnej miary rozpraszania dla tych s
 Zastosowanie jednego z kryteriów z powyższych pięciu definicji niezmienniczości do operacji statystycznej może dać inny wynik niż wynik innego kryterium. Potrzebna jest dalsza specyfikacja, w jakich okolicznościach stosuje się każde ze specjalnych kryteriów. Proponujemy następujące kryterium: operacja statystyczna nie powinna być traktowana jako właściwa lub nieodpowiednia, tylko w odniesieniu do rodzajów stwierdzeń, które są na jej temat. Bardziej szczegółowo, kryterium polega na tym, że operacja statystyczna jest odpowiednia zarówno w odniesieniu do stwierdzenia (bardziej ogólnie, klasy stwierdzeń reprezentowanych przez funkcję zdaniową), jak i do NAS. W przypadku prawdziwej wartości stwierdzenia (lub jakiegokolwiek stwierdzenia klasy ) nie jest zmieniany, gdy mowa jest o innym numerical assignment tego samego systemu. Nasze kryterium odnosi się zatem, przede wszystkim do stwierdzeń lub klas stwierdzeń, a ponadto do operacji statystycznych, których mogą dotyczyć.
  Jednym z ważnych zastosowań jest formułowanie stwierdzeń dotyczących mierzalnych właściwości w populacjach i proponujemy kryterium stosowności dla tego rodzaju zastosowania.
 
-Teraz przedstawiamy sposób na uszczegółowienie powyższych intuicyjnych pomysłów. Przede wszystkim musimy dać bardziej precyzyjny sens koncepcji „stwierdzenia o pomiarach” lub „stwierdzenia o statystycznej operacji pomiarów”. Opis składniowy tego typu stwierdzeń (na tyle ogólny, by uwzględnić większość interesujących naukowo przypadków) wydaje się bezowocny, gdyż stwierdzenia te sa po prostu zbyt zróżnicowane. Dla naszego obecnego celu wystarczy jednak nie rozważać samych stwierdzeń, ale ich warunków prawdy , które mogą być reprezentowane przez odpowiednie funkcje prawdy. Jako przykład rozważmy poniższy wzór, zrównując miarę jednostki $x$ ze średnią miary jednostek w skończonym ciągu  $x=<x_{1},\dots,x_{n}>$:
+Teraz przedstawiamy sposób na uszczegółowienie powyższych intuicyjnych pomysłów. Przede wszystkim musimy dać bardziej precyzyjny sens koncepcji „stwierdzenia o pomiarach” lub „stwierdzenia o statystycznej operacji pomiarów”. Opis składniowy tego typu stwierdzeń (na tyle ogólny, by uwzględnić większość interesujących naukowo przypadków) wydaje się bezowocny, gdyż stwierdzenia te sa po prostu zbyt zróżnicowane. Dla naszego obecnego celu wystarczy jednak nie rozważać samych stwierdzeń, ale ich warunków prawdy , które mogą być reprezentowane przez odpowiednie funkcje prawdy. Jako przykład rozważmy poniższy wzór, zrównując miarę jednostki $x$ ze średnią miary jednostek w skończonym ciągu  $\overline{x}=<x_{1},\dots,x_{n}>$:
 \begin{equation}
-m(x)=Mean(\domkniecie{m}(x)).
+m(x)=Mean(\domkniecie{m}(\overline{x})).
 \end{equation}
-Warunki prawdy tego wzoru są reprezentowane przez funkcję $F(m; x, \overline{x})$, która przyjmuje wartość „prawda” dla określonego numerical assignment $m$, obiekt $x$ i ciąg $\overline{x}$, na wypadek, gdyby te trzy spełniały wzór, tj. tylko w przypadku, gdy $m(x)$ jest równe  $Mean(\domkniecie{m}(x))$. Jeśli arbitralnie reprezentujemy wartość „prawda” przez „1”, a wartość „fałsz” przez „0”, to funkcja prawdy $F(m; x, \overline{x})$ może być precyzyjnie zdefiniowana w następujący sposób. Dziedzina $F$ to zbiór uporządkowanych trójek $m; x, \overline{x}$ takich, że $m$ jest numerical assignment z pewną dziedziną $A$, $x$ jest elementem z $A$, a $\overline{x}$ jest skończonym ciągiem elementów z $A$ i dla wszystkich $m; x, \overline{x}$ z dziedziny $F$,
+Warunki prawdy tego wzoru są reprezentowane przez funkcję $F(m; x, \overline{x})$, która przyjmuje wartość „prawda” dla określonego numerical assignment $m$, obiekt $x$ i ciąg $\overline{x}$, na wypadek, gdyby te trzy spełniały wzór, tj. tylko w przypadku, gdy $m(x)$ jest równe  $Mean(\domkniecie{m}(\overline{x}))$. Jeśli arbitralnie reprezentujemy wartość „prawda” przez „1”, a wartość „fałsz” przez „0”, to funkcja prawdy $F(m; x, \overline{x})$ może być precyzyjnie zdefiniowana w następujący sposób. Dziedzina $F$ to zbiór uporządkowanych trójek $m; x, \overline{x}$ takich, że $m$ jest numerical assignment z pewną dziedziną $A$, $x$ jest elementem z $A$, a $\overline{x}$ jest skończonym ciągiem elementów z $A$ i dla wszystkich $m; x, \overline{x}$ z dziedziny $F$,
 \begin{equation}
 F(m;x,\overline{x})= \left\{ \begin{array}{lIl}
-1 & \textrm{gdy} & m(x)=Mean(\domkniecie{m}(x)),}\\
+1 & \textrm{gdy} & m(x)=Mean(\domkniecie{m}(\overline{x})),}\\
 0 & \textrm{wpp}}\\
 \end{array} \right.
 \end{equation}
@@ -1198,7 +1181,7 @@ Zatem
 $$
 ABS_{F,\alpha}(m_1;\overline{x})=ABS_{F,\alpha}(m_2;\overline{x}).
 $$
-Z dowolności $m_1$, $m_2$, $x$ oraz $\alpha$ pokazaliśmy, że $ABS_{F,\alpha}$ jest bezwzględnie niezmiennicza.
+Z dowolności $m_1$, $m_2$, $\overline{x}$ oraz $\alpha$ pokazaliśmy, że $ABS_{F,\alpha}$ jest bezwzględnie niezmiennicza.
 
 $\impliedby$
 Rozumujemy nie wprost, zatem istnieją $m_1$, $m_2 \in M$ oraz $\overline{x} \in \domkniecie{A}$ takie, że
@@ -1224,6 +1207,7 @@ $$
 REF_{F}(m_1;x,\overline{x})=REF_{F}(m_2;x,\overline{x}).
 $$
 Z dowolności $m_1$, $m_2$, $\overline{x}$, $x$ oraz $\alpha$ pokazaliśmy, że $REF_{F}$ jest bezwzględnie niezmiennicza.
+
 $\impliedby$
 Rozumujemy nie wprost, zatem istnieją $m_1$, $m_2 \in M$ oraz$x\in A$ $\overline{x} \in \domkniecie{A}$ takie, że
 $$
@@ -1239,14 +1223,15 @@ Skoro wszystkie przypadki skończyły się uzyskaniem sprzeczności to nasze prz
 \item 
 $\implies$
 Niech $F$ będzie porównawczo niezmiennicza w stosunku do $U$ 
+dla dow. $m_1$, $m_2 \in M$ i $\overline{x}$, $\overline{y} \in \domkniecie{A}$ o ile $\domkniecie{m_1}(\overline{x}), \domkniecie{ m_2}(\overline{x}), \domkniecie{m_1}(\overline{y}), \domkniecie{m_2}(\overline{y}) \in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{m_1, m_2 \in M}  \forall_{\overline{x},\overline{y} \in \domkniecie{A}} \quad  \domkniecie{m_1}(\overline{x}), \domkniecie{ m_2}(\overline{x}), \domkniecie{m_1}(\overline{y}), \domkniecie{m_2}(\overline{y}) \in \mathcal{D} \implies  F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
+F(m_{1};\overline{x})=F(m_{1};\overline{y}) \iff F(m_{2};\overline{x})=F(m_{2};\overline{y}).
 \end{equation}
 Pokażemy, że $COMP_{F}$ jest bezwzględnie niezmiennicza, to znaczy
 \begin{equation}
 \forall_{m_1, m_2 \in M} \forall_{\overline{x}, \overline{y}\in \domkniecie{A}} \quad COMP_{F}(m_1;\overline{x},\overline{y})=COMP_{F}(m_2;\overline{x},\overline{y}).
 \end{equation}
- Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x}, \overline{y} \in \domkniecie{A}$ 
+ Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x}$, $\overline{y} \in \domkniecie{A}$ 
 \begin{enumerate}[I.]
 \item
 Jeśli $COMP_{F}(m_1;\overline{x},\overline{y})=1$ to $F(m_1;\overline{x})=F(m_1;\overline{y})$ to z (3.19) $F(m_2;\overline{x})=F(m_2;\overline{y})$ stąd $COMP_{F}(m_2;\overline{x},\overline{y})=1$.
@@ -1257,7 +1242,8 @@ Zatem
 $$
 COMP_{F}(m_1;\overline{x},\overline{y})=COMP_{F}(m_2;\overline{x},\overline{y}).
 $$
-Z dowolności $m_1$, $m_2$, $\overline{x}$, $x$ pokazaliśmy, że $COMP_{F}$ jest bezwzględnie niezmiennicza.
+Z dowolności $m_1$, $m_2$, $\overline{x}$, $\overline{y}$ pokazaliśmy, że $COMP_{F}$ jest bezwzględnie niezmiennicza.
+
 $\impliedby$
 Rozumujemy nie wprost, zatem istnieją $m_1$, $m_2 \in M$ oraz$x\in A$ $\overline{x}, \overline{y} \in \domkniecie{A}$ takie, że
 $$
