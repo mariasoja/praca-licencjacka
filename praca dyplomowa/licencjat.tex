@@ -22,7 +22,7 @@
 
 \newcommand{\parauporzadkowana}[2]{\left\langle {#1}; {#2} \right\rangle}
 \newcommand{\zbior}[1]{\left\lbrace {#1} \right\rbrace }
-\newcommand{\domkniecie}[1]{\left\lbrack{#1}\right\rbrack}
+\newcommand{\domkniecie}[1]{\left[ {#1} \right] }
 \newcommand{\notiff}{%
   \mathrel{{\ooalign{\hidewidth$\not\phantom{"}$\hidewidth\cr$\iff$}}}}
 \newcommand{\tuple}[1]{\left\langle {#1} \right\rangle}
@@ -1037,7 +1037,8 @@ Udowodnimy warunek konieczny. Załóżmy, że dla dow $\phi \in \Phi$, $\overlin
 \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
 Niech $\phi \in \Phi$. Niech $\Psi_{\phi}$ będzie taka, że $\Psi_{\phi}: z\longmapsto \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))$, gdzie $\overline{\alpha} \in \domkniecie{a} \land z=\mathcal{F}(\overline{\alpha})$
-Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. Niech $\overline{\alpha}$, $\overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta)$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta}))$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}$, $\overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1$, $\mathcal{F}(\overline{\beta})=z_2$.
+Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. 
+Niech $\overline{\alpha}$, $\overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta}))$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}$, $\overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1$, $\mathcal{F}(\overline{\beta})=z_2$.
 \begin{eqnarray*}
 \Psi_{\phi}(z_1)&=&\Psi_{\phi}(z_2),\\
 \Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta})).\\
@@ -1061,9 +1062,9 @@ m(x)=Mean(\domkniecie{m}(\overline{x})).
 \end{equation}
 Warunki prawdy tego wzoru są reprezentowane przez funkcję $F(m; x, \overline{x})$, która przyjmuje wartość „prawda” dla określonego numerical assignment $m$, obiekt $x$ i ciąg $\overline{x}$, na wypadek, gdyby te trzy spełniały wzór, tj. tylko w przypadku, gdy $m(x)$ jest równe  $Mean(\domkniecie{m}(\overline{x}))$. Jeśli arbitralnie reprezentujemy wartość „prawda” przez „1”, a wartość „fałsz” przez „0”, to funkcja prawdy $F(m; x, \overline{x})$ może być precyzyjnie zdefiniowana w następujący sposób. Dziedzina $F$ to zbiór uporządkowanych trójek $m; x, \overline{x}$ takich, że $m$ jest numerical assignment z pewną dziedziną $A$, $x$ jest elementem z $A$, a $\overline{x}$ jest skończonym ciągiem elementów z $A$ i dla wszystkich $m; x, \overline{x}$ z dziedziny $F$,
 \begin{equation}
-F(m;x,\overline{x})= \left\{ \begin{array}{lIl}
-1 & \textrm{gdy} & m(x)=Mean(\domkniecie{m}(\overline{x})),}\\
-0 & \textrm{wpp}}\\
+F(m;x,\overline{x})= \left\{ \begin{array}{lcl}
+1 & \textrm{gdy} & m(x)=Mean(\domkniecie{m}(\overline{x})),\\
+0 & \textrm{wpp}\\
 \end{array} \right.
 \end{equation}
 
@@ -1094,25 +1095,25 @@ Niech $F$ będzie uogólnioną operacją na pomiarach z dziedziną $\mathcal{D}$
 \item
 Dla wszystkich liczb rzeczywistych $\alpha, ABS_{F,\alpha}$ jest funkcją z dziedzina $\mathcal{D}$ taką, że dla wszystkich $m;\overline{x} \in \mathcal{D}$,
 \begin{equation*}
-ABS_{F,\alpha}(m;\overline{x})= \left\{ \begin{array}{lIl}
-1 & \textrm{gdy} & F(m;\overline{x})=\alpha,}\\
-0 & \textrm{wpp}}\\
+ABS_{F,\alpha}(m;\overline{x})= \left\{ \begin{array}{lcl}
+1 & \textrm{gdy} & F(m;\overline{x})=\alpha,\\
+0 & \textrm{wpp}\\
 \end{array} \right.
 \end{equation*}
 \item
 $REF_{F}$ jest funkcją z dziedziną $\mathcal{D'}$ składającą się ze wszystkich uporządkowanych trójek $m;x,\overline{x}$, gdzie $m;\overline{x}$ jest w $\mathcal{D}$ i $x$ jest w dziedzinie $m$, taka że
 \begin{equation*}
-REF_{F}(m;x,\overline{x})= \left\{ \begin{array}{lIl}
-1 & \textrm{gdy} & m(x)=F(m;\overline{x}),}\\
-0 & \textrm{wpp}}\\
+REF_{F}(m;x,\overline{x})= \left\{ \begin{array}{lcl}
+1 & \textrm{gdy} & m(x)=F(m;\overline{x}),\\
+0 & \textrm{wpp}\\
 \end{array} \right.
 \end{equation*}
 \item
 $COMP_{F}$ jest funkcją z dziedziną $\mathcal{D''}$ składająca się ze wszystkich uporządkowanych trójek $m;\overline{x},\overline{y},$ gdzie $m;\overline{x}$, $m;\overline{y} \in \mathcal{D}$ taka że
 \begin{equation*}
-COMP_{F}(m;\overline{x},\overline{y})= \left\{ \begin{array}{lIl}
-1 & \textrm{gdy} & F(m;\overline{x})=F(m;\overline{y}),}\\
-0 & \textrm{wpp}}\\
+COMP_{F}(m;\overline{x},\overline{y})= \left\{ \begin{array}{lcl}
+1 & \textrm{gdy} & F(m;\overline{x})=F(m;\overline{y}),\\
+0 & \textrm{wpp}
 \end{array} \right.
 \end{equation*}
 \item
