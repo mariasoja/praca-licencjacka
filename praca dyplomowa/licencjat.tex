@@ -86,9 +86,9 @@ napisana w~Instytucie Matematyki
 
 \chapter{Wstęp}
 
-Tematem pracy jest teoria Stevensa pomiaru statystycznego. Teoria ta wiąże się nieodłącznie z pojęciem skali w zagadnieniach analizy danych. Pomimo tego, że pojęcie skali pojawia się w wielu książkach z zakresu analizy danych np. w {\citep{walesiak2009statystyczna}} to zaskakującym jest że nigdzie nie jest ono matematycznie poprawnie ono wyjaśnione ponadto różne bliskie narzędzia analizy danych są nieporównywalnie lepiej matematycznie opisane. W bibliografiach znajduje się w tych miejscach odniesienie do teorii Stevensa sformułowanej w pracy napisanej przez Adams, Fagot, Robinson {\citep{adams1965theory}}, która okazuje się być próbą wyjaśnienia nieprecyzyjności z wcześniejszych prac Stevensa. Publikacja pracy miała miejsce w roku 1965 co sugeruje ze odpowiedziała na większość z nękających społeczność pytań. Sama praca okazuje się zawierać znacznie więcej niż definicje skal pomiarowych. Autorzy starają się w niej sformułować bardzo ogólna teorie o formułowaniu wszelkich zdań z zakresu statystyki. W niniejszej pracy podjęta została próba omówienia choć części tej bogato omówionej tam teorii. 
+Tematem pracy jest teoria Stevensa pomiaru statystycznego. Teoria ta wiąże się nieodłącznie z pojęciem skali w zagadnieniach analizy danych. Pomimo tego, że to zagadnienie pojawia się w wielu książkach z zakresu analizy danych np. w {\citep{walesiak2009statystyczna}} to zaskakującym jest że nigdzie nie jest ono matematycznie poprawnie ono wyjaśnione ponadto różne bliskie narzędzia analizy danych są nieporównywalnie lepiej matematycznie opisane. W bibliografiach znajduje się w tych miejscach odniesienie do teorii Stevensa sformułowanej w pracy napisanej przez Adams, Fagot, Robinson {\citep{adams1965theory}}, która okazuje się być próbą wyjaśnienia nieprecyzyjności z wcześniejszych prac Stevensa. Publikacja pracy miała miejsce w roku 1965 co sugeruje ze odpowiedziała na większość z nękających społeczność pytań. Sama praca okazuje się zawierać znacznie więcej niż definicje skal pomiarowych. Autorzy starają się w niej sformułować bardzo ogólna teorie o formułowaniu wszelkich zdań z zakresu statystyki. W niniejszej pracy podjęta została próba omówienia choć części tej bogato omówionej tam teorii. 
  
-Praca uporządkowana jest w następujący sposób. W rozdziale drugim znajdują się preliminaria w których umieszczono miedzy innymi elementy algebraicznej teorii grup oraz teorii mnogości. W rozdziale trzecim omawiane są kolejne aspekty teorii Stevensa pomiaru statystycznego. Część ta rozpoczyna od wprowadzenia numerical assignment systems (NAS), których zadaniem jest modelowanie rzeczywistych pomiarów wykonywanych w statystyce. W dalszej części wprowadzone są typy skal jako warunki nakładane na poszczególne NAS, w tym miejscu dokonujemy porównania założeń NAS  z teoria grup algebraicznych. Dalsza część pracy stanowi omówienie teorii niezmienniczości w pomiarach statystycznych. W pracy zaprezentowano kilka twierdzeń o warunkach równoważnych rożnych typów niezmienniczości. Pomimo tego, iż praca ta nie wyczerpuje i nie wyjaśnia w pełni teorii przedstawionej w pracy Adams, Fagot, Robinson {\citep{adams1965theory}}, wnosi istotną wartość poprzez zaprezentowanie własnych przykładów oraz dowodów twierdzeń zaprezentowanych w pracy które wyraźnie rzutują na rozumienie pojęć przedstawionych w pracy. Ponadto pokazuje iż tematyka przedstawiona ponad 50 lat temu, dalej jest nietrywialną i nie jest wprowadzana w pełni przez autorów książek z analizy danych z uwagi na jej ogólność i stopień skomplikowania. W rozdziale czwartym podsumujemy  matematyczne badania tej teorii i omówimy wypracowane wnioski.
+Praca uporządkowana jest w następujący sposób. W rozdziale drugim znajdują się preliminaria w których umieszczono miedzy innymi elementy algebraicznej teorii grup oraz teorii mnogości. W rozdziale trzecim omawiane są kolejne aspekty teorii Stevensa pomiaru statystycznego. Część ta rozpoczyna od wprowadzenia numerical assignment systems (NAS), których zadaniem jest modelowanie rzeczywistych pomiarów wykonywanych w statystyce. W dalszej części wprowadzone są typy skal jako warunki nakładane na poszczególne NAS, w tym miejscu dokonujemy porównania ich założeń z teoria grup algebraicznych. Dalsza część pracy stanowi omówienie teorii niezmienniczości w pomiarach statystycznych. W pracy zaprezentowano kilka twierdzeń o warunkach równoważnych rożnych typów niezmienniczości. Pomimo tego, iż praca ta nie wyczerpuje i nie wyjaśnia w pełni teorii przedstawionej w pracy Adams, Fagot, Robinson {\citep{adams1965theory}}, wnosi istotną wartość poprzez zaprezentowanie własnych przykładów oraz dowodów twierdzeń zaprezentowanych w pracy, a które wyraźnie rzutują na rozumienie pojęć przedstawionych w pracy. Ponadto pokazuje iż tematyka przedstawiona ponad 50 lat temu, dalej jest nietrywialną i nie jest wprowadzana w pełni przez autorów książek z analizy danych z uwagi na jej ogólność i stopień skomplikowania. W rozdziale czwartym podsumujemy  matematyczne badania tej teorii i omówimy wypracowane wnioski.
 
 \chapter{Preliminaria}
 
@@ -217,7 +217,7 @@ dla każdego elementu $x$ ze zbioru $X$.
 \end{definition}
 
 
-\begin{definition}[{\citep[Sec 4.2 Def. 4.9]{jedrzejewski2011algebra}}]
+\begin{definition}[{\citep[Sec 4.2]{jedrzejewski2011algebra}}]
 \begin{itemize}
 \item
 Strukturę algebraiczną, złożoną z niepustego zbioru $X$ i jednego działania łącznego, nazywamy półgrupą.
@@ -230,24 +230,14 @@ a'\circ a=a\circ a'=e
 \end{equation*}
 Element $a'$ nazywamy wtedy elementem odwrotnym do elementu $a$.
 \item
-Półgrupę
+Półgrupę z jedynką gdy dla dow. $a \in X$ istnieje element odwrotny $a'$ tzn. taki, że 
+$$
+a'\circ a = a \circ a' =e
+$$
+nazywamy grupą.
 \end{itemize}
 \end{definition}
-\begin{definition}[Grupy {\citep[Sec 4.3 Def. 4.10]{jedrzejewski2011algebra}}]
-Strukturę algebraiczną ($\mathcal{G},\circ$) nazywamy grupą, jeśli spełnione są następujące warunki:
-\begin{equation*}
-\forall_{a\in \mathcal{G}} \forall_{b\in \mathcal{G}} \forall_{c\in \mathcal{G}} ((a\circ b)\circ c=a\circ (b\circ c)),
-\end{equation*}
-\begin{equation*}
-\exists_{e\in \mathcal{G}} \forall_{a\in \mathcal{G}}(e\circ a=a=a\circ e),
-\end{equation*}
-\begin{equation*}
-\forall_{a \in \mathcal{G}} \exists_{\overline{a}\in\mathcal{G}}(\overline{a}\circ a=e=a\circ\overline{a}).
-\end{equation*}
-\end{definition}
-\begin{definition}[{\citep[Sec 4.3 Def. 4.12]{jedrzejewski2011algebra}}]
-Grupą przemienną (abelową) nazywamy taką grupę, w której działanie jest przemienne.
-\end{definition}
+
 
 
 
@@ -255,18 +245,19 @@ Grupą przemienną (abelową) nazywamy taką grupę, w której działanie jest p
 
 W poniższym rozdziale korzystać z artykułu {\citep{adams1965theory}}
 
-Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skorelowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Dowolną funkcję tego rodzaju nazywamy numerical assignment. Choć w języku polskim nie jest dostępne utarte tłumaczenie tego pojęcia rozumiemy je jako formę przypisania liczby do danego obiektu. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek. Jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasę przypisań liczbowych. Drugim podstawowym pojęciem jest permissible transformation czyli funkcja odwzorowującą wartości jednego numerical assignment danej klasy na wartości innego numerical assignment. Te dwa pojęcia składają się na numerical assignment system. Zdefiniujmy formalnie czym jest numerical assignment system.
-\begin{definition}[Numerical assignment system (NAS)]
-Numerical assignment system to uporządkowany układ $\tuple{A, M, a, \Phi}$ spełniający poniższe warunki:
+Standardowo w analizie pomiaru, wynik będziemy przedstawiać jako funkcję o wartości liczbowej. Pomiary masy w funtach będą reprezentowane przez funkcję, która może być oznaczona jako "$Ib$";  ta funkcja jest skorelowana z każdym obiektem $x$ który można zważyć wartością liczbową, $Ib(x)$ - waga $x$ w funtach. Dowolną funkcję tego rodzaju nazywamy numerical assignment. Choć w języku polskim nie jest dostępne utarte tłumaczenie tego pojęcia rozumiemy je jako formę przypisania liczby do danego obiektu. Na przykład przy pomiarze wagi możemy użyć rożnych jednostek. Jest to formalnie przedstawione  przez klasę przypisań liczbowych (funkcja funta, funkcja uncji, funkcja tona, itp.). Mówiąc ogólnie o pomiarze, przyjmiemy jako podstawowe pojecie klasę przypisań liczbowych. Drugim podstawowym pojęciem jest permissible transformation czyli funkcja odwzorowującą wartości jednego numerical assignment danej klasy na wartości innego numerical assignment. Te dwa pojęcia składają się na numerical assignment system. Zdefiniujmy formalnie czym jest numerical assignment system w ujęciu pracy {\citep{adams1965theory}}.
+\begin{definition}[Numerical assignment system (NAS){\citep[Str. 101, Def. 1]{adams1965theory}}] 
+Numerical assignment system to uporządkowana czwórka $\tuple{A, M, a, \Phi}$ spełniająca poniższe warunki:
 \begin{enumerate}
 \item
 $A$ jest niepustym zbiorem, $a$ jest podzbiorem liczb rzeczywistych, $M$ jest zbiorem funkcji przekształcających $A$ w $a$, i $\Phi$ jest klasą funkcji przekształcających $a$ w siebie.  
 \item
+Dla wszystkich $m$ z $M$ i $\phi$ z $\Phi$,
 $$
-\forall_{m \in M} \forall_{\phi \in \Phi} \quad \phi \circ m \in M.
+ \phi \circ m \in M.
 $$ 
 \item
-$\Phi$ zawiera tożsamościową transformację (identyczność) $a$ w siebie i 
+$\Phi$ zawiera tożsamościową transformację (identyczność) $a$ w siebie oraz zachodzi
 $$
 \forall_{\phi_{1}, \phi_{2} \in \Phi} \quad \phi_{1} \circ \phi_{2} \in \Phi.
 $$
@@ -280,19 +271,19 @@ Warunek 2. powyższej definicji jest po prostu wymogiem na to aby każde permiss
 \end{remark}
 
 \begin{remark}[O warunku 3]
-Warunek 3. nie jest kluczowy, ale może być wymuszany, ponieważ tożsamościowe transformacje zdecydowanie przypisują numerical assignment do numerical assignment. Poza tym musimy pamiętać, że złożenie dwóch transformacji musi zawsze dawać permissible transformiation.
+Warunek 3. nie jest kluczowy, ale może być wymuszany, ponieważ tożsamościowe transformacja zdecydowanie przypisuje numerical assignment do numerical assignment. Poza tym musimy pamiętać, że złożenie dwóch transformacji musi zawsze dawać permissible transformation.
 \end{remark}
 
-  Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i permissible transfomations  nie są zakładane w powyższej definicji. Po pierwsze, nie zakładaliśmy, że permissible transfomations stanowią grupę, która wymaga dodatkowych założeń, dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Nie zakładaliśmy, że numerical assignment z $M$ odwzorowuje $A$ na $a$ to znaczy, że pomiary nie przyjmują wszystkich  możliwych wartości liczbowych. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładaliśmy odwrotności warunku 2. w definicji, to znaczy, że każde numerical assignemnt na ten system może być przeniesione na inny za pomocą permissible transformation. W poniższych przykładach pokażemy dlaczego nie zakładamy mocniejszych założeń.
-  %TODO
+  Można zauważyć, że pewne rzeczy przyjmowane za pewnik dotyczące pomiarów i permissible transfomations  nie są zakładane w powyższej definicji. Po pierwsze, w teorii tej nie zakładamy, że permissible transfomations stanowią grupę, w rozumowaniu algebry przypomnianej w definicji (2.13) wymaga ona  dodatkowych założeń, np. że dla każdego $\phi$ z $\Phi$, że $\Phi$ zawiera odwrotność $\phi$, a to z kolei wymagałoby żeby dodatkowo wszystkie $\phi$ z $\Phi$ były odwzorowaniem różnowartościowym $a$ w siebie. Autorzy pracy {\citep{adams1965theory}} nie zakładali, że numerical assignment z $M$ odwzorowuje $A$ na $a$. To znaczy, że pomiary nie przyjmują wszystkich  możliwych wartości liczbowych. Wreszcie co może wydawać najpoważniejszym pominięciem, nie zakładamy odwrotności warunku 2. w definicji, to znaczy, że każde numerical assignment z danego NAS może być przeniesione na inny za pomocą pewnej permissible transformation. W poniższych przykładach zilustrujemy dlaczego nie są uzasadnione mocniejsze założenia.
+
 \begin{enumerate}
 \item
-Wagi z różnym maksymalnym obciążeniem. Jeżeli będziemy ważyć przedmiot którego waga jest większa od maksymalnego obciążenia jednej z wag wtedy wyniki naszych pomiarów będą się różnić. 
+\textbf{Wagi z różnym maksymalnym obciążeniem}. Jeżeli będziemy ważyć przedmiot którego waga jest większa od maksymalnego obciążenia jednej z wag wtedy wyniki naszych pomiarów będą się różnić. 
 \item
-Termometry z różnymi maksymalnymi i minimalnymi stopniami. Jeżeli temperatura będzie wyższa lub niższa niż skala jednego termometru wtedy wyniki naszych pomiarów również będą się różnić.
+\textbf{Termometry z różnymi maksymalnymi i minimalnymi stopniami}. Jeżeli temperatura będzie wyższa lub niższa niż skala jednego termometru wtedy wyniki naszych pomiarów również będą się różnić.
 \end{enumerate}  
-   Dotyczy to rodzajowi pomiaru i jego klasie permissible transformation. Jeżeli nasze założenia o początku tych idei jest poprawne, to powyższe założenia ogólnie nie maja miejsca i dlatego wskazane jest zacząć od słabszych założeń, ale lepiej uzasadnionych.  
-\begin{definition}
+W teorii tej założone są zatem warunki dużo słabsze od przypomnianych grup algebraicznych. Tak słabe założenia mają uzasadnienie w zadaniach statystycznych. Stanowi jednak duży problem w opracowaniu matematycznych następstw. Z uwagi na takie problemy rozważany jest często NAS regularny. Jego założenia są wypośrodkowane pomiędzy zwykłym NASem a tym co zakładamy o grupach algebraicznych.  
+\begin{definition}[{\citep[Str. 102, Def. 2]{adams1965theory}}]
 Numerical assignment system $U=\tuple{A, M, a, \Phi}$ jest regularny wtedy i tylko wtedy gdy spełnione są poniższe warunki:
 \begin{enumerate}
 \item
@@ -303,29 +294,29 @@ $$
 \phi \circ m_{0}=m.
 $$
 \item
-Dla wszystkich skończonych $n$ i elementów $\alpha_{1},\dots,\alpha_{n}\in a$ i  $\phi\in \Phi$, istnieje funkcja $\Psi\in \Phi$, $\Psi:a\to a$, taka że dla każdego $i=1,\ldots,n$ 
+Dla wszystkich skończonych $n$ i elementów $\alpha_{1},\dots,\alpha_{n}\in a$ i  $\phi\in \Phi$, istnieje taka funkcja $\Psi\in \Phi$, $\Psi:a\to a$, że dla każdego $i=1,\ldots,n$ 
 $$
 \Psi(\Phi(\alpha_{i}))=\alpha_{i}.
 $$
 \end{enumerate}
 \end{definition}
 \section{Typy skal}
-Pojęcie Stevensa na temat typów skal jest jednym z najważniejszych definicji w jego teorii. Jednakże nie zawsze będą używane o tym samym znaczeniu. Co mogłoby oznaczać nieprecyzyjność w teorii. Dlatego pojęcie na temat typów skal rozszerzamy następująco.  
-\begin{definition}
-Niech $U=\tuple{A, M, a, \Phi}$ będzie NAS. Wtedy:
+Pojęcie Stevensa na temat typów skal jest jednym z najważniejszych definicji w jego teorii. Skala w teorii tej służy uporządkowaniu, określeniu różnych systemów NAS
+\begin{definition}[{\citep[Str. 103, Def. 3]{adams1965theory}}]
+Niech $U=\tuple{A, M, a, \Phi}$ będzie NAS. Wtedy powyższe $U$ jest:
 \begin{enumerate}
 \item
-$U$ jest skalą nominalną wtedy i tylko wtedy gdy $\Phi$ jest zbiorem wszystkich różnowartościowych funkcji odwzorowujących $a$ w siebie.
+Skalą nominalną gddy $\Phi$ jest zbiorem wszystkich różnowartościowych funkcji odwzorowujących $a$ w siebie.
 \item
-$U$ jest skalą porządkową wtedy i tylko wtedy gdy $\Phi$ jest zbiorem wszystkich ściśle rosnących odwzorowań $a$ w siebie.
+Skalą porządkową gddy $\Phi$ jest zbiorem wszystkich ściśle rosnących odwzorowań $a$ w siebie.
 \item
-$U$ jest skalą interwałową (nazywaną też przedziałową) wtedy i tylko wtedy gdy $a$ jest zbiorem wszystkich liczb rzeczywistych i $\Phi$ jest zbiorem wszystkich funkcji $\phi$, takich że istnieją $\beta,\gamma$ gdzie $\beta>0$ i
+Skalą interwałową (nazywaną też przedziałową) gddy $a$ jest zbiorem wszystkich liczb rzeczywistych i $\Phi$ jest zbiorem wszystkich funkcji $\phi$, takich, że istnieją $\beta,\gamma$ gdzie $\beta>0$ i
 \begin{equation*}
 \phi(\alpha)=\beta\alpha+\gamma
 \end{equation*}
 dla wszystkich $\alpha$ z $a$.
 \item
-$U$ jest skalą ilorazową (nazywaną też stosunkową) wtedy i tylko wtedy gdy $a$ jest zbiorem liczb dodatnich rzeczywistych i $\Phi$ jest zbiorem wszystkich przekształceń takich że istnieje $\beta>0$ i
+Skalą ilorazową (nazywaną też stosunkową) gddy $a$ jest zbiorem liczb dodatnich rzeczywistych i $\Phi$ jest zbiorem wszystkich przekształceń takich, że istnieje $\beta>0$ i
 \begin{equation*}
 \phi(\alpha)=\beta\alpha
 \end{equation*}
@@ -333,10 +324,10 @@ dla wszystkich $\alpha$ z $a$.
 \end{enumerate}
 \end{definition}
 
-Zauważmy, że skale w powyższej definicji są uporządkowane od najsłabszej do najmocniejszej oraz dla dowolnej skali spełnione są założenia skal słabszych.
-\begin{remark}
-Przykładem zmiennej w skali nominalnej jest płeć, w skali porządkowej jest stopień wysmażenia mięsa, w skali interwałowej rok urodzenia oraz w skali ilorazowej ciężar.
-\end{remark}
+Zauważmy, że skale w powyższej definicji są uporządkowane od najsłabszej do najmocniejszej czyli dla dowolnej skali spełnione są założenia skal słabszych.
+\begin{przyklad}
+Przykładem zmiennej w skali nominalnej jest płeć gdzie mamy dwie wartości, kobieta i mężczyzna którym przykładowo można przypisać odpowiednio 1 i 0. W skali porządkowej zmienną może być stopień wysmażenia mięsa czyli przykładowo słabo, średnio i mocno, zmienne te możemy uporządkować i przypisać odpowiednio wartości 1, 2 i 3. W skali interwałowej różne pomiary temperatury możemy uporządkować oraz obliczyć jaka jest różnica pomiędzy pomiarami i przypisać im odpowiednie wartości liczbowe. W skali ilorazowej ciężar.
+\end{przyklad}
 
 %\begin{przyklad}
 %Rozważmy zbiór nazw dni tygodnia czyli
@@ -496,9 +487,9 @@ Przykładem zmiennej w skali nominalnej jest płeć, w skali porządkowej jest s
 
 
 \section{Operacje statystyczne}
-Poprzednie definicje dostarczają niezbędnych podstaw do precyzyjnych definicji różnych rodzajów niezmienniczości operacji statystycznych lub obliczeń stosowanych do pomiarów. Sformułujemy jeszcze jedną wstępną koncepcje to znaczy operację statystyczną  (bardziej ogólnie, operację matematyczną) pomiarów. Liczba różnych rodzajów działań matematycznych  do których stosuje się pojęcie niezmienniczości jest dość duża. Należałoby zatem sformułować bardzo ogólną definicje działań matematycznych która by uwzględniała wszystkie poszczególne przypadki jednakże byłaby zbyt rozbudowana. Skupmy się zatem na specjalnej klasie działań matematycznych i statystycznych, w których wynik jest obliczany ze skończonej liczby pomiarów (liczba ta nie musi być ustalona) w pewien jednakowy sposób. Zawiera to w szczególnych przypadkach dobrze znane operacje jak np. obliczenie średniej, mediany, odchylenia standardowego, a także bardziej elementarne działania matematyczne takie jak na przykład dodawanie i odejmowanie. Nie zawiera natomiast działań stosowanych do nieskończonych sekwencji. Wszystkie standardowe operacje statystyczne mogą być przedstawione jako specjalne przypadki uogólnionej funkcji rzeczywistej. W celu zdefiniowania tego pojęcia powinniśmy wprowadzić następujące pojęcia pomocnicze. 
+ Sformułujemy jeszcze jedną wstępną koncepcje tj. operację statystyczną lub bardziej ogólnie, operację matematyczną na pomiarów. W obliczeniach statystycznych wykonuje się bardzo wiele różnych operacji. Należałoby zatem sformułować bardzo ogólną definicje działań matematycznych która by uwzględniała wszystkie poszczególne przypadki. Skupmy się zatem na specjalnej klasie działań matematycznych i statystycznych, w których wynik jest obliczany ze skończonej liczby pomiarów (liczba ta nie musi być ustalona z góry) w pewien jednakowy sposób. Zawiera to w szczególnych przypadkach dobrze znane operacje jak np. obliczenie średniej, mediany, odchylenia standardowego, a także bardziej elementarne działania matematyczne takie jak na przykład dodawanie i odejmowanie. Nie zawiera natomiast działań stosowanych do nieskończonych sekwencji. Wydaje się że, standardowe operacje statystyczne mogą być przedstawione jako specjalne przypadki uogólnionej funkcji rzeczywistej. Posłużmy się następującym pojęciem pomocniczym. 
 \begin{definition}[Domkniecie zbioru skończonymi ciągami]
-Niech $A$ będzie dowolnym niepustym zbiorem. Oznaczmy przez $S(A)$ zbiór wszystkich skończonych ciągów o elementach w $A$.
+Niech $A$ będzie dowolnym niepustym zbiorem. Oznaczmy przez $S(A)$ zbiór wszystkich skończonych ciągów o elementach w $A$, tzn.
 $$
 S(A)=\zbior{(a_n)^{N}_{n=1}; N\in \mathbb{N}, \forall_{n\in \zbior{1,\dots,N}} a_n \in A}.
 $$
@@ -507,42 +498,43 @@ $$
 \domkniecie{A}=\bigcup^{\infty}_{n=1} A_n.
 $$ 
 \end{definition}
+Domknięcie w pewien szczególny sposób %TODO
 \begin{definition}[Rozszerzenie funkcji na skończone ciągi]
-Niech $A$ będzie dowolnym niepustym zbiorem. Niech $m:A\to \mathbb{R}$. Wtedy funkcja $\domkniecie{m}:\domkniecie{A}\to \domkniecie{\mathbb{R}}$ dana jest formuła
+Niech $A$ będzie dowolnym niepustym zbiorem. Niech $m:A\to \mathbb{R}$. Wtedy funkcja $\domkniecie{m}:\domkniecie{A}\to \domkniecie{\mathbb{R}}$ dana jest formuła, że
 \begin{itemize}
 \item jeśli $x\in A$ to $\domkniecie{m}(x) =m(x) \in \mathbb{R}$
 \item jeśli $x\notin A$ to jest ciągiem elementów z $\domkniecie{A}$. Oznaczmy $x=(x_1,\dots,x_N)$. Wtedy 
 $$
 \domkniecie{m}(x)=\domkniecie{m}((x_1,x_2,\dots,x_N))=(\domkniecie{m}(x_1),\domkniecie{m}(x_2),\dots, \domkniecie{m}(x_N))\in \domkniecie{\mathbb{R}}.
 $$
-Funkcja $\domkniecie{m}$ nazywana jest rozszerzeniem funkcji $m$ na skończone ciągi.
 \end{itemize}
+Funkcja $\domkniecie{m}$ nazywana jest rozszerzeniem funkcji $m$ na skończone ciągi.
 \end{definition}
-Więc jeżeli $x$ jest dowolnym ciągiem, $\domkniecie{m}(x)$ jest po prostu odpowiadającym ciągiem wartości. Używając tego pojęcia możemy zdefiniować uogólnioną funkcję rzeczywistą której dziedzina jest podzbiorem $\domkniecie{\mathbb{R}}$. Większość konkretnych funkcji, które chcemy uwzględnić mają zdecydowanie bardziej ograniczone dziedziny, ale pożądane jest rozważenie wszystkich funkcji tej klasy razem. Funkcja, której dziedziną są wszystkie uporządkowane pary liczb rzeczywistych jest binarne działanie dodawania. Działanie które znajduje różnicę dwóch średnich może być rozumiane jako działanie posiadające dziedzinę składającą się klasy wszystkich uporządkowanych par skończonego ciągu liczb rzeczywistych. Uogólnione działanie na pomiarach jest intuicyjnie wynikiem zastosowania uogólnionej funkcji rzeczywistej  do liczb przypisanych przez numerical assignment. Zatem uogólnione operacje na pomiarach są generowane przez odpowiednie uogólnione funkcje rzeczywiste. Formalne definicje tych dwóch pojęć są następujące.
-\begin{definition}
+Więc jeżeli $x$ jest dowolnym ciągiem, $\domkniecie{m}(x)$ jest po prostu odpowiadającym ciągiem wartości. Używając tego pojęcia możemy zdefiniować uogólnioną funkcję rzeczywistą której dziedzina jest podzbiorem $\domkniecie{\mathbb{R}}$. Większość konkretnych funkcji statystycznych, które chcemy uwzględnić mają zdecydowanie bardziej ograniczone dziedziny, ale pożądane jest rozważenie wszystkich funkcji tej klasy razem. Przykładem takich funkcji uogólnionych jest funkcja, której dziedziną są wszystkie uporządkowane pary liczb rzeczywistych wykonująca działanie dodawania par lub działanie które znajduje różnicę dwóch średnich. Może być rozumiane jako działanie posiadające dziedzinę składającą się klasy wszystkich uporządkowanych par skończonego ciągu liczb rzeczywistych. Uogólnione działanie na pomiarach jest intuicyjnie wynikiem zastosowania uogólnionej funkcji rzeczywistej  do liczb przypisanych przez numerical assignment. Zatem uogólnione operacje na pomiarach są generowane przez odpowiednie uogólnione funkcje rzeczywiste. Formalne definicje tych dwóch pojęć są następujące.
+\begin{definition}[{\citep[Str. 105, Def. 4.1]{adams1965theory}}]
 Niech $\mathcal{D}\subset \domkniecie{\mathbb{R}}$. Wtedy funkcję $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$ nazywamy uogólnioną funkcją rzeczywistą.
 \end{definition}
 \begin{przyklad}
 Przykładem takiej funkcji jest wzięcie średniej  liczb dowolnego ciągu czyli niech $\mathcal{D}=S(\mathbb{R})$, $Mean: S(\mathbb{R})\to \domkniecie{\mathbb{R}}\supset \mathbb{R}$
 $$
-\forall_{(\alpha_1,\dots,\alpha_n)\in S(\mathbb{R})} \quad Mean((\alpha_1,\dots,\alpha_n))=\frac{\alpha_1+\dots+\alpha_n}{n}.
+\forall_{n \in \mathbb{N}} \forall_{(\alpha_1,\dots,\alpha_n)\in S(\mathbb{R})} \quad Mean((\alpha_1,\dots,\alpha_n))=\frac{\alpha_1+\dots+\alpha_n}{n}.
 $$
 \end{przyklad}
 \begin{przyklad}
-Kolejnym przykładem takiej funkcji jest funkcja sortująca liczby
+Kolejnym przykładem takiej funkcji jest funkcja sortująca liczby.
 $$
 Sort((5,1,7,8,0))=(0,1,5,7,8).
 $$
-Albo funkcja która filtruje liczby negatywne
+Albo funkcja która filtruje liczby ujemne.
 $$
 FN((-1,2,7,-3,-4,5,6))=(2,7,5,6)
 $$
-Dobrym przykładem jest też funkcja która dodaje do każdej wartości liczbę 2
+Dobrym przykładem jest też funkcja która dodaje do każdej wartości liczbę 2.
 $$
 ADD2((1,3,5,0))=(3,5,7,2)
 $$
 \end{przyklad}
-\begin{definition}
+\begin{definition}[{\citep[Str. 105, Def. 4.2]{adams1965theory}}]
 Niech $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$, $\mathcal{D}\subset\domkniecie{\mathbb{R}}$ Wtedy
 $$
 D=\zbior{\parauporzadkowana{m}{x}; m:A\to \mathbb{R}, x\in \domkniecie{A}, \domkniecie{m}(x)\in \mathcal{D}}.
@@ -553,11 +545,11 @@ F:\parauporzadkowana{m}{x}\longmapsto\mathcal{F}(\domkniecie{m}(x))
 $$
 nazywamy uogólnionym działaniem na pomiarach.
 \end{definition}
-Należy zauważyć, że w definicji uogólnionej funkcji rzeczywistej, nie określono dokładnej przeciwdziedziny dla takich funkcji. Funkcje te zatem mogą być bardzo dowolne. W dalszej części będziemy się zajmować głównie funkcjami, których przeciwdziedziny są liczby rzeczywiste. 
+Należy zauważyć, że w definicji uogólnionej funkcji rzeczywistej, nie określono dokładnej przeciwdziedziny dla takich funkcji. Funkcje te zatem mogą być bardzo dowolne. W dalszej części będziemy się zajmować głównie funkcjami, których przeciwdziedziny są liczby rzeczywiste.  Funkcje te służą do formułowania statystycznych wniosków. Teoria dalej skupia się wokół wprowadzenia koncepcji niezmienniczości tych funkcji. Tj. niezależność zdań statystycznych od przyjętej techniki pomiaru.
 
 \section{Niezmienniczość statystycznych operacji}
 Definiujemy trzy rodzaje niezmienniczości dla uogólnionych operacji na pomiarach względem NAS. 
-\begin{definition}
+\begin{definition}[{\citep[Str. 105, Def. 5]{adams1965theory}}]
 Niech $U=\tuple{A,M,a,\Phi}$ będzie NAS $\mathcal{F}:\mathcal{D}\to\domkniecie{\mathbb{R}}$, $\mathcal{D}\subset \domkniecie{\mathbb{R}}$ i $F$ jest uogólnioną operacją na pomiarach odpowiadających $\mathcal{F}$. Wtedy:
 \begin{enumerate}
 \item
@@ -566,9 +558,9 @@ $$
 \forall_{m_{1}, m_{2} \in M}  \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies F(m_{1};\overline{x})=F(m_{2};\overline{x}).
 $$
 \item
-$F$ jest odnośnikowo niezmiennicza względem $U$ gddy 
+$F$ jest odnośnikowo niezmiennicza względem $U$ gddy dla dow. $m_{1}$, $m_{2} \in M$ $x \in A$ i  $\overline{x} \in \domkniecie{A}$ o ile  $\domkniecie{m_1}(\overline{x})$, $\domkniecie{m_2}(\overline{x})\in \mathcal{D}$ to mamy.
 $$
-\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}),\domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies \big[ m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}) \big].
+ m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
 $$
 \item
 $F$ jest porównawczo niezmiennicza względem $U$ gddy dla dow. $m_1$, $m_2 \in M$ i $\overline{x}$, $\overline{y} \in \domkniecie{A}$ o ile $\domkniecie{m_1}(\overline{x}), \domkniecie{ m_2}(\overline{x}), \domkniecie{m_1}(\overline{y}), \domkniecie{m_2}(\overline{y}) \in \mathcal{D}$ to mamy.
@@ -578,23 +570,23 @@ $$
 \end{enumerate} 
 \end{definition}
 
-Jeśli ograniczymy uwagę do regularnego NAS, każdy typ niezmienniczości może być zdefiniowany równoważnie pod względem klasy numerical assignment lub klasy permissible transformation. Ponieważ rozważamy ogólniejszą klasę NAS, alternatywa wymagająca niezmienniczości według wszystkich numerical assignment wydaje się być bardziej fundamentalna. Zauważmy, że zgodnie z tymi definicjami, odchylenie standardowe nie jest ani bezwzględnie niezmienicze, ani niezmiennicze w stosunku do skal interwałowych, pomimo faktu, że Stevens wymienia je jako odpowiednią statystkę dla takich skal.
+Kolejne twierdzenia ograniczone są do regularnego NAS.
 
-Przykładem funkcji bezwzględnie niezmienniczych, o ile NAS regularny, jest funkcja która sprawdza liczbę różnych elementów
 \begin{przyklad}
-Bezwzględnie niezmiennicza względem $U$ są funkcje 
+Bezwzględnie niezmiennicza względem $U$ jest np. funkcja:
 $$
-F=Count(m;x)
+F(m;\overline{x})=Count(m;\overline{x}).
 $$
+Funkcja ta bierze dowolny ciąg i liczy ile jest w nim różnych elementów
 \end{przyklad}
 \begin{przyklad}
 Odnośnikowo niezmiennicza w stosunku do skal interwałowych są np. funkcje
 $$
-F=Mean(m;x)
+F(m;\overline{x})=Mean(m;\overline{x})
 $$ 
-
+Które liczą średnią dowolnego ciągu
 Niech $U$ będzie skalą interwałową oraz NAS regularny.
-Niech $m_1,m_2\in M$ i niech $x\in \domkniecie{A}$. Z regularności $U$ istnieje $m_0 \in M$, że
+Niech $m_1,m_2\in M$ i niech $x \in A $, $\overline{x}\in \domkniecie{A}$. Z regularności $U$ istnieje $m_0 \in M$, że
 $$
 m_1 = \phi_1 \circ m_0, \quad m_2=\phi_2\circ m_0
 $$
@@ -602,40 +594,40 @@ Ponad, to gdyż $U$ jest interwałowa to istnieją takie $\beta_{1}, \gamma_{1},
 $$
 \phi_1(\alpha)=\beta_1 \alpha + \gamma_1, \quad \phi_2(\alpha)=\beta_2 \alpha + \gamma_2
 $$
-Niech $\domkniecie{m_1}(x)=F(m;x)$.
+Niech $m_(x)=F(m;\overline{x})$.
 \begin{eqnarray*}
-\domkniecie{\phi_1\circ m_0}(x) & = & Mean(\phi_1\circ m_0;x) 
+\phi_1\circ m_0(x) & = & Mean(\phi_1\circ m_0;\overline{x}) 
 \end{eqnarray*}
 Z postaci $\phi_{1}$ i własności średniej
 \begin{eqnarray*}
-\beta_1\domkniecie{m_0}(x)+ \gamma_1 & = & \beta_1 Mean(m_0;x) + \gamma_1, \\
-\beta_1\domkniecie{m_0}(x) & = & \beta_1 Mean(m_0;x), \\
-\domkniecie{m_0}(x) & = & Mean(m_0;x), \\
-\beta_2\domkniecie{m_0}(x) & = & Mean(\beta_2 m_0;x), \\
-\beta_2\domkniecie{m_0}(x) + \gamma_2 & = & Mean(\beta_2 m_0 + \gamma_2;x),  \\
-\domkniecie{m_2}(x) & = & F(m_2;x) .
+\beta_1m_0(x)+ \gamma_1 & = & \beta_1 Mean(m_0;\overline{x}) + \gamma_1, \\
+\beta_1m_0(x) & = & \beta_1 Mean(m_0;\overline{x}), \\
+m_0(x) & = & Mean(m_0;\overline{x}), \\
+\beta_2m_0(x) & = & Mean(\beta_2 m_0;\overline{x}), \\
+\beta_2m_0(x) + \gamma_2 & = & Mean(\beta_2 m_0 + \gamma_2;\overline{x}),  \\
+m_2(x) & = & F(m_2;\overline{x}) .
 \end{eqnarray*}
 Zatem
 $$
-\domkniecie{m_1}(x)=F(m_1;x) \implies \domkniecie{m_2}(x)=F(m_2;x).
+m_1(x)=F(m_1;\overline{x}) \implies m_2(x)=F(m_2;\overline{x}).
 $$
 Wobec symetrii oznaczeń mamy
 $$
-\domkniecie{m_2}(x)=F(m_2;x) \implies \domkniecie{m_1}(x)=F(m_1;x).
+m_2(x)=F(m_2;\overline{x}) \implies m_1(x)=F(m_1;\overline{x}).
 $$
 Skąd
 $$
-\domkniecie{m_1}(x)=F(m_1;x) \iff \domkniecie{m_2}(x)=F(m_2;x)
+m_1(x)=F(m_1;\overline{x}) \iff m_2(x)=F(m_2;\overline{x})
 $$
 Z dowolności $m_1,m_2$ oraz $x$, $F$ jest odnośnikowo niezmiennicza względem $U$.
 \end{przyklad}
 \begin{przyklad}
-Porównawczo niezmiennicza w stosunku do $U$ są funkcje maximum oraz minimum.
+Porównawczo niezmiennicza w stosunku do skal porządkowych są funkcje maximum oraz minimum z próby.
 \end{przyklad}
 
 
-\begin{tw}[Warunki równoważne niezmienniczości bezwzględnej]
-Niech $U=\tuple{A,M,a,\Phi}$ będzie regularnym NAS, niech $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$ i niech $F$ będzie uogólnioną operacją na pomiarach odpowiadającą $\mathcal{F}$. Wtedy:
+\begin{tw}[Warunki równoważne niezmienniczości bezwzględnej {\citep[Str. 107, Tw. 1]{adams1965theory}}]
+Niech $U=\tuple{A,M,a,\Phi}$ będzie regularnym NAS, niech $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$, $\mathcal{D} \in \domkniecie{\mathbb{R}}$ i niech $F$ będzie uogólnioną operacją na pomiarach odpowiadającą $\mathcal{F}$. Wtedy:
 
 \item
 NWSR.
@@ -644,11 +636,11 @@ NWSR.
 $F$ jest niezmiennicza bezwzględnie w stosunku do $U$ 
 \item
 $$
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}),\phi(\domkniecie{m}(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
+\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}),\domkniecie{\phi \circ m}(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
 $$
 \item
 $$
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha})\in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
 $$
 \end{enumerate}
 
@@ -685,7 +677,7 @@ Niech $m:=\phi_2\circ m_0$ oraz $\phi:=\phi_1\circ\Psi$, $\overline{x}=\overline
 \mathcal{F}(\domkniecie{\phi_1\circ(\Psi\circ \phi_2)\circ m_0}(\overline{x})) & = & \mathcal{F}(\domkniecie{\phi_1\circ m_0}(\overline{x})) = \mathcal{F}(\domkniecie{m_1}(\overline{x}))
 \end{eqnarray*}
 \begin{eqnarray*}
-\mathcal{F}(m_2(\overline{x})) & = & \mathcal{F}(\domkniecie{m_1}(\overline{x}))\\
+\mathcal{F}(\domkniecie{m_2}(\overline{x})) & = & \mathcal{F}(\domkniecie{m_1}(\overline{x}))\\
 F(m_2;\overline{x}) & = & F(m_1;\overline{x})
 \end{eqnarray*}
 Z dowolności $m_1,m_2$ oraz $\overline{x} \in \domkniecie{A}$ udowodniliśmy punkt (1).
@@ -693,7 +685,7 @@ Z dowolności $m_1,m_2$ oraz $\overline{x} \in \domkniecie{A}$ udowodniliśmy pu
 Udowodnimy (3) $\implies$ (2)
 Załóżmy, że
 \begin{equation}
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \phi(\overline{\alpha})\in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha})\in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\overline{\alpha}).
 \end{equation}
 Niech $m\in M, \phi \in \Phi$ i $\overline{x} \in\domkniecie{A}$, $\overline{\alpha}:=m(\overline{x})$. Z (3.2)
 $$
@@ -704,9 +696,9 @@ Z dowolności wyboru $m$, $\phi$ oraz $\overline{x}$ udowodniliśmy punkt (2).
 Udowodnimy $(2) \implies (3)$
 Załóżmy, że
 \begin{equation}
-\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}),\domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
+\forall_{m \in M}\forall_{\phi \in \Phi} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m}(\overline{x}),\domkniecie{\phi\circ m}(\overline{x}) \in \mathcal{D} \implies \mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{x})).
 \end{equation}
-Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ oraz $\overline{\alpha}$, $\phi(\overline{\alpha})\in \mathcal{D}$. Niech $m \in M$, $\overline{x} \in \domkniecie{A}$, $\domkniecie{m}(\overline{x}):= \overline{\alpha}$. 
+Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ oraz $\overline{\alpha}$, $\domkniecie{\phi}(\overline{\alpha})\in \mathcal{D}$. Niech $m \in M$, $\overline{x} \in \domkniecie{A}$, $\domkniecie{m}(\overline{x}):= \overline{\alpha}$. 
 $$
  \mathcal{F}(\overline{\alpha})=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
@@ -721,19 +713,20 @@ $$
 Z dowolności wyboru $\phi$, $\overline{\alpha}$, $m$, $\overline{x}$ udowodniliśmy punkt (3).
 \end{proof}
 
-\begin{tw}[Warunki równoważne niezmienniczości odnośnikowej]
+\begin{tw}[Warunki równoważne niezmienniczości odnośnikowej {\citep[Str. 107, Tw. 1]{adams1965theory}}]
 Niech $U=\tuple{A,M,a,\Phi}$ będzie regularnym NAS, niech $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$ i niech $F$ będzie uogólnioną operacją na pomiarach odpowiadającą $\mathcal{F}$. Wtedy
 NWSR
 \begin{enumerate}
 \item
-$F$ jest odnośnikowo niezmiennicza w stosunku do $U$ gddy dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D}$ to mamy.
+$F$ jest odnośnikowo niezmiennicza w stosunku do $U$
 \item
+Dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D}$ to mamy.
 $$
 (\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 \item
 $$
-\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \big[\phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha})\big].
 $$
 \end{enumerate}
 
@@ -748,11 +741,11 @@ Niech $m\in M, \phi \in \Phi$, $x \in A$ i $\overline{x}\in \domkniecie{A}$
 Stosujemy przekształcenia równoważne
 Dla $m_1:=\phi\circ m$,$ m_2:=m$, $x:=x$, $\overline{x}:=\overline{x}$ mamy
 $$
-\phi\circ m(x)=\mathcal{F}((\domkniecie{\phi \circ m}(\overline{x})) \iff \domkniecie{\phi \circ m}(x)=F(\phi \circ m;\overline{x}) 
+\phi\circ m(x)=\mathcal{F}((\domkniecie{\phi \circ m}(\overline{x})) \iff \domkniecie{\phi \circ m}(x)=F(\phi \circ m;\overline{x}). 
 $$
 Z (3.4) mamy
 $$
-\iff m(x)=F(m;\overline{x}) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
+\iff m(x)=F(m;\overline{x}) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x})).
 $$
 Udowodnimy (2) $\implies (1)$
 Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D}$ to mamy.
@@ -761,37 +754,37 @@ Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} 
 \end{equation}
 Niech $m_1,m_2 \in M$, $x \in A$, $\overline{x}\in \domkniecie{A}$ i niech $\domkniecie{m_1}(\overline{x})$, $\domkniecie{m_2}(\overline{x})\in \mathcal{D}$. Z regularności NAS istnieje $m_0$, $\phi_1$, $\phi_2$ takie, że
 $$ 
-m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0
+m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0.
 $$
 Niech $\alpha=m_0(x)$ i $\overline{\alpha}=\domkniecie{m_0}(\overline{x})$ wtedy ponownie z regularności NAS istnieje $\Psi$ takie, że dla każdego $\alpha_i \in \alpha$
 $$
-\Psi(\phi_2(\overline{\alpha_i}))=\overline{\alpha_i}
+\Psi(\phi_2(\overline{\alpha_i}))=\overline{\alpha_i},
 $$
 oraz
 $$
-\Psi(\phi_2(\alpha))=\alpha
+\Psi(\phi_2(\alpha))=\alpha.
 $$
 Z (3.5) dla $m:=\phi_2 \circ m_0$, $\phi:=\phi_1\circ \Psi$, $\overline{x}:=\overline{x}$, $x:=x$
 Równoważnie
 \begin{eqnarray*}
 m_1(x) & = & F(m_1;\overline{x}), \\
  \phi_1\circ m_0(x) & = & F(\phi_1 \circ m_0;\overline{x}),\\
-\phi_1\circ\Psi\circ\phi_2\circ m_0(x)&=&F(\phi_1\circ\Psi\circ\phi_2\circ m_0;\overline{x}) 
+\phi_1\circ\Psi\circ\phi_2\circ m_0(x)&=&F(\phi_1\circ\Psi\circ\phi_2\circ m_0;\overline{x}). 
 \end{eqnarray*}
 
 Korzystając ponownie z (3.5)
 $$
-(\phi_2\circ m_0)(x)=F(\phi_2\circ m_0;\overline{x}) 
+(\phi_2\circ m_0)(x)=F(\phi_2\circ m_0;\overline{x}), 
 $$
 $$
 m_2(x)=F(m_2;\overline{x}).
 $$
-Z dowolności $m_1, m_2, x$ i $\overline{x}, F$ jest odnośnikowo niezmiennicza.
+Z dowolności $m_1, m_2$, $x$ i $\overline{x}, F$ jest odnośnikowo niezmiennicza.
 
 Udowodnimy (3) $\implies$ (2)
 Załóżmy, że
 \begin{equation}
-\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
+\forall_{\phi \in \Phi}\forall_{\alpha \in a}\forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \big[\phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha})\big].
 \end{equation}
 Niech $m\in M, \phi\in \Phi$, $x\in A$ i $\overline{x} \in \domkniecie{A}$ i niech $\overline{\alpha}$, $\domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D}$. Dla  $\alpha:= m(x)$, $\overline{\alpha}:=\domkniecie{m}(\overline{x})$. Równoważnie
 $$
@@ -802,7 +795,7 @@ $$
 $$
 Z (3.6)
 $$
-\alpha=\mathcal{F}(\overline{\alpha}) \quad m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
+\alpha=\mathcal{F}(\overline{\alpha}), \quad m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
 $$
 Z dowolności wyboru $m, \phi$ oraz $x$ udowodniliśmy punkt (2).
 
@@ -810,7 +803,6 @@ Udowodnimy $(2) \implies (3)$
 Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$, $ x \in A$ i $\overline{x} \in \domkniecie{A}$ o ile $domkniecie{m}(\overline{x}), \domkniecie{\phi\circ m}(\overline{x})) \in \mathcal{D}$ to mamy.
 \begin{equation}
 (\domkniecie{\phi\circ m}(x))=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}))) \iff m(x)=\mathcal{F}(\domkniecie{m}(\overline{x}))
-\end{equation}
 \end{equation}
 Niech $\phi \in \Phi$, $\alpha \in a$, $\overline{\alpha} \in \domkniecie{a}$. Wtedy istnieje $x$ i $\overline{x}$ oraz takie $m$, że
 $$
@@ -822,12 +814,12 @@ $$
 \end{eqnarray*}
 Z (3.7) mamy
 \begin{eqnarray*}
-m(x) &=&\mathcal{F}(\domkniecie{m}(\overline{x}))\\
-\alpha&=&\mathcal{F}(\overline{\alpha})
+m(x) &=&\mathcal{F}(\domkniecie{m}(\overline{x})),\\
+\alpha&=&\mathcal{F}(\overline{\alpha}).
 \end{eqnarray*}
 Z dowolności $\phi$, $\alpha$, $\overline{\alpha}$ udowodniliśmy punkt (3).
 \end{proof}
-\begin{tw}[Warunki równoważne niezmienniczości porównawczej]
+\begin{tw}[Warunki równoważne niezmienniczości porównawczej {\citep[Str. 107, Tw. 1]{adams1965theory}}]
 Niech $U=\tuple{A,M,a,\Phi}$ będzie regularnym NAS, niech $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$ i niech $F$ będzie uogólnioną operacją na pomiarach odpowiadającą $\mathcal{F}$. Wtedy
 NWSR
 \begin{enumerate}
@@ -841,9 +833,10 @@ $$
 \mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))) \iff \mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 $$
 \item
-$$
-\forall_{\phi \in \Phi} \forall_{\overline{\alpha}, \overline{\beta} \in \domkniecie{a}}  \quad \overline{\alpha}, \overline{\beta}, \domkniecie{\phi}(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D} \implies  \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
-$$
+Dla dow. $\phi \in \Phi$ i $\overline{\alpha}$,$ \overline{\beta} \in \domkniecie{a}$ o ile $\overline{\alpha}, \overline{\beta}, \domkniecie{\phi}(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D}$ to mamy.
+\begin{equation*}
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
+\end{equation*}
 \end{enumerate}
 
 \end{tw}
@@ -852,7 +845,7 @@ Udowodnimy $(1) \implies (2)$
 Niech $F$ będzie porównawczo niezmiennicza oraz niech $m\in M, \phi \in \Phi$, $x, y \in A$ i $\overline{x}, \overline{y} \in \domkniecie{A}$ wtedy dla $m_1:=\phi\circ m, m_2:=m, x:=x, y:=y, \overline{x}:=\overline{x}, \overline{y}:=\overline{y}$ mamy $F(\phi\circ m;\overline{x})=F(\phi\circ m;\overline{y}) \iff F(m;\overline{x})=F(m;\overline{y})$
 Następujące stwierdzenia są równoważne
 $$
-\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}))
+\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x}))=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y})).
 $$
 Zauważmy, że
 $$
@@ -860,19 +853,19 @@ F(\phi \circ m;\overline{x})=\mathcal{F}( \domkniecie{\phi \circ m}(\overline{x}
 $$
 Zatem równoważne zdanie jest równe 
 $$
-F(\phi\circ m;\overline{x})=F(\phi \circ m;\overline{y})
+F(\phi\circ m;\overline{x})=F(\phi \circ m;\overline{y}).
 $$
 Dzięki warunkowi porównawczej niezmienniczości to z kolei jest równoważne
 $F(m;\overline{x})=F(m;\overline{y})$.
 Zauważmy, że 
 $$
-F(m;\overline{x})=\mathcal{F}(\domkniecie{m}(\overline{x})) \quad \textrm{oraz} \quad F(m;\overline{y})=\mathcal{F}(\domkniecie{m}(\overline{y}))
+F(m;\overline{x})=\mathcal{F}(\domkniecie{m}(\overline{x})) \quad \textrm{oraz} \quad F(m;\overline{y})=\mathcal{F}(\domkniecie{m}(\overline{y})).
 $$
 Zatem ostatecznie jest równoważne 
 $$
-\mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y}))
+\mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})).
 $$
-Z dowolności $\overline{x}, \overline{y} \in \domkniecie{A}$, $m_1, m_2 \in M$ udowodniliśmy punkt (2)
+Z dowolności $\overline{x}, \overline{y} \in \domkniecie{A}$, $m_1, m_2 \in M$ udowodniliśmy punkt (2).
 
 Udowodnimy (2) $\implies (1)$
 Załóżmy, że dla dow. $m \in M$, $\phi \in \Phi$ i $\overline{x}$, $\overline{y} \in \domkniecie{A}$ o ile $\domkniecie{m}(\overline{x}), \domkniecie{
@@ -902,7 +895,7 @@ Z (3.8)
 Z dowolności $m_1, m_2$ i $\overline{x}$, $\overline{y}$ $F$ jest porównawczo niezmiennicza.
 
 Udowodnimy (3) $\implies$ (2)
-Załóżmy, że dla dow. $phi \in \Phi$ i $\overline{\alpha}$,$ \overline{\beta} \in \domkniecie{a}$ o ile $\overline{\alpha}, \overline{\beta}, \domkniecie{\phi}(\overline{\alpha}), \phi(\overline{\beta}) \in \mathcal{D}$ to mamy.
+Załóżmy, że dla dow. $\phi \in \Phi$ i $\overline{\alpha}$,$ \overline{\beta} \in \domkniecie{a}$ o ile $\overline{\alpha}$, $\overline{\beta}$, $\domkniecie{\phi}(\overline{\alpha})$, $\phi(\overline{\beta}) \in \mathcal{D}$ to mamy.
 \begin{equation}
 \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
@@ -921,19 +914,19 @@ m}(\overline{y}), \domkniecie{\phi\circ m}(\overline{x})), \domkniecie{\phi\circ
 Niech $\phi \in \phi$, $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$ oraz $\overline{\alpha}$, $\overline{\beta}$, $\phi(\overline{\alpha})$, $\phi(\overline{\beta}) \in \mathcal{D}$ i $\domkniecie{m}(\overline{x}):=\overline{\alpha}$,  $\domkniecie{m}(\overline{y}):=\overline{\beta}$. 
 Rozumujemy równoważnie
 $$
-\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta}).
 $$
 Niech $m \in M$, $\overline{x}$, $\overline{y} \in \domkniecie{A}$ takie, że
 $$
-\overline{\alpha}=\domkniecie{m}(\overline{x}), \quad \overline{\beta}=\domkniecie{m}(\overline{y})
+\overline{\alpha}=\domkniecie{m}(\overline{x}), \quad \overline{\beta}=\domkniecie{m}(\overline{y}).
 $$
 Wtedy z pierwszej równoważności
 $$
-\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y})
+\mathcal{F}(\domkniecie{\phi \circ m}(\overline{x})=\mathcal{F}(\domkniecie{\phi \circ m}(\overline{y}).
 $$
 Z (3.10)
 $$
-\mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})) 
+\mathcal{F}(\domkniecie{m}(\overline{x}))=\mathcal{F}(\domkniecie{m}(\overline{y})), 
 $$
 $$
 \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
@@ -942,7 +935,7 @@ Z dowolności $\phi$, $\overline{\alpha}$, $\overline{\beta}$ udowodniliśmy pun
 \end{proof}
 
 
-\begin{tw}
+\begin{tw}[{\citep[Str. 108, Tw. 2]{adams1965theory}}]
 Niech $U=\tuple{A,M,a,\phi}$ będzie regularnym NAS $\mathcal{F}:\mathcal{D}\to \domkniecie{\mathbb{R}}$, oraz niech $F$ będzie uogólnioną operacją na pomiarach odpowiadającą $\mathcal{F}$. Wtedy:
 \begin{enumerate}
 \item
@@ -967,59 +960,56 @@ $$
 \item
 Dowód (1) wynika wprost z twierdzenia 3.13
 \item
-$\impliedby$
-Załóżmy, że 
+Udowodnimy warunek dostateczny. Załóżmy, że 
 \begin{equation}
 \forall_{\phi \in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\domkniecie{\phi}(\mathcal{F}(\overline{\alpha})).
 \end{equation}
 Niech $m_1, m_2 \in M$ $x \in A$ i $\overline{x} \in \domkniecie{A}$ i $\domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x}) \in \mathcal{D}$
 $$
-m_1(x)=F(m_1;\overline{x})=F(\domkniecie{m_1}(\overline{x}))
+m_1(x)=F(m_1;\overline{x})=F(\domkniecie{m_1}(\overline{x})).
 $$
- z regularności NAS istnieje $m_0, \phi_1 , \phi_2$ takie, że 
+Z regularności NAS istnieje $m_0, \phi_1 , \phi_2$ takie, że 
 $$ 
-m_1=\phi_1\circ m_0 \quad m_2=\phi_2\circ m_0
+m_1=\phi_1\circ m_0, \quad m_2=\phi_2\circ m_0.
 $$
 Niech $\alpha=m_0(x)$, $\overline{\alpha}=\domkniecie{m_0}(\overline{x})$, $\alpha=(\alpha_1,\dots,\alpha_n)$.
 
 Dalej z regularności $U$ istnieje $\Psi:a \to a$
 $$
- \Psi(\phi_1(\overline{\alpha_i}))=\overline{\alpha_i}
+ \Psi(\phi_1(\overline{\alpha_i}))=\overline{\alpha_i},
 $$
 $$
- \Psi(\phi_1(\alpha))=\alpha
+ \Psi(\phi_1(\alpha))=\alpha.
 $$
 \begin{eqnarray*}
 m_1(x) & = & \mathcal{F}(\domkniecie{m_1}(\overline{x})),\\ 
-\phi_1 \circ m_0(x)& = & \mathcal{F}(\domkniecie{\phi_1 \circ m_0}(\overline{x}))/\Psi(),\\ 
-\Psi \circ \phi_1 \circ m_0(x)&= & \Psi(\mathcal{F}(\domkniecie{\psi_1 \circ m_0}(\overline{x})))/\phi_2(),\\
-m_2(x)&=&\phi_2(\Psi(\mathcal{F}(\domkniecie{\phi_1 \circ m_0}(x)))
+\phi_1 \circ m_0(x)& = & \mathcal{F}(\domkniecie{\phi_1 \circ m_0}(\overline{x}))/\quad \Psi(\cdot),\\ 
+\Psi \circ \phi_1 \circ m_0(x)&= & \Psi(\mathcal{F}(\domkniecie{\psi_1 \circ m_0}(\overline{x})))/\quad \phi_2(\cdot),\\
+m_2(x)&=&\phi_2(\Psi(\mathcal{F}(\domkniecie{\phi_1 \circ m_0}(x))).
 \end{eqnarray*}
 
 Dla $\phi:=\phi_2\circ \Psi,$ $\overline{\alpha}:=\domkniecie{m_1}(\overline{x})$ z (3.11)
 \begin{eqnarray*}
 m_2(x) & = & \mathcal{F}(\domkniecie{\phi_2 \circ \Psi \circ \phi_1 \circ m_0})(\overline{x})),\\
-m_2(x) & = & \mathcal{F}(\domkniecie{m_2}(\overline{x}))
+m_2(x) & = & \mathcal{F}(\domkniecie{m_2}(\overline{x})).
 \end{eqnarray*}
 Z uwagi na symetrię oznaczeń implikacja w drugą stronę jest oczywista. Z dowolności $m_1, m_2$, $x$ i $\overline{x}$, F jest odnośnikowo niezmiennicza.
 
-$\implies$
-Załóżmy, że dla dow. $\phi \in \Phi$, $\alpha \in a$ i $\overline{\alpha} \in \domkniecie{a}$ o ile $\overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D}$ to mamy 
+Udowodnimy warunek konieczny. Załóżmy, że dla dow. $\phi \in \Phi$, $\alpha \in a$ i $\overline{\alpha} \in \domkniecie{a}$ o ile $\overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D}$ to mamy 
 \begin{equation}
 \phi(\alpha))=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})) \iff \alpha=\mathcal{F}(\overline{\alpha}).
 \end{equation}
 Niech $\phi \in \Phi$, $\overline{\alpha} \in \domkniecie{a}$ i $\overline{\alpha}$, $\phi(\overline{\alpha}) \in \mathcal{D}$. Niech $\alpha=\mathcal{F}(\overline{\alpha})$ z (3.12) mamy 
 $$
-\phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))
+\phi(\alpha)=\mathcal{F}(\domkniecie{\phi}(\overline{\alpha})),
 $$
  jednocześnie $\alpha=\mathcal{F}(\overline{\alpha}))$ zatem
 $$
-\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\phi(\alpha)=\phi(\mathcal{F}(\overline{\alpha}))
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\phi(\alpha)=\phi(\mathcal{F}(\overline{\alpha})).
 $$
 Z dowolności $\phi$ i $\alpha, \overline{\alpha}$ udowodniliśmy punkt (2).
 \item
-$\impliedby$
-Załóżmy, że
+Udowodnimy warunek dostateczny. Załóżmy, że
 \begin{equation*}
 \forall_{\phi \in \Phi}  \exists_{\psi_{\phi}\in \Phi} \forall_{\overline{\alpha} \in \domkniecie{a}} \quad \overline{\alpha}, \domkniecie{\phi}(\overline{\alpha}) \in \mathcal{D} \implies \mathcal{F}(\phi(\overline{\alpha}))=\Psi_{\phi}(\mathcal{F}(\overline{\alpha})).
 \end{equation*}
@@ -1030,54 +1020,42 @@ Niech $\phi \in \Phi$. Wtedy istnieje
 
 Niech $\overline{\alpha}, \overline{\beta} \in \domkniecie{a}$. Wtedy z (3.13)
 \begin{eqnarray*}
-\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))\\
-\mathcal{F}(\domkniecie{\phi}(\overline{\beta}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\alpha})),\\
+\mathcal{F}(\domkniecie{\phi}(\overline{\beta}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta})).
 \end{eqnarray*}
 Równoważnie
 \begin{eqnarray*}
-\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))&=&\mathcal{F}(\domkniecie{\phi}(\overline{\beta}))\\
-\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))&=&\mathcal{F}(\domkniecie{\phi}(\overline{\beta})),\\
+\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta})).\\
 \end{eqnarray*}
 Ponieważ $\Psi_{\phi} \in \Phi$ więc jest różnowartościowa. Zatem mamy
 $$
-\mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta})
+\mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 $$
-$\implies$
-Załóżmy, że dla dow $\phi \in \Phi$, $\overline{\alpha}$, $\overline{\beta} \in \domkniecie{a}$ o ile $\overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \domkniecie{\phi}(\overline{\beta}) \in \mathcal{D}$ to mamy.
+Udowodnimy warunek konieczny. Załóżmy, że dla dow $\phi \in \Phi$, $\overline{\alpha}$, $\overline{\beta} \in \domkniecie{a}$ o ile $\overline{\alpha}, \overline{\beta}, \phi(\overline{\alpha}), \domkniecie{\phi}(\overline{\beta}) \in \mathcal{D}$ to mamy.
 \begin{equation}
 \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \iff \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}).
 \end{equation}
 Niech $\phi \in \Phi$. Niech $\Psi_{\phi}$ będzie taka, że $\Psi_{\phi}: z\longmapsto \mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))$, gdzie $\overline{\alpha} \in \domkniecie{a} \land z=\mathcal{F}(\overline{\alpha})$
 Pokażemy, że definicja jest poprawna. Aby tak było wartość funkcji nie może zależeć od wyboru $\overline{\alpha}$. Niech $\overline{\alpha}$, $\overline{\beta} \in \domkniecie{a} \land \mathcal{F}(\overline{\alpha})=z=\mathcal{F}(\overline{\beta})$. Z (3.14) mamy natychmiast, że $\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta)$. To oznacza jednak, że $\Psi(\mathcal{F}(\overline{\alpha}))=\Psi(\mathcal{F}(\overline{\beta}))$. Pozostaje pokazać, że $\Psi_{\phi}$ jest różnowartościowa. Niech $z_1, z_2 \in \mathcal{D}(\Psi_{\phi})$. Zatem istnieją reprezentanci $\overline{\alpha}$, $\overline{\beta}$, że $\mathcal{F}(\overline{\alpha})=z_1$, $\mathcal{F}(\overline{\beta})=z_2$.
 \begin{eqnarray*}
-\Psi_{\phi}(z_1)&=&\Psi_{\phi}(z_2)\\
-\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta}))\\
+\Psi_{\phi}(z_1)&=&\Psi_{\phi}(z_2),\\
+\Psi_{\phi}(\mathcal{F}(\overline{\alpha}))&=&\Psi_{\phi}(\mathcal{F}(\overline{\beta})).\\
 \end{eqnarray*}
 Z (3.14)
 $$
-\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \implies \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}) \implies z_1=z_2
+\mathcal{F}(\domkniecie{\phi}(\overline{\alpha}))=\mathcal{F}(\domkniecie{\phi}(\overline{\beta})) \implies \mathcal{F}(\overline{\alpha})=\mathcal{F}(\overline{\beta}) \implies z_1=z_2.
 $$
 Z dowolności $\phi$, $\overline{\alpha}$, $\overline{\beta}$ udowodniliśmy implikacje.
 \end{enumerate}
 \end{proof}
-Powyższe twierdzenie pokazuje, że warunki bezwzględnej, referencyjnej oraz porównawczej niezmienniczości operacji $F$ są równoważne (przynajmniej w szerokim zakresie warunków określonych w twierdzeniu) różnym rodzajom praw transformacji, które odnoszą się do wartości od $\mathcal{F}(\phi(\alpha))$ do $\mathcal{F}(\alpha)$. W pierwszym przypadku wartości te muszą być równe. W przypadku referencyjnej niezmienniczości wymagane jest, aby wartości $\mathcal{F}$ przekształcić zgodnie z tym samym prawem, co podstawowa transformacja pomiarów. W przypadku porównawczej niezmienniczości  wymagane jest, aby każda transformacja podstawowych pomiarów mogła określić odpowiednią transformację wartości operacji. Jedną bezpośrednią konsekwencją tego, wspomnianą wcześniej, jest to, że (zakładając, że ograniczenia przedstawione w hipotezie twierdzenia są spełnione), bezwzględna i referencyjna niezmienniczość są szczególnymi przypadkami niezmienniczości porównawczej.
-
-Pewne problemy matematyczne powstają podczas prób określenia wewnętrznych warunków koniecznych i wystarczających, aby uogólniona operacja na pomiarach, $F$, była niezmienna w każdym z naszych trzech sensów w odniesieniu do NAS z czterech podstawowych typów skali. Z naukowego punktu widzenia najciekawsze z tych wyników dotyczą warunków, które muszą być spełnione, aby $F$ była niezmienna w stosunku do skal porządkowych lub słabszych. Załóżmy, że dziedzina $F$ to zbiór par $m; \overline{x}$, w którym $\overline{x}$ jest skończonym ciągiem jednostek. Następnie, jeśli $F$ jest porównawczo niezmiennicza w stosunku do skali porządkowej lub słabszej, ale nie jest
-bezwzględnie niezmiennicza w stosunku do tej skali,
-\begin{equation*}
-F(m;x_{1},\dots,x_{n})=F(m;y_{1},\dots,y_{m})
-\end{equation*}
-można otrzymać w przypadku
-\begin{center}
-$m(x_{i})=m(y_{i})$ dla $i=1,\dots,m$ i $j=1,\dots,m$.
-\end{center}
-Oznacza to, że nie można zdefiniować rozsądnej miary rozpraszania dla tych skal, ponieważ (i) taka miara nie powinna być bezwzględnie niezmiennicza (gdyby tak było, przypisałaby równe rozproszenia do dowolnych dwóch zbiorów tej samej liczby elementów) i (ii) powinno być możliwe, gdy dwóm zbiorom $\zbior{x_{1},\dots,x_{n}}$  i$\zbior{y_{1},\dots,y_{m}}$ można przypisać równe rozproszenia, nawet jeśli żaden obiekt z pierwszego zbioru nie ma miary równej obiektowi w drugim (tj.$ m(x_{i})\neq m(y_{j})$  dla wszystkich $i, j$).
+Powyższe twierdzenie pokazuje, że warunki bezwzględnej, referencyjnej oraz porównawczej niezmienniczości operacji $F$ są równoważne (przynajmniej w szerokim zakresie warunków określonych w twierdzeniu) różnym rodzajom praw transformacji, które odnoszą się do wartości $\mathcal{F}(\phi(\alpha))$ i $\mathcal{F}(\alpha)$. 
 \section{Twierdzenia i ich funkcje prawdy}
 
 Zastosowanie jednego z kryteriów z powyższych pięciu definicji niezmienniczości do operacji statystycznej może dać inny wynik niż wynik innego kryterium. Potrzebna jest dalsza specyfikacja, w jakich okolicznościach stosuje się każde ze specjalnych kryteriów. Proponujemy następujące kryterium: operacja statystyczna nie powinna być traktowana jako właściwa lub nieodpowiednia, tylko w odniesieniu do rodzajów stwierdzeń, które są na jej temat. Bardziej szczegółowo, kryterium polega na tym, że operacja statystyczna jest odpowiednia zarówno w odniesieniu do stwierdzenia (bardziej ogólnie, klasy stwierdzeń reprezentowanych przez funkcję zdaniową), jak i do NAS. W przypadku prawdziwej wartości stwierdzenia (lub jakiegokolwiek stwierdzenia klasy ) nie jest zmieniany, gdy mowa jest o innym numerical assignment tego samego systemu. Nasze kryterium odnosi się zatem, przede wszystkim do stwierdzeń lub klas stwierdzeń, a ponadto do operacji statystycznych, których mogą dotyczyć.
  Jednym z ważnych zastosowań jest formułowanie stwierdzeń dotyczących mierzalnych właściwości w populacjach i proponujemy kryterium stosowności dla tego rodzaju zastosowania.
 
-Teraz przedstawiamy sposób na uszczegółowienie powyższych intuicyjnych pomysłów. Przede wszystkim musimy dać bardziej precyzyjny sens koncepcji „stwierdzenia o pomiarach” lub „stwierdzenia o statystycznej operacji pomiarów”. Opis składniowy tego typu stwierdzeń (na tyle ogólny, by uwzględnić większość interesujących naukowo przypadków) wydaje się bezowocny, gdyż stwierdzenia te sa po prostu zbyt zróżnicowane. Dla naszego obecnego celu wystarczy jednak nie rozważać samych stwierdzeń, ale ich warunków prawdy , które mogą być reprezentowane przez odpowiednie funkcje prawdy. Jako przykład rozważmy poniższy wzór, zrównując miarę jednostki $x$ ze średnią miary jednostek w skończonym ciągu  $\overline{x}=<x_{1},\dots,x_{n}>$:
+Teraz przedstawmy sposób na uszczegółowienie powyższych intuicyjnych pomysłów. Przede wszystkim musimy dać bardziej precyzyjny sens koncepcji „stwierdzenia o pomiarach” lub „stwierdzenia o statystycznej operacji pomiarów”. Opis składniowy tego typu stwierdzeń (na tyle ogólny, by uwzględnić większość interesujących naukowo przypadków) wydaje się bezowocny, gdyż stwierdzenia te są po prostu zbyt zróżnicowane. Dla naszego obecnego celu wystarczy jednak nie rozważać samych stwierdzeń, ale ich warunków prawdy , które mogą być reprezentowane przez odpowiednie funkcje prawdy. Jako przykład rozważmy poniższy wzór, zrównując miarę jednostki $x$ ze średnią miary jednostek w skończonym ciągu  $\overline{x}=<x_{1},\dots,x_{n}>$:
 \begin{equation}
 m(x)=Mean(\domkniecie{m}(\overline{x})).
 \end{equation}
@@ -1090,27 +1068,27 @@ F(m;x,\overline{x})= \left\{ \begin{array}{lIl}
 \end{equation}
 
 Powyższe sugeruje, że przynajmniej dla ograniczonej klasy wzorów, takich jak (3.15), wzory te mogą być wykonane tak, aby odpowiadały funkcjom prawdy w prosty i jednolity sposób (funkcja prawdy jest definiowana w kategoriach wzoru jak w (3.16)). Co więcej, te funkcje prawdy są postrzegane jako szczególne przypadki uogólnionych operacji na pomiarach.
-\begin{definition}
+\begin{definition}[{\citep[Str. 111, Def. 6]{adams1965theory}}]
 Uogólniona funkcja prawdy pomiaru jest uogólnioną operacją na pomiarach, których wartości wynoszą tylko $0$ i $1$.
 \end{definition}
 \section{Empiryczne znaczenie stwierdzeń}
 
 Mając powiązane funkcje prawdy z wzorami w sposób opisany powyżej, możliwe staje się zastosowanie precyzyjnych pojęć niezmienniczości zdefiniowanych w poprzedniej sekcji do funkcji prawdy (przynajmniej do tych, które są uogólnionymi operacjami na pomiarach), a pośrednio do wzorów, których są funkcjami prawdy. Idea kryjąca się za definicją empirycznego znaczenia dla stwierdzeń (dokładniej wzorów) polega na tym, że ich prawda nie może być zmieniona przez zmianę permissible numerical assignment. Jasne jest, że chodzi o wymóg, aby funkcja prawdy odpowiadająca wzorowi była bezwzględnie niezmiennicza w stosunku do danego systemu pomiarowego. Dlatego możemy zdefiniować:
-\begin{definition}
+\begin{definition}[{\citep[Str. 111, Def. 7]{adams1965theory}}]
 Wyrażenie $W(F)$ jest empirycznie znaczące względem $U$ gdy jego funkcje prawdy są niezmiennicze bezwzględnie.
 \end{definition}
 Oczywiście definicja ta jest nieprecyzyjna z powodu nieprecyzyjności w warunkach wzoru i wzoru funkcji prawdy, który celowo nie został precyzyjnie zdefiniowany. W obronie sformułowania powyższej definicji w ten sposób można powiedzieć, że jej zastosowania są dość jasne w tych przypadkach, w których stosuje się ją do wzorów takich jak (3.15), dla których precyzyjnie określona funkcja prawdy jest definiowana w sposób (3.16) . Oznacza to, że jeśli wzór jest wystarczająco jasny, aby możliwe było precyzyjne zdefiniowanie odpowiedniej funkcji prawdy, wówczas zastosowanie definicji staje się jednoznaczne.
 \section{Odpowiedniość stwierdzeń dotyczących operacji statystycznych}
 
 Główną cechą naszej analizy jest to, że nie można mówić o statystyce (reprezentowanej przez uogólnioną operację na pomiarach), że jest odpowiednia lub nieodpowiednia. Operacje te powinny być raczej uważane za odpowiednie lub nieodpowiednie w stosunku do wzoru (i NAS).
-\begin{definition}
+\begin{definition}[{\citep[Str. 111, Def. 8]{adams1965theory}}]
 $F$ jest względnie odpowiednie w stosunku do wyrażenia $W$ oraz $U$ (NAS) wtedy i tylko wtedy, gdy $W(F)$ jest empirycznie znaczące względem $U$.
 \end{definition}
 
 Należy zauważyć, że to kryterium adekwatności dla operacji statystycznej względem wzoru nie wymaga wyraźnie, aby wzór był konstruowany z warunkami operacji. W rzeczywistości to, czy operacja jest odpowiednia w stosunku do wzoru i NAS zależy tylko od relacji między wzorem, a NAS. Z tego wynika, że jeśli jakakolwiek operacja statystyczna jest odpowiednia w stosunku do wzoru i NAS, to każda inna operacja jest również odpowiednia w stosunku do tej samego wzoru i NAS. To pokazuje, że po prostu przeszliśmy przez trudny problem próby określenia warunków, które musiałyby być spełnione przez wzór w odniesieniu do operacji statystycznej. W ważnych zastosowaniach tego kryterium będziemy zajmować się tylko wzorami, które odnoszą się do danej operacji (można powiedzieć, że wzór (3.15) dotyczy średniej operacji).
 
 Teraz pokazujemy każdy z trzech specjalnych rodzajów niezmienniczości jako specjalne przypadki niezmienniczości względem wzoru lub klasy wzorów. Poszczególne wzory, o których mowa, są tym, co nazywamy bezwzględnym, referencyjnym i wzorami porównawczymi. Są one definiowane w sposób okrężny: najpierw określamy, jakie muszą być funkcje prawdy tych wzorów, a następnie definiujemy wzór, który będzie tego rodzaju, na wypadek, gdyby miał jedną z nich jako swoją funkcję prawdy. Należy założyć, co może być bardzo wątpliwe, a mianowicie, że wszystkie te funkcje prawdy są funkcjami prawdy jakiegoś wzoru.
-\begin{definition}
+\begin{definition}[{\citep[Str. 112, Def. 9]{adams1965theory}}]
 Niech $F$ będzie uogólnioną operacją na pomiarach z dziedziną $\mathcal{D}$. Wtedy:
 \begin{enumerate}
 \item
@@ -1151,7 +1129,7 @@ Osobnik $x$ ma wzrost równy średniej z populacji $\overline{x}$ wtedy funkcja 
 Średnia wzrostu populacji $\overline{x}$ i $\overline{y}$ są równe wtedy funkcja $COMP$ zwraca 1 w przeciwnym przypadku 0.
 \end{przyklad}
 Jest to oczywiste, pod warunkiem, że istnieją symbole dla wszystkich liczb rzeczywistych (ogólniej, każda z powyższych funkcji prawdy jest funkcją prawdy jakiegoś wzoru), że:
-\begin{tw}
+\begin{tw} [{\citep[Str. 112, Tw. 3]{adams1965theory}}]
 Niech $F$ będzie uogólnioną operacją na pomiarach taka że dla wszystkich rzeczywistych $\alpha$, $ABS_{F,\alpha}$ i $REF_{F}$ $COMP_{F}$ są także uogólnionymi operacjami na pomiarach, oraz niech $U$ będzie numerical assignment sysytem. Wtedy:
 \begin{enumerate}
 \item
@@ -1191,9 +1169,9 @@ $$
 Niech $\alpha=F(m_1;\overline{x})$. Rozważmy wyrażenie $ABS_{F,\alpha}$  z założenia jest ono bezwzględnie niezmiennicze wtedy $ABS_{F,\alpha}(m_1;\overline{x})=1$. Skoro jest bezwzględnie niezmiennicza  to $ABS_{F,\alpha}(m_1;\overline{x})=ABS_{F,\alpha}(m_2;\overline{x})=1$. Z definicji $ABS_{F,\alpha}(m_2;\overline{x})$ mamy, że $F(m_2;\overline{x})=\alpha$ a $\alpha=F(m_1;\overline{x})$. Sprzeczność, jest ona efektem takiego przypuszczenia, że $F(m_1;\overline{x})\ne F(m_2;\overline{x})$, stad (3.17).
 \item
 $\implies$
-Niech $F$ będzie odnośnikowo niezmiennicza w stosunku do $U$ 
+Niech $F$ będzie odnośnikowo niezmiennicza w stosunku do $U$. Dla dow. $m_{1}$, $m_{2} \in M$ $x \in A$ i  $\overline{x} \in \domkniecie{A}$ o ile  $\domkniecie{m_1}(\overline{x})$, $\domkniecie{m_2}(\overline{x})\in \mathcal{D}$ to mamy.
 \begin{equation}
-\forall_{m_{1}, m_{2} \in M} \forall_{x \in A} \forall_{\overline{x} \in \domkniecie{A}} \quad \domkniecie{m_1}(\overline{x}), \domkniecie{m_2}(\overline{x})\in \mathcal{D} \implies  m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
+ m_{1}(x)=F(m_{1};\overline{x}) \iff m_{2}(x)=F(m_{2};\overline{x}).
 \end{equation}
 Pokażemy, że $REF_{F}$ jest bezwzględnie niezmiennicza. Niech $m_1$, $m_2 \in M$ oraz niech $\overline{x} \in \domkniecie{A}$ 
 \begin{enumerate}[I.]
@@ -1312,6 +1290,7 @@ $\Phi$ jest klasą homomorficznego osadzenia $\mathcal{G}$ w siebie.
 
 Oczywiście klasy $M$ i $\Phi$ są definiowalne w warunkach $G$ i $\mathcal{G}$. Celem ich wyraźnego przedstawienia jest ułatwienie porównania z NAS, które odpowiadają FMS.
 \chapter{Podsumowania}
+W rozdziale 3. Zostały wprowadzone definicje NAS oraz NAS regularnego, który ma mocniejsze założenia od zwykłego ale jednak słabsze niż założenia grup algebraicznych. Problem ten został również zilustrowany na przykładach. Omówione również zostały typy skal. Następnie zostały wprowadzone definicje domknięcia zbioru skończonymi ciągami, rozszerzenia funkcji na skończone ciągi, uogólnionych funkcji rzeczywistych oraz uogólnionego działania na pomiarach które pozwoliły zdefiniować nam niezmienniczość dla uogólnionych działań na pomiarach. Są trzy rodzaje niezmienniczości; bezwzględna, odnośnikowa i porównawcza. Dla każdego rodzaju niezmienniczości zostały sformułowane warunki równoważne oraz udowodnione.  Zostało wprowadzone również twierdzenie 3.14, początkowe próby dowodzenia punktu trzeciego nie powiodły się więc konieczne było dodatkowe  założenie że funkcja $\Psi_{\phi}$ jest różnowartościowa. Bez tego warunku dowód nie był możliwy do wykonania.
 \bibliographystyle{plain}
 \bibliography{bibliografia}
 \end{document}
